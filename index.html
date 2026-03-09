@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>R. Sridhar — Glycochemistry & Biomimetic Catalysis | PhD Applicant</title>
+<meta name="description" content="Academic portfolio of R. Sridhar — synthetic organic chemist specialising in carbohydrate chemistry, Ferrier rearrangements, and LPMO biomimetic catalysis. Seeking PhD in Europe."/>
+<meta property="og:title" content="R. Sridhar — Glycochemistry & Catalysis | PhD Applicant"/>
+<meta property="og:description" content="Synthetic organic chemist | NIT Calicut JRF | Pondicherry University | Seeking European PhD 2026"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ===== TOKENS ===== */
+:root{
+  --cream:       #faf8f3;
+  --cream-deep:  #f2ede3;
+  --ink:         #0f1923;
+  --ink-mid:     #2d3a48;
+  --ink-soft:    #5a6a7a;
+  --ink-faint:   #9aabb8;
+  --border:      #ddd8cc;
+  --border-em:   #b8a882;
+  --amber:       #b8722a;
+  --amber-light: #d49048;
+  --amber-bg:    rgba(184,114,42,0.08);
+  --amber-bg2:   rgba(184,114,42,0.14);
+  --sage:        #3d6b50;
+  --sage-light:  #528966;
+  --sage-bg:     rgba(61,107,80,0.09);
+  --rose:        #8b3a4a;
+  --rose-bg:     rgba(139,58,74,0.08);
+  --card:        #ffffff;
+  --card-hover:  #fdfcf9;
+  --shadow-sm:   0 1px 4px rgba(15,25,35,0.07);
+  --shadow-md:   0 4px 20px rgba(15,25,35,0.10);
+  --shadow-lg:   0 12px 40px rgba(15,25,35,0.12);
+  --font-serif:  'Libre Baskerville', Georgia, serif;
+  --font-sans:   'DM Sans', system-ui, sans-serif;
+  --font-mono:   'DM Mono', monospace;
+  --r:           8px;
+  --r-lg:        14px;
+  --ease:        cubic-bezier(.4,0,.2,1);
+}
+
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--cream);color:var(--ink);font-family:var(--font-sans);line-height:1.7;overflow-x:hidden}
+::selection{background:var(--amber-bg2);color:var(--amber)}
+a{color:var(--amber);text-decoration:none;transition:color .2s var(--ease)}
+a:hover{color:var(--amber-light)}
+img{display:block;max-width:100%}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--border-em);border-radius:9px}
+
+/* ===== LAYOUT ===== */
+.wrap{max-width:1080px;margin:0 auto;padding:0 2rem}
+section{padding:5rem 0}
+.divider{width:100%;height:1px;background:var(--border)}
+
+/* ===== SECTION LABELS ===== */
+.sl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem}
+.sl::before{content:'';width:28px;height:1px;background:var(--amber);flex-shrink:0}
+.sh{font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:.5rem}
+.sd{color:var(--ink-soft);font-size:.95rem;max-width:540px;margin-bottom:2.8rem;line-height:1.7}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(250,248,243,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:all .3s var(--ease)}
+.nav-brand{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--ink);letter-spacing:.02em}
+.nav-brand span{color:var(--amber)}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{font-size:.77rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--amber)}
+.nav-cta{background:var(--ink)!important;color:var(--cream)!important;padding:.42rem 1.1rem;border-radius:var(--r);font-weight:600!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--amber)!important}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.ham span{display:block;width:21px;height:1.5px;background:var(--ink);transition:.2s}
+
+/* ===== HERO ===== */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:5rem;position:relative;overflow:hidden;background:var(--ink)}
+
+/* hex grid bg */
+#hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 40%, rgba(184,114,42,.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 60%, rgba(61,107,80,.10) 0%, transparent 50%);
+  pointer-events:none
+}
+.hero-hex{position:absolute;inset:0;opacity:.035;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 0 L56 16 L56 48 L28 64 L0 48 L0 16Z' fill='none' stroke='%23d49048' stroke-width='1'/%3E%3Cpath d='M28 36 L56 52 L56 84 L28 100 L0 84 L0 52Z' fill='none' stroke='%23d49048' stroke-width='1'/%3E%3C/svg%3E");
+  background-size:56px 100px}
+
+.hero-inner{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.hero-left{}
+
+.hero-status{display:inline-flex;align-items:center;gap:.6rem;padding:.38rem 1rem;background:rgba(61,107,80,.2);border:1px solid rgba(61,107,80,.4);border-radius:100px;margin-bottom:1.8rem;opacity:0;animation:fadeUp .8s var(--ease) .2s forwards}
+.hero-dot{width:7px;height:7px;background:#6fcf97;border-radius:50%;animation:pulse 2s ease infinite}
+.hero-status span{font-family:var(--font-mono);font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:#6fcf97}
+
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+
+.hero-name{font-family:var(--font-serif);font-size:clamp(3.2rem,7vw,5.8rem);font-weight:700;color:#faf8f3;line-height:.97;letter-spacing:-.02em;margin-bottom:1rem;opacity:0;animation:fadeUp .9s var(--ease) .35s forwards}
+.hero-name em{font-style:italic;color:var(--amber-light)}
+
+.hero-tagline{font-family:var(--font-serif);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:rgba(250,248,243,.55);margin-bottom:2rem;max-width:580px;line-height:1.6;opacity:0;animation:fadeUp .9s var(--ease) .5s forwards}
+
+.hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem;opacity:0;animation:fadeUp .9s var(--ease) .65s forwards}
+.chip{font-size:.72rem;font-weight:500;padding:.32rem .85rem;border-radius:100px;border:1px solid rgba(255,255,255,.12);color:rgba(250,248,243,.65);background:rgba(255,255,255,.05);transition:all .2s}
+.chip:hover{border-color:var(--amber-light);color:var(--amber-light);background:var(--amber-bg)}
+.chip.hi{border-color:rgba(184,114,42,.5);color:var(--amber-light);background:rgba(184,114,42,.12)}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;opacity:0;animation:fadeUp .9s var(--ease) .8s forwards}
+.btn-p{display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 1.9rem;background:var(--amber);color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;border-radius:var(--r);border:1px solid var(--amber);transition:all .25s var(--ease)}
+.btn-p:hover{background:var(--amber-light);color:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,114,42,.35)}
+.btn-s{display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 1.9rem;background:transparent;color:rgba(250,248,243,.8);font-weight:600;font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;border-radius:var(--r);border:1px solid rgba(255,255,255,.2);transition:all .25s var(--ease)}
+.btn-s:hover{border-color:rgba(184,114,42,.6);color:var(--amber-light);transform:translateY(-2px)}
+
+/* hero right — stat panel */
+.hero-stats{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);overflow:hidden;opacity:0;animation:fadeIn 1s var(--ease) 1s forwards}
+.hstat{padding:1.4rem 1.8rem;background:rgba(255,255,255,.03);transition:background .2s}
+.hstat:hover{background:rgba(255,255,255,.07)}
+.hstat-n{font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--amber-light);line-height:1;display:block}
+.hstat-l{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,243,.4);display:block;margin-top:.3rem}
+
+.hero-scroll{position:absolute;bottom:2.2rem;left:2.5rem;display:flex;align-items:center;gap:.7rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;color:rgba(250,248,243,.3);opacity:0;animation:fadeIn 1s var(--ease) 1.5s forwards}
+.scroll-bar{width:38px;height:1px;background:rgba(250,248,243,.2);position:relative;overflow:hidden}
+.scroll-bar::after{content:'';position:absolute;width:100%;height:100%;background:var(--amber-light);animation:scrollPx 2.2s ease-in-out infinite}
+@keyframes scrollPx{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* ===== ABOUT ===== */
+#about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:260px 1fr;gap:3.5rem;align-items:start}
+.about-photo{width:100%;aspect-ratio:3/4;background:var(--cream-deep);border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.photo-ph{display:flex;flex-direction:column;align-items:center;gap:.8rem;color:var(--ink-faint);font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;text-align:center;padding:1rem}
+.photo-ph .ico{font-size:2.5rem}
+.about-corner{position:absolute;bottom:-10px;right:-10px;width:72px;height:72px;border:1.5px solid var(--border-em);border-radius:var(--r);background:var(--amber-bg)}
+.profile-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.ilink{display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;font-weight:500;letter-spacing:.04em;padding:.42rem .85rem;border:1px solid var(--border);border-radius:var(--r);color:var(--ink-soft);background:var(--card);transition:all .2s}
+.ilink:hover{border-color:var(--border-em);color:var(--amber);background:var(--amber-bg)}
+.about-body{}
+.about-body h3{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:1.1rem;line-height:1.3}
+.about-body p{color:var(--ink-soft);font-size:.94rem;line-height:1.85;margin-bottom:1.1rem}
+.about-body p strong{color:var(--ink);font-weight:600}
+.about-body p em{color:var(--sage);font-style:normal;font-weight:600}
+.meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid var(--border)}
+.meta-item .lbl{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);display:block}
+.meta-item .val{font-size:.86rem;color:var(--ink-soft);font-weight:500;display:block;margin-top:.15rem}
+.meta-item .val.hi{color:var(--amber);font-weight:600}
+
+/* ===== EXPERIENCE ===== */
+#experience{background:var(--cream-deep)}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-bottom:1.4rem;transition:all .25s var(--ease);position:relative;overflow:hidden;box-shadow:var(--shadow-sm)}
+.exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom, var(--amber), transparent);opacity:0;transition:opacity .25s}
+.exp-card:hover{border-color:var(--border-em);box-shadow:var(--shadow-md);transform:translateX(3px)}
+.exp-card:hover::before{opacity:1}
+.exp-card.current{border-color:rgba(61,107,80,.3)}
+.exp-card.current::before{opacity:1;background:linear-gradient(to bottom, var(--sage), transparent)}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.3rem;flex-wrap:wrap}
+.exp-role{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--ink);line-height:1.3}
+.exp-tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;padding:.28rem .75rem;border-radius:100px;white-space:nowrap;border:1px solid}
+.exp-tag.now{color:var(--sage);background:var(--sage-bg);border-color:rgba(61,107,80,.3)}
+.exp-tag.past{color:var(--amber);background:var(--amber-bg);border-color:rgba(184,114,42,.3)}
+.exp-where{font-size:.83rem;color:var(--sage);font-weight:600;margin-bottom:.2rem;letter-spacing:.01em}
+.exp-guide{font-size:.8rem;color:var(--ink-faint);margin-bottom:1rem;font-style:italic}
+.exp-q-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:.35rem}
+.exp-title{font-family:var(--font-serif);font-style:italic;font-size:1rem;color:var(--ink-mid);margin-bottom:.8rem;line-height:1.4}
+.exp-body{font-size:.88rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1rem}
+.exp-body strong{color:var(--ink);font-weight:600}
+.outcome{display:flex;align-items:flex-start;gap:.6rem;background:var(--sage-bg);border:1px solid rgba(61,107,80,.15);border-radius:var(--r);padding:.75rem 1rem;font-size:.82rem;color:var(--sage);margin-bottom:1rem;line-height:1.55}
+.outcome::before{content:'→';font-weight:700;flex-shrink:0;margin-top:.05rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.04em;padding:.25rem .65rem;border-radius:100px;background:var(--cream-deep);border:1px solid var(--border);color:var(--ink-soft)}
+
+/* ===== VISION ===== */
+#vision{background:var(--ink);position:relative;overflow:hidden}
+#vision::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(184,114,42,.08) 0%,transparent 70%);pointer-events:none}
+#vision::after{content:'';position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(61,107,80,.08) 0%,transparent 70%);pointer-events:none}
+#vision .sl{color:var(--amber-light)}
+#vision .sl::before{background:var(--amber-light)}
+#vision .sh{color:#faf8f3}
+#vision .sd{color:rgba(250,248,243,.5)}
+
+.vision-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:2.8rem;position:relative;overflow:hidden}
+.vision-box::before{content:'"';position:absolute;top:-30px;right:1.5rem;font-family:var(--font-serif);font-size:16rem;color:rgba(184,114,42,.06);line-height:1;pointer-events:none;user-select:none}
+.vision-text{font-family:var(--font-serif);font-style:italic;font-size:clamp(1rem,1.8vw,1.22rem);color:rgba(250,248,243,.65);line-height:1.95;margin-bottom:2.2rem;position:relative;z-index:1}
+.vision-text strong{color:#faf8f3;font-style:normal}
+.vision-text em{color:var(--amber-light);font-style:normal}
+
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+.pillar{padding:1.2rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);transition:all .25s}
+.pillar:hover{background:rgba(255,255,255,.06);border-color:rgba(184,114,42,.25)}
+.pillar-ico{font-size:1.3rem;margin-bottom:.6rem}
+.pillar-t{font-size:.83rem;font-weight:600;color:#faf8f3;margin-bottom:.3rem}
+.pillar-d{font-size:.76rem;color:rgba(250,248,243,.4);line-height:1.6}
+
+.target-sec h4{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-light);margin-bottom:1rem}
+.tgroup{display:flex;flex-direction:column;gap:.7rem}
+.tg-item{display:flex;flex-direction:column;gap:.2rem;padding:1rem 1.2rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:var(--r);transition:all .25s}
+.tg-item:hover{border-color:rgba(184,114,42,.3);background:rgba(184,114,42,.06)}
+.tg-pi{font-size:.87rem;font-weight:600;color:#faf8f3}
+.tg-inst{font-size:.76rem;color:var(--amber-light)}
+.tg-why{font-size:.77rem;color:rgba(250,248,243,.45);line-height:1.6;margin-top:.3rem}
+
+/* ===== PUBLICATIONS ===== */
+#publications{background:var(--cream)}
+.pub-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem;display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:stretch;transition:all .25s var(--ease);box-shadow:var(--shadow-sm);margin-bottom:1.2rem}
+.pub-card:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.pub-type{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--font-mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;padding:.6rem .4rem;border-radius:5px;display:flex;align-items:center;justify-content:center;white-space:nowrap;flex-shrink:0;align-self:stretch}
+.pub-type.journal{color:var(--amber);background:var(--amber-bg);border:1px solid rgba(184,114,42,.25)}
+.pub-type.thesis{color:var(--sage);background:var(--sage-bg);border:1px solid rgba(61,107,80,.2)}
+.pub-title{font-family:var(--font-serif);font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:.35rem;line-height:1.35}
+.pub-authors{font-size:.78rem;color:var(--ink-soft);margin-bottom:.35rem}
+.pub-authors strong{color:var(--amber)}
+.pub-journal{font-size:.8rem;color:var(--sage);font-style:italic;margin-bottom:.6rem}
+.pub-meta{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.8rem}
+.pbadge{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.07em;padding:.2rem .65rem;border-radius:100px;border:1px solid}
+.pbadge.prep{color:var(--rose);background:var(--rose-bg);border-color:rgba(139,58,74,.25)}
+.pbadge.jrf{color:var(--sage);background:var(--sage-bg);border-color:rgba(61,107,80,.25)}
+.pbadge.grade{color:var(--amber);background:var(--amber-bg);border-color:rgba(184,114,42,.3)}
+.pub-bullets{margin-top:.5rem}
+.pub-bullets li{font-size:.83rem;color:var(--ink-soft);margin-bottom:.4rem;padding-left:1rem;position:relative;line-height:1.6}
+.pub-bullets li::before{content:'·';position:absolute;left:0;color:var(--amber);font-weight:700}
+.pub-bullets li strong{color:var(--ink);font-weight:600}
+
+/* ===== SKILLS ===== */
+#skills{background:var(--cream-deep)}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.sg{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem;box-shadow:var(--shadow-sm);transition:all .25s}
+.sg:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.sg-title{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:1.2rem;display:flex;align-items:center;gap:.55rem}
+.sg-title .ico{font-size:.95rem}
+.sk-rows{display:flex;flex-direction:column;gap:.9rem}
+.sk-row{display:flex;align-items:center;gap:1rem}
+.sk-name{font-size:.82rem;color:var(--ink-mid);width:168px;flex-shrink:0;line-height:1.3}
+.sk-track{flex:1;height:3px;background:var(--cream-deep);border-radius:99px;overflow:hidden}
+.sk-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber),var(--amber-light));transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.sk-fill.sage{background:linear-gradient(90deg,var(--sage),var(--sage-light))}
+.sk-lv{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;color:var(--ink-faint);width:48px;text-align:right}
+
+/* extra skill chips */
+.skill-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+.stag{font-size:.72rem;padding:.28rem .7rem;border-radius:100px;background:var(--cream);border:1px solid var(--border);color:var(--ink-soft)}
+
+/* ===== AWARDS ===== */
+#awards{background:var(--cream)}
+.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.aw-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.4rem;display:flex;gap:1rem;align-items:flex-start;transition:all .25s;box-shadow:var(--shadow-sm)}
+.aw-card:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.aw-ico{font-size:1.5rem;flex-shrink:0;margin-top:.1rem}
+.aw-title{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:.25rem;line-height:1.3}
+.aw-body{font-size:.79rem;color:var(--ink-soft);line-height:1.65}
+.aw-year{font-family:var(--font-mono);font-size:.62rem;color:var(--amber);letter-spacing:.08em;margin-top:.4rem}
+
+/* ===== CONFERENCES ===== */
+#conferences{background:var(--cream-deep)}
+.conf-list{display:flex;flex-direction:column;gap:.85rem}
+.conf-item{display:grid;grid-template-columns:70px 1fr auto;gap:1.3rem;align-items:center;padding:1rem 1.4rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r);transition:all .25s;box-shadow:var(--shadow-sm)}
+.conf-item:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.conf-year{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--amber);opacity:.7;line-height:1}
+.conf-name{font-size:.87rem;font-weight:600;color:var(--ink);margin-bottom:.2rem;line-height:1.3}
+.conf-role{font-size:.77rem;color:var(--ink-soft)}
+.conf-loc{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.07em;color:var(--sage);text-align:right;white-space:nowrap}
+
+/* ===== COURSES ===== */
+#courses{background:var(--cream)}
+.courses-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.course-group{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;box-shadow:var(--shadow-sm);transition:all .25s}
+.course-group:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.cg-inst{font-size:.83rem;font-weight:700;color:var(--ink);margin-bottom:.1rem}
+.cg-type{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--amber);text-transform:uppercase;margin-bottom:1rem}
+.course-row{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--border);gap:.5rem}
+.course-row:last-child{border-bottom:none;padding-bottom:0}
+.cname{font-size:.82rem;color:var(--ink-soft);line-height:1.3;flex:1}
+.cyear{font-family:var(--font-mono);font-size:.67rem;color:var(--ink-faint);white-space:nowrap}
+
+/* ===== REFERENCES ===== */
+#references{background:var(--cream-deep)}
+.ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ref-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem;text-align:center;transition:all .25s;box-shadow:var(--shadow-sm)}
+.ref-card:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.ref-av{width:52px;height:52px;border-radius:50%;background:var(--amber-bg);border:1.5px solid var(--border-em);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--amber);margin:0 auto 1rem}
+.ref-name{font-family:var(--font-serif);font-size:.97rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
+.ref-pos{font-size:.77rem;color:var(--sage);line-height:1.4;margin-bottom:.2rem}
+.ref-inst{font-size:.75rem;color:var(--ink-faint);margin-bottom:.9rem;line-height:1.4}
+.ref-email{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.04em;color:var(--amber);word-break:break-all}
+
+/* ===== CONTACT ===== */
+#contact{background:var(--ink);position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(184,114,42,.07) 0%,transparent 70%);pointer-events:none}
+.contact-inner{text-align:center;max-width:600px;margin:0 auto;position:relative;z-index:1}
+.avail{display:inline-flex;align-items:center;gap:.6rem;padding:.45rem 1.2rem;background:rgba(61,107,80,.15);border:1px solid rgba(61,107,80,.3);border-radius:100px;margin-bottom:1.8rem}
+.avail-dot{width:7px;height:7px;background:#6fcf97;border-radius:50%;animation:pulse 2s ease infinite}
+.avail span{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#6fcf97}
+.contact-h{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;color:#faf8f3;line-height:1.2;margin-bottom:.9rem}
+.contact-h em{font-style:italic;color:var(--amber-light)}
+.contact-sub{font-size:.94rem;color:rgba(250,248,243,.5);line-height:1.75;margin-bottom:2.2rem}
+.contact-email{font-family:var(--font-serif);font-size:clamp(1rem,2.2vw,1.4rem);font-weight:700;color:var(--amber-light);display:block;margin-bottom:2.2rem;transition:color .2s}
+.contact-email:hover{color:#faf8f3}
+.contact-btns{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap}
+.btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:transparent;color:rgba(250,248,243,.65);font-weight:500;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r);border:1px solid rgba(255,255,255,.15);transition:all .2s}
+.btn-ghost:hover{border-color:rgba(184,114,42,.5);color:var(--amber-light)}
+
+/* ===== LEADERSHIP STRIP ===== */
+#leadership{background:var(--cream)}
+.ls-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ls-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.4rem;box-shadow:var(--shadow-sm);transition:all .25s}
+.ls-card:hover{border-color:var(--border-em);box-shadow:var(--shadow-md)}
+.ls-ico{font-size:1.6rem;margin-bottom:.7rem}
+.ls-title{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:.35rem}
+.ls-body{font-size:.79rem;color:var(--ink-soft);line-height:1.65}
+
+/* ===== FOOTER ===== */
+footer{padding:1.6rem 2rem;text-align:center;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:.63rem;letter-spacing:.1em;color:var(--ink-faint);background:var(--cream)}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.on{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.07s}.reveal.d2{transition-delay:.14s}.reveal.d3{transition-delay:.21s}.reveal.d4{transition-delay:.28s}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .about-photo{max-width:240px}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-stats{display:none}
+  .pillars{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .awards-grid{grid-template-columns:1fr}
+  .courses-grid{grid-template-columns:1fr}
+  .ref-grid{grid-template-columns:1fr 1fr}
+  .ls-grid{grid-template-columns:1fr 1fr}
+  .conf-item{grid-template-columns:60px 1fr;}.conf-loc{display:none}
+}
+@media(max-width:640px){
+  nav{padding:.8rem 1.2rem}.nav-links{display:none}.ham{display:flex}
+  .wrap{padding:0 1.1rem}
+  section{padding:3.5rem 0}
+  .hero-actions{flex-direction:column}
+  .ref-grid{grid-template-columns:1fr}
+  .ls-grid{grid-template-columns:1fr}
+  .contact-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">R. <span>Sridhar</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Research</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="ham" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- ====================================================
+     HERO
+==================================================== -->
+<section id="hero">
+  <div class="hero-hex"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-status">
+          <div class="hero-dot"></div>
+          <span id="cms-status-text">JRF · NIT Calicut · Feb 2026 — Present</span>
+        </div>
+
+        <h1 class="hero-name">R.&nbsp;<em>Sridhar</em></h1>
+
+        <p id="cms-hero-tagline" class="hero-tagline">
+          Synthetic organic chemist with a passion for carbohydrate chemistry,
+          biomimetic catalysis, and the design of drug-relevant molecular scaffolds.
+        </p>
+
+        <div class="hero-chips">
+          <span class="chip hi">🔬 Glycochemistry</span>
+          <span class="chip hi">⚗️ Ferrier Rearrangements</span>
+          <span class="chip hi">🌿 LPMO Biomimetic Catalysis</span>
+          <span class="chip">Green Catalytic Strategies</span>
+          <span class="chip">Drug Design Intermediates</span>
+          <span class="chip">GATE 2025 · CSIR-NET 2025</span>
+          <span class="chip">🇪🇺 Seeking PhD in Europe</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="YOUR_CV_LINK.pdf" target="_blank" class="btn-p">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV
+          </a>
+          <a href="/cdn-cgi/l/email-protection#b1e2c3d8d5d9d0c38381d2d9f1d6dcd0d8dd9fd2dedc" class="btn-s">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
+          <a href="#vision" class="btn-s">View Research Vision</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-n" id="cms-stat-cgpa">8.75</span>
+          <span class="hstat-l">M.Sc. CGPA / 10</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n" id="cms-stat-rank">3<sup style="font-size:1.2rem">rd</sup></span>
+          <span class="hstat-l">University Rank</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n" id="cms-stat-yield">&gt;95%</span>
+          <span class="hstat-l">Ferrier Glycoside Yield</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n" id="cms-stat-papers">25+</span>
+          <span class="hstat-l">Papers Analysed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     ABOUT
+==================================================== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+
+      <div class="reveal">
+        <div class="about-photo">
+          <div class="photo-ph">
+            <div class="ico">👨‍🔬</div>
+            <!-- Replace with: <img src="photo.jpg" alt="R. Sridhar" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"/> -->
+            <span>Replace with<br/>your professional photo</span>
+          </div>
+          <div class="about-corner"></div>
+        </div>
+        <div class="profile-links">
+          <a href="/cdn-cgi/l/email-protection#c695b4afa2aea7b4f4f6a5ae86a1aba7afaae8a5a9ab" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/sridhar-r-chem/" target="_blank" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://orcid.org/0009-0001-3602-6240" target="_blank" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            ORCID
+          </a>
+          <a href="https://sridhar20ch.github.io/Portfolio/" target="_blank" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="about-body reveal d1">
+        <div class="sl">About Me</div>
+        <h2 class="sh">A Carbohydrate Chemist<br/>Driven by Catalytic Curiosity</h2>
+
+        <p id="cms-about-p1">I am a synthetic organic chemist with a deep specialisation in <strong>carbohydrate chemistry and biomimetic catalysis</strong>. My research sits at a compelling intersection — using the structural complexity of glycals and their rearrangements to access <em>pharmacologically relevant scaffolds</em>, while simultaneously designing metal-ligand systems that replicate the enzymatic elegance of nature.</p>
+
+        <p id="cms-about-p2">At <strong>Pondicherry University</strong> under Prof. J. Kandasamy, I developed an efficient synthetic route to <strong>D-Rhamnal from D-Glucal</strong> and subsequently exploited it to synthesise novel <strong>C-2 aryl glycosides via Pd-catalysed arylation</strong> — work now being prepared for peer-reviewed publication. My Ferrier-I rearrangement studies produced 2,3-unsaturated glycosides in <em>yields exceeding 95%</em>, establishing robust methodology across four glycal precursors.</p>
+
+        <p id="cms-about-p3">I am currently a <strong>Junior Research Fellow (JRF) at NIT Calicut</strong> under Dr. M. Sankaralingam, where I am exploring biomimetic analogues of Lytic Polysaccharide Monooxygenases (LPMOs) — copper-dependent enzymes central to sustainable biomass valorisation. I am seeking a <em>European PhD position</em> that will allow me to deepen this work at the frontier of synthetic methodology, green catalysis, and chemical biology.</p>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span class="lbl">Current Position</span>
+            <span class="val hi" id="cms-meta-position">JRF — NIT Calicut</span>
+          </div>
+          <div class="meta-item">
+            <span class="lbl">M.Sc. CGPA</span>
+            <span class="val hi" id="cms-meta-cgpa">8.75 / 10 — 3rd University Rank</span>
+          </div>
+          <div class="meta-item">
+            <span class="lbl">Qualifications</span>
+            <span class="val hi" id="cms-meta-quals">GATE 2025 (CY) · CSIR-NET 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="lbl">Languages</span>
+            <span class="val" id="cms-meta-langs">English (C1) · Tamil · Telugu</span>
+          </div>
+          <div class="meta-item">
+            <span class="lbl">Target Region</span>
+            <span class="val hi" id="cms-meta-region">Europe</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     RESEARCH EXPERIENCE
+==================================================== -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sl reveal">Research Experience</div>
+    <h2 class="sh reveal d1">The Work, in Detail</h2>
+    <p class="sd reveal d2">Each project described as a scientific narrative — the question, my specific contribution, and what was discovered.</p>
+
+    <div id="cms-exp-section">
+    <!-- EXP 1 — CURRENT JRF -->
+    <div class="exp-card current reveal">
+      <div class="exp-head">
+        <div class="exp-role">Nature-inspired Conversion of Biomass to Biofuel: The LPMO Paradigm</div>
+        <span class="exp-tag now">Feb 2026 — Present</span>
+      </div>
+      <div class="exp-where">🏛 National Institute of Technology Calicut, India</div>
+      <div class="exp-guide">Project Associate (JRF) · Guide: Dr. M. Sankaralingam, Associate Professor, Dept. of Chemistry</div>
+
+      <div class="exp-q-label">Scientific Question</div>
+      <div class="exp-title">"Can we design synthetic molecular systems and functional nanomaterials that replicate the oxidative C–H activation achieved by copper-dependent LPMOs in nature?"</div>
+
+      <div class="exp-body">
+        Lytic Polysaccharide Monooxygenases (LPMOs) are copper metalloenzymes that perform the remarkable feat of oxidatively cleaving recalcitrant crystalline cellulose — a bond inert to most conventional reagents. Their catalytic mechanism, involving Cu(I)/Cu(II) redox cycling and reactive oxygen species, represents a paradigm for sustainable biomass valorisation. <strong>My role in this JRF project is twofold:</strong> (1) design and synthesise biomimetic ligand scaffolds that support Cu-coordination environments analogous to the LPMO active site, enabling molecular catalytic models; and (2) tune the surface chemistry of nanomaterials and MOFs to replicate the key features of LPMO reactivity in heterogeneous systems.
+      </div>
+
+      <div class="outcome">Currently at an early stage; synthesising first-generation ligand candidates and characterising their Cu complexes by UV-Vis, EPR, and cyclic voltammetry to probe redox behaviour.</div>
+
+      <div class="tags">
+        <span class="tag">Ligand Design</span>
+        <span class="tag">Cu Coordination Chemistry</span>
+        <span class="tag">Cyclic Voltammetry</span>
+        <span class="tag">Nanomaterial Functionalisation</span>
+        <span class="tag">MOF Chemistry</span>
+        <span class="tag">Biomass Valorisation</span>
+        <span class="tag">Biomimetic Catalysis</span>
+      </div>
+    </div>
+
+    <!-- EXP 2 — MASTER'S THESIS -->
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <div class="exp-role">Strategic Synthesis of D-Rhamnal from D-Glucal & Application to C-2 Aryl Glycosides</div>
+        <span class="exp-tag past">Jan – May 2025</span>
+      </div>
+      <div class="exp-where">🏛 Pondicherry University, India</div>
+      <div class="exp-guide">Master's Thesis · Guide: Prof. Dr. J. Kandasamy, Associate Professor, Dept. of Chemistry</div>
+
+      <div class="exp-q-label">Scientific Question</div>
+      <div class="exp-title">"How can D-glucal serve as a practical precursor to D-rhamnal, and can this rhamnal derivative be leveraged for novel C-2 arylation chemistry?"</div>
+
+      <div class="exp-body">
+        D-Rhamnal — a 6-deoxy-L-mannose derived glycal — is a high-value synthetic building block with established utility in glycoconjugate formation, preparation of pharmaceutical intermediates, and as a chiral scaffold in total synthesis. However, its accessibility from commercial starting materials is limited by lengthy routes. <strong>I devised an efficient synthetic strategy starting from D-glucal</strong>, involving selective modifications to the C-6 hydroxyl group and controlling the C-5 configuration. The rhamnal product was subsequently employed as a pseudoglycal substrate in a <strong>palladium-catalysed C-2 arylation protocol</strong>, generating novel C-aryl glycosides under mild conditions with investigation of stereochemical outcomes and protecting group effects across diverse pyranosides.
+      </div>
+
+      <div class="outcome">Successfully synthesised D-rhamnal via an efficient route; Pd-catalysed arylation delivered C-2 aryl glycoside products with promising stereoselectivity — manuscript under preparation.</div>
+
+      <div class="tags">
+        <span class="tag">Carbohydrate Chemistry</span>
+        <span class="tag">Pd-Catalysis</span>
+        <span class="tag">Glycal Chemistry</span>
+        <span class="tag">C-Glycoside Synthesis</span>
+        <span class="tag">Protecting Group Manipulation</span>
+        <span class="tag">¹H/¹³C NMR</span>
+        <span class="tag">ESI-HRMS</span>
+        <span class="tag">Column Chromatography</span>
+      </div>
+    </div>
+
+    <!-- EXP 3 — SUMMER INTERNSHIP -->
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <div class="exp-role">Ferrier-I Rearrangements of Glycals to 2,3-Unsaturated Glycosides</div>
+        <span class="exp-tag past">July – Dec 2024</span>
+      </div>
+      <div class="exp-where">🏛 Pondicherry University, India</div>
+      <div class="exp-guide">Summer Internship · Guide: Prof. Dr. J. Kandasamy</div>
+
+      <div class="exp-q-label">Scientific Question</div>
+      <div class="exp-title">"Can we systematically map the Ferrier Type-I rearrangement across structurally diverse glycal precursors to establish a robust, high-yielding methodology?"</div>
+
+      <div class="exp-body">
+        The Ferrier rearrangement transforms glycals into 2,3-unsaturated glycosides — versatile intermediates for glycoconjugate synthesis, natural product total synthesis, and drug discovery. Although known, the scope across different glycal architectures (differing in C-6 substitution and absolute configuration) had not been comprehensively benchmarked under uniform conditions. <strong>I systematically synthesised 2,3-unsaturated glycosides using four glycal precursors</strong> — D-glucal, D-galactal, D-rhamnal, and L-rhamnal — under Ferrier Type-I conditions, optimising the reaction parameters for each substrate and characterising all products by NMR and mass spectrometry. <strong>Yields exceeded 95%</strong> across all substrates, demonstrating the robustness of the methodology.
+      </div>
+
+      <div class="outcome">Established a reproducible Ferrier-I protocol across four glycal precursors with >95% yield; provided a solid methodological foundation for the thesis-stage C-2 arylation work.</div>
+
+      <div class="tags">
+        <span class="tag">Ferrier Rearrangement</span>
+        <span class="tag">D-Glucal</span>
+        <span class="tag">D-Galactal</span>
+        <span class="tag">D/L-Rhamnal</span>
+        <span class="tag">2,3-Unsaturated Glycosides</span>
+        <span class="tag">TLC Monitoring</span>
+        <span class="tag">Yield Optimisation</span>
+        <span class="tag">NMR Characterisation</span>
+      </div>
+    </div>
+
+    <!-- EXP 4 — LITERATURE REVIEW -->
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <div class="exp-role">Literature Review — Innovations in the Ferrier Reaction: Green Chemistry & Catalytic Strategies</div>
+        <span class="exp-tag past">Jan – May 2025</span>
+      </div>
+      <div class="exp-where">🏛 Pondicherry University, India</div>
+      <div class="exp-guide">Formal Literature Review · Guide: Prof. Dr. J. Kandasamy</div>
+
+      <div class="exp-body">
+        Conducted a systematic analysis of <strong>25+ peer-reviewed publications</strong> covering the evolution of the Ferrier rearrangement from classical Lewis acid-mediated conditions to modern green and catalytic approaches. Compared catalysts (BF₃·OEt₂, Amberlyst, zeolites, ionic liquids, photocatalytic systems) across dimensions of yield, selectivity, solvent, temperature, and waste generation. This critical reading not only underpinned my own experimental work but sharpened my ability to evaluate mechanistic proposals and identify genuine methodological innovations versus incremental variations.
+      </div>
+
+      <div class="outcome">Produced a structured comparative analysis; developed critical evaluation skills central to identifying the gap that motivated the C-2 arylation project.</div>
+
+      <div class="tags">
+        <span class="tag">SciFinder</span>
+        <span class="tag">Reaxys</span>
+        <span class="tag">Green Chemistry Metrics</span>
+        <span class="tag">Comparative Catalysis</span>
+        <span class="tag">Ferrier Reaction</span>
+      </div>
+    </div>
+
+    </div><!-- /cms-exp-section -->
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     RESEARCH VISION ★
+==================================================== -->
+<section id="vision">
+  <div class="wrap">
+    <div class="sl reveal">Research Vision</div>
+    <h2 class="sh reveal d1">The Problems I Want to Solve</h2>
+    <p class="sd reveal d2">My PhD goal — in the words a professor needs to hear in the first 60 seconds.</p>
+
+    <div class="vision-box reveal">
+      <p id="cms-vision-text" class="vision-text">
+        "Two of the most pressing challenges in modern synthetic chemistry converge precisely at the boundary of my expertise. First: <strong>the carbohydrate chemical space — arguably the most structurally complex and biologically essential class of natural products — remains extraordinarily difficult to access synthetically.</strong> Despite a century of glycochemistry, the selective construction of C-glycosidic bonds, particularly with control over anomeric configuration and C-2 functionality, continues to require lengthy routes incompatible with rapid analogue synthesis in drug discovery. My Ferrier-arylation work has given me a direct window into this problem, and I believe <em>new C–H and C–M activation strategies applied to glycal platforms</em> offer genuinely unexplored solutions.
+        <br/><br/>
+        Second: <strong>the enzyme family of LPMOs has revealed that nature solves the problem of activating inert C–H bonds in polysaccharides using elegant copper coordination chemistry</strong> — a feat synthetic chemists have only begun to replicate. My JRF work at NIT Calicut positions me at this exact frontier. My PhD ambition is to <em>design the next generation of biomimetic Cu catalysts</em> that bridge the mechanistic precision of the LPMO active site with the synthetic accessibility demanded by scalable biomass valorisation."
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-ico">🍬</div>
+          <div class="pillar-t">Glycochemistry & C-Glycosides</div>
+          <div class="pillar-d">New stereoselective routes to C-aryl glycosides via Pd/Ni-catalysed C–H and C–M functionalization of glycal platforms</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-ico">🪨</div>
+          <div class="pillar-t">Biomimetic LPMO Catalysis</div>
+          <div class="pillar-d">Rational design of Cu-ligand systems that replicate LPMO's oxidative C–H cleavage — toward sustainable cellulose conversion</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-ico">💊</div>
+          <div class="pillar-t">Drug-Relevant Intermediates</div>
+          <div class="pillar-d">Applying glycochemistry methodology to access scaffolds relevant to glycosidase inhibitors, antibiotics, and anticancer glycoconjugates</div>
+        </div>
+      </div>
+
+      <div class="target-sec">
+        <h4>European Research Groups I Admire — and Precisely Why</h4>
+        <div class="tgroup">
+          <div class="tg-item">
+            <div class="tg-pi">Prof. Peter H. Seeberger — Max Planck Institute of Colloids and Interfaces, Germany</div>
+            <div class="tg-inst">Automated glycan assembly, vaccine development, continuous-flow carbohydrate synthesis</div>
+            <div class="tg-why">Prof. Seeberger's automated glycan assembly platform directly addresses the accessibility problem I encountered in my own glycal chemistry. His group's approach to combinatorial glycoside synthesis and use of glycan arrays in drug discovery represents exactly the translational bridge I want to build — taking my Ferrier methodology toward high-throughput application.</div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-pi">Prof. Jeroen D. C. Codée — Leiden University, Netherlands</div>
+            <div class="tg-inst">Glycan synthesis, conformational analysis, stereoselective glycosylation</div>
+            <div class="tg-why">The Codée group's mechanistic rigour in understanding anomeric selectivity, neighbouring-group participation, and the conformational dynamics of glycosyl donors closely mirrors the stereochemical questions I encountered in my C-2 arylation work. Their computational/experimental approach to glycosylation mechanism is something I want to contribute to and learn from.</div>
+          </div>
+          <div class="tg-item">
+            <div class="tg-pi">Prof. Bert Sels — KU Leuven, Belgium</div>
+            <div class="tg-inst">Sustainable catalysis, biomass valorisation, heterogeneous catalysis for lignocellulosic conversion</div>
+            <div class="tg-why">Prof. Sels's group works precisely at the interface of catalysis and biomass conversion that defines my JRF project — and their integration of material science, mechanistic chemistry, and sustainability metrics is a model I aspire to follow. A PhD in this group would allow me to extend my LPMO-mimicry work into real heterogeneous systems with direct bio-refinery impact.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     PUBLICATIONS
+==================================================== -->
+<section id="publications">
+  <div class="wrap">
+    <div class="sl reveal">Publications & Thesis</div>
+    <h2 class="sh reveal d1">Scientific Output</h2>
+    <p class="sd reveal d2">Peer-reviewed manuscripts in preparation, and thesis work.</p>
+
+    <!-- Paper 1 -->
+    <div id="cms-pub-section">
+    <div class="pub-card reveal">
+      <div class="pub-type journal">Journal</div>
+      <div>
+        <div class="pub-title">A Versatile Synthetic Route to C-2 Aryl Glycosides under Mild Conditions</div>
+        <div class="pub-authors"><strong>R. Sridhar</strong> et al. · Research Advisor: Prof. J. Kandasamy, Pondicherry University</div>
+        <div class="pub-journal">Manuscript under preparation — target journal: <em>Organic Letters / European Journal of Organic Chemistry</em></div>
+        <div class="pub-meta">
+          <span class="pbadge prep">Manuscript in Preparation</span>
+        </div>
+        <ul class="pub-bullets">
+          <li>Contributed to developing a <strong>palladium-catalysed arylation protocol for pseudoglycals</strong> under ambient conditions — enabling access to C-2 aryl glycosides that are otherwise difficult to synthesise.</li>
+          <li>Investigated stereochemical outcomes, protecting group participation, and reaction scope across various pyranosides; identified conditions that favour the desired anomer with high selectivity.</li>
+          <li>Synthetic route proceeds from D-rhamnal (itself synthesised from D-glucal in the companion thesis project), establishing a two-stage platform from simple precursors to complex C-glycosides.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Thesis -->
+    <div class="pub-card reveal">
+      <div class="pub-type thesis">Thesis</div>
+      <div>
+        <div class="pub-title">Strategic Synthesis of D-Rhamnal from D-Glucal and Its Application in Novel C-2 Aryl Glycoside Synthesis</div>
+        <div class="pub-authors"><strong>R. Sridhar</strong> · Supervised by Prof. Dr. J. Kandasamy</div>
+        <div class="pub-journal">M.Sc. Dissertation · Department of Chemistry · Pondicherry University · 2025</div>
+        <div class="pub-meta">
+          <span class="pbadge grade">M.Sc. Thesis · CGPA 8.75 / 10</span>
+          <span class="pbadge jrf">3rd University Rank</span>
+        </div>
+        <ul class="pub-bullets">
+          <li>Developed an efficient synthetic route to <strong>D-Rhamnal from D-Glucal</strong>; product confirmed by NMR (¹H, ¹³C, DEPT, COSY) and ESI-HRMS.</li>
+          <li>Ferrier-I rearrangement study across four glycal precursors (D-glucal, D-galactal, D-rhamnal, L-rhamnal) with <strong>yields exceeding 95%</strong> under optimised conditions.</li>
+        </ul>
+      </div>
+    </div>
+    </div><!-- /cms-pub-section -->
+  </div>
+</section>
+<section id="skills">
+  <div class="wrap">
+    <div class="sl reveal">Technical Skills</div>
+    <h2 class="sh reveal d1">What I Can Actually Do</h2>
+    <p class="sd reveal d2">Context-rich proficiency levels — not a keyword list. Each skill reflects real hands-on use.</p>
+
+    <div class="skills-grid">
+
+      <div class="sg reveal">
+        <div class="sg-title"><span class="ico">⚗️</span> Synthetic Techniques</div>
+        <div class="sk-rows">
+          <div class="sk-row"><span class="sk-name">Multi-step Org. Synthesis</span><div class="sk-track"><div class="sk-fill" style="width:92%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">Column Chromatography</span><div class="sk-track"><div class="sk-fill" style="width:95%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">Inert-atmosphere Rxns</span><div class="sk-track"><div class="sk-fill" style="width:72%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">Reflux / Distillation</span><div class="sk-track"><div class="sk-fill" style="width:90%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">Recrystallisation</span><div class="sk-track"><div class="sk-fill" style="width:90%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">Rotary Evaporation</span><div class="sk-track"><div class="sk-fill" style="width:92%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">TLC Monitoring</span><div class="sk-track"><div class="sk-fill" style="width:95%"></div></div><span class="sk-lv">Expert</span></div>
+        </div>
+      </div>
+
+      <div class="sg reveal d1">
+        <div class="sg-title"><span class="ico">🔬</span> Characterisation</div>
+        <div class="sk-rows">
+          <div class="sk-row"><span class="sk-name">¹H / ¹³C NMR</span><div class="sk-track"><div class="sk-fill" style="width:90%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">2D NMR (COSY, DEPT)</span><div class="sk-track"><div class="sk-fill" style="width:80%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">ESI-HRMS</span><div class="sk-track"><div class="sk-fill" style="width:82%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">FT-IR</span><div class="sk-track"><div class="sk-fill" style="width:85%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">UV-Vis Spectroscopy</span><div class="sk-track"><div class="sk-fill" style="width:78%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">Cyclic Voltammetry</span><div class="sk-track"><div class="sk-fill" style="width:55%"></div></div><span class="sk-lv">Growing</span></div>
+        </div>
+      </div>
+
+      <div class="sg reveal d2">
+        <div class="sg-title"><span class="ico">💻</span> Computational / Software</div>
+        <div class="sk-rows">
+          <div class="sk-row"><span class="sk-name">ChemDraw / ChemSketch</span><div class="sk-track"><div class="sk-fill" style="width:92%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">MestReNova</span><div class="sk-track"><div class="sk-fill" style="width:82%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">Gaussian-09 (DFT)</span><div class="sk-track"><div class="sk-fill sage" style="width:48%"></div></div><span class="sk-lv">Basic</span></div>
+          <div class="sk-row"><span class="sk-name">GaussView / Spartan</span><div class="sk-track"><div class="sk-fill sage" style="width:50%"></div></div><span class="sk-lv">Basic</span></div>
+          <div class="sk-row"><span class="sk-name">PyRx / Discovery Studio</span><div class="sk-track"><div class="sk-fill sage" style="width:60%"></div></div><span class="sk-lv">Growing</span></div>
+          <div class="sk-row"><span class="sk-name">SigmaPlot / OriginPro</span><div class="sk-track"><div class="sk-fill" style="width:72%"></div></div><span class="sk-lv">Proficient</span></div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Molecular Docking</span>
+          <span class="stag">ADMET Filtering</span>
+          <span class="stag">Homology Modelling</span>
+          <span class="stag">Drug-Likeness (Lipinski)</span>
+        </div>
+      </div>
+
+      <div class="sg reveal d3">
+        <div class="sg-title"><span class="ico">🧪</span> Domain Knowledge</div>
+        <div class="sk-rows">
+          <div class="sk-row"><span class="sk-name">Carbohydrate Chemistry</span><div class="sk-track"><div class="sk-fill" style="width:90%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">Glycal / Ferrier Chem.</span><div class="sk-track"><div class="sk-fill" style="width:90%"></div></div><span class="sk-lv">Expert</span></div>
+          <div class="sk-row"><span class="sk-name">Pd-Catalysis / Cross-Coupling</span><div class="sk-track"><div class="sk-fill" style="width:72%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">Biomimetic / Bio-inspired</span><div class="sk-track"><div class="sk-fill" style="width:60%"></div></div><span class="sk-lv">Growing</span></div>
+          <div class="sk-row"><span class="sk-name">Scientific Writing</span><div class="sk-track"><div class="sk-fill" style="width:78%"></div></div><span class="sk-lv">Proficient</span></div>
+          <div class="sk-row"><span class="sk-name">SciFinder / Reaxys</span><div class="sk-track"><div class="sk-fill" style="width:88%"></div></div><span class="sk-lv">Proficient</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     AWARDS
+==================================================== -->
+<section id="awards">
+  <div class="wrap">
+    <div class="sl reveal">Honors & Awards</div>
+    <h2 class="sh reveal d1">Recognition</h2>
+    <p class="sd reveal d2">Competitive qualifications, academic excellence, and merit-based recognition — with context for international readers.</p>
+
+    <div id="cms-awards-section" class="awards-grid">
+      <div class="aw-card reveal">
+        <div class="aw-ico">🏅</div>
+        <div>
+          <div class="aw-title">GATE 2025 — Chemistry (CY) Qualified</div>
+          <div class="aw-body">Graduate Aptitude Test in Engineering — India's most competitive national-level exam for postgraduate science students. Qualifies candidates for JRF positions and PhD admissions at IITs, NITs, and IISERs. Approximately 15,000–20,000 candidates sit this exam annually; GATE qualification is required for funded research positions.</div>
+          <div class="aw-year">2025</div>
+        </div>
+      </div>
+
+      <div class="aw-card reveal d1">
+        <div class="aw-ico">🏅</div>
+        <div>
+          <div class="aw-title">CSIR-NET June 2025 — Qualified (PhD Only)</div>
+          <div class="aw-body">Council of Scientific & Industrial Research — National Eligibility Test for Chemical Sciences. One of India's most rigorous national research aptitude tests — qualifying in the PhD-only category demonstrates strong research aptitude and theoretical mastery across all branches of chemistry.</div>
+          <div class="aw-year">2025</div>
+        </div>
+      </div>
+
+      <div class="aw-card reveal d2">
+        <div class="aw-ico">🥉</div>
+        <div>
+          <div class="aw-title">Merit Cum Means Scholarship — 3rd University Rank</div>
+          <div class="aw-body">Awarded by Pondicherry University for outstanding academic performance in M.Sc. Chemistry. Ranked 3rd out of all M.Sc. Chemistry students in the university — recognising sustained academic excellence across all four semesters (CGPA 8.75/10).</div>
+          <div class="aw-year">2023–2025 · Pondicherry University</div>
+        </div>
+      </div>
+
+      <div class="aw-card reveal d3">
+        <div class="aw-ico">🎖️</div>
+        <div>
+          <div class="aw-title">Prof. A.C. Joseph Medal — 178th College Day</div>
+          <div class="aw-body">Prestigious medal awarded at the annual College Day of St. Joseph's College, Tiruchirappalli — recognising outstanding academic and extracurricular contribution. Named after Prof. A.C. Joseph, a distinguished alumnus of the college.</div>
+          <div class="aw-year">2022 · St. Joseph's College</div>
+        </div>
+      </div>
+
+      <div class="aw-card reveal">
+        <div class="aw-ico">🏸</div>
+        <div>
+          <div class="aw-title">Consecutive Inter-Collegiate Ball Badminton Champion</div>
+          <div class="aw-body">Led the college Ball Badminton team to back-to-back championship victories at Bharathidasan University inter-collegiate tournaments. As Team Captain, responsible for team strategy, training coordination, and representing the institution in state-level competition.</div>
+          <div class="aw-year">2022 & 2023 · Bharathidasan University</div>
+        </div>
+      </div>
+
+      <div class="aw-card reveal d1">
+        <div class="aw-ico">⭐</div>
+        <div>
+          <div class="aw-title">Special Award — Sports & Games, Achievers Day</div>
+          <div class="aw-body">Recognised on Achievers Day at St. Joseph's College for exceptional contribution to inter-collegiate sports. Demonstrates leadership, team coordination, and the discipline required both on the field and in the laboratory.</div>
+          <div class="aw-year">2023 · St. Joseph's College, Tiruchirappalli</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     CONFERENCES
+==================================================== -->
+<section id="conferences">
+  <div class="wrap">
+    <div class="sl reveal">Conferences & Workshops</div>
+    <h2 class="sh reveal d1">Scientific Community Engagement</h2>
+    <p class="sd reveal d2">Events attended, scientific networks built, and exposure to cutting-edge research directions.</p>
+
+    <div id="cms-conf-section" class="conf-list">
+      <div class="conf-item reveal">
+        <div class="conf-year">2025</div>
+        <div>
+          <div class="conf-name">ICFCS 2025 — International Conference on Frontiers in Chemical Sciences</div>
+          <div class="conf-role">Participant & Student Volunteer — engaged with international researchers across organic, inorganic, and materials chemistry</div>
+        </div>
+        <div class="conf-loc">India</div>
+      </div>
+
+      <div class="conf-item reveal">
+        <div class="conf-year">Nov 2024</div>
+        <div>
+          <div class="conf-name">Indo-ASEAN Symposium on Organic Synthesis and Medicinal Chemistry</div>
+          <div class="conf-role">Participant — exposure to organic synthesis and drug discovery research from Indian and ASEAN institutions</div>
+        </div>
+        <div class="conf-loc">India</div>
+      </div>
+
+      <div class="conf-item reveal">
+        <div class="conf-year">Dec 2024</div>
+        <div>
+          <div class="conf-name">National Workshop on Green Hydrogen: Technology to Application</div>
+          <div class="conf-role">Participant — aligned with interest in sustainable catalysis and energy-relevant chemistry</div>
+        </div>
+        <div class="conf-loc">India</div>
+      </div>
+
+      <div class="conf-item reveal">
+        <div class="conf-year">2024</div>
+        <div>
+          <div class="conf-name">RACES 2024 — National Conference on Recent Advancements in Chemistry & Environmental Sciences</div>
+          <div class="conf-role">Participant — exposure to environmental and analytical chemistry frontiers</div>
+        </div>
+        <div class="conf-loc">India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     COURSES
+==================================================== -->
+<section id="courses">
+  <div class="wrap">
+    <div class="sl reveal">Courses & Training</div>
+    <h2 class="sh reveal d1">Continuous Learning</h2>
+    <p class="sd reveal d2">Formal training beyond degree coursework — demonstrating initiative and broadening technical range.</p>
+
+    <div class="courses-grid">
+      <div class="course-group reveal">
+        <div class="cg-inst">Discovery Boulevard</div>
+        <div class="cg-type">Online · Computational Drug Discovery · 2025</div>
+        <div class="course-row"><span class="cname">Molecular Docking & Multi-Ligand Screening</span><span class="cyear">2025</span></div>
+        <div class="course-row"><span class="cname">Homology Modelling</span><span class="cyear">2025</span></div>
+        <div class="course-row"><span class="cname">Drug-Likeness Filtering & ADMET Analysis</span><span class="cyear">2025</span></div>
+      </div>
+
+      <div class="course-group reveal d1">
+        <div class="cg-inst">St. Joseph's College</div>
+        <div class="cg-type">B.Sc. Coursework · Tiruchirappalli</div>
+        <div class="course-row"><span class="cname">Pharmaceutical Chemistry</span><span class="cyear">2021</span></div>
+        <div class="course-row"><span class="cname">Separation & Instrumental Techniques</span><span class="cyear">2022</span></div>
+        <div class="course-row"><span class="cname">Food Standards & Quality Control</span><span class="cyear">2023</span></div>
+      </div>
+
+      <div class="course-group reveal d2">
+        <div class="cg-inst">CIPET–IPT Kochi</div>
+        <div class="cg-type">Online · 2025</div>
+        <div class="course-row"><span class="cname">Polymers in Electronics</span><span class="cyear">2025</span></div>
+      </div>
+
+      <div class="course-group reveal d3">
+        <div class="cg-inst">Bharathidasan University</div>
+        <div class="cg-type">Diploma · Computing</div>
+        <div class="course-row"><span class="cname">Office Automation</span><span class="cyear">2016</span></div>
+        <div class="course-row"><span class="cname">Programming Techniques</span><span class="cyear">2017</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     LEADERSHIP
+==================================================== -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="sl reveal">Leadership & Additional Information</div>
+    <h2 class="sh reveal d1">Beyond the Bench</h2>
+
+    <div class="ls-grid">
+      <div class="ls-card reveal">
+        <div class="ls-ico">🏸</div>
+        <div class="ls-title">Team Captain — Ball Badminton</div>
+        <div class="ls-body">Led the college team to consecutive inter-collegiate championships at Bharathidasan University (2022 & 2023). Responsibilities included strategy, training coordination, and representing the institution at state level — building leadership, resilience, and teamwork under pressure.</div>
+      </div>
+      <div class="ls-card reveal d1">
+        <div class="ls-ico">🔬</div>
+        <div class="ls-title">14th Chemistry Research Drive (CRD-2025) — RJSF</div>
+        <div class="ls-body">Participated in the Chemistry Research Drive organised by the Ramanujan Junior Science Forum — a competitive, research-focused engagement platform for emerging chemists. Demonstrates commitment to the Indian chemistry research community and early career professional development.</div>
+      </div>
+      <div class="ls-card reveal d2">
+        <div class="ls-ico">🌍</div>
+        <div class="ls-title">Languages & Communication</div>
+        <div class="ls-body"><strong>English</strong> — C1 level (academic and scientific communication). <strong>Tamil</strong> — Native. <strong>Telugu</strong> — Native. Comfortable writing and presenting in English; have reviewed literature, written thesis, and presented posters in English throughout M.Sc. studies.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     REFERENCES
+==================================================== -->
+<section id="references">
+  <div class="wrap">
+    <div class="sl reveal">References</div>
+    <h2 class="sh reveal d1">Who Can Speak to My Work</h2>
+    <p class="sd reveal d2">Supervisors who have directly observed and evaluated my research — available to correspond with prospective PhD supervisors.</p>
+
+    <div class="ref-grid">
+      <div class="ref-card reveal">
+        <div class="ref-av">MS</div>
+        <div class="ref-name">Dr. Muniyandi Sankaralingam</div>
+        <div class="ref-pos">Associate Professor & Current Research Advisor</div>
+        <div class="ref-inst">Department of Chemistry<br/>NIT Calicut, India</div>
+        <a href="/cdn-cgi/l/email-protection#29445a484742485b484540474e48446947405d4a07484a074047" class="ref-email"><span class="__cf_email__" data-cfemail="2b46584a45404a594a4742454c4a466b45425f48054a48054245">[email&#160;protected]</span></a>
+      </div>
+
+      <div class="ref-card reveal d1">
+        <div class="ref-av">JK</div>
+        <div class="ref-name">Prof. Dr. Jeyakumar Kandasamy</div>
+        <div class="ref-pos">Associate Professor & M.Sc. Thesis Advisor</div>
+        <div class="ref-inst">Department of Chemistry<br/>Pondicherry University, India</div>
+        <a href="/cdn-cgi/l/email-protection#ea808f938b819f878b98c4898293aa9a85848e839f8483c48b89c48384" class="ref-email"><span class="__cf_email__" data-cfemail="204a4559414b554d41520e43485960504f4e4449554e490e41430e494e">[email&#160;protected]</span></a>
+      </div>
+
+      <div class="ref-card reveal d2">
+        <div class="ref-av">SS</div>
+        <div class="ref-name">Prof. Dr. S. Sabiah</div>
+        <div class="ref-pos">Professor, Department of Chemistry</div>
+        <div class="ref-inst">Pondicherry University, India</div>
+        <a href="/cdn-cgi/l/email-protection#f48795969d959c87b4849b9a909d819a9dda9597da9d9a" class="ref-email"><span class="__cf_email__" data-cfemail="691a080b0008011a291906070d001c070047080a470007">[email&#160;protected]</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ====================================================
+     CONTACT
+==================================================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="avail">
+        <div class="avail-dot"></div>
+        <span id="cms-avail-text">Actively seeking PhD positions — Europe 2025/26</span>
+      </div>
+
+      <h2 class="contact-h">Let's Discuss<br/><em>Science Together</em></h2>
+
+      <p id="cms-contact-sub" class="contact-sub">
+        I welcome emails from professors whose research connects to glycochemistry, biomimetic catalysis, or synthetic methodology — even before a formal position is advertised. The best collaborations start with a conversation about ideas, not a vacancy notice.
+      </p>
+
+      <a id="cms-contact-email" href="mailto:Sridhar20ch@gmail.com" class="contact-email">Sridhar20ch@gmail.com</a>
+
+      <div class="contact-btns">
+        <a id="cms-linkedin-btn" href="https://www.linkedin.com/in/sridhar-r-chem/" target="_blank" class="btn-ghost">LinkedIn</a>
+        <a id="cms-orcid-btn" href="https://orcid.org/0009-0001-3602-6240" target="_blank" class="btn-ghost">ORCID: 0009-0001-3602-6240</a>
+        <a id="cms-phone-btn" href="tel:+919486941040" class="btn-ghost">+91 94869 41040</a>
+        <a id="cms-cv-btn" href="YOUR_CV_LINK.pdf" target="_blank" class="btn-p cms-cv-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 R. Sridhar · Synthetic Organic Chemistry · NIT Calicut · Pondicherry University</span>
+</footer>
+
+
+<script>
+// ── CMS HYDRATION (reads from admin panel localStorage data) ──────────────
+(function(){
+  try{
+    var raw=localStorage.getItem('sridhar_portfolio_data');
+    if(!raw) return;
+    var d=JSON.parse(raw);
+    var f=d.fields||{};
+    var s=d.sections||{};
+    var setT=function(id,v){if(v===undefined||v===null||v==='')return;var e=document.getElementById(id);if(e)e.textContent=v;};
+    var setH=function(id,v){if(v===undefined||v===null||v==='')return;var e=document.getElementById(id);if(e)e.innerHTML=v;};
+    // Simple text fields
+    setT('cms-status-text',f.statusText);
+    setH('cms-hero-tagline',f.heroTagline);
+    setT('cms-stat-cgpa',f.cgpa);
+    setT('cms-stat-rank',f.rank);
+    setT('cms-stat-yield',f.yieldStat);
+    setT('cms-stat-papers',f.papersStat);
+    setH('cms-about-p1',f.aboutP1);
+    setH('cms-about-p2',f.aboutP2);
+    setH('cms-about-p3',f.aboutP3);
+    setT('cms-meta-position',f.metaPosition);
+    setT('cms-meta-cgpa',f.metaCgpa);
+    setT('cms-meta-quals',f.metaQuals);
+    setT('cms-meta-langs',f.metaLangs);
+    setT('cms-meta-region',f.targetRegion);
+    setT('cms-avail-text',f.availMsg);
+    setH('cms-contact-sub',f.contactSub);
+    // Email
+    if(f.email){
+      var emailEl=document.getElementById('cms-contact-email');
+      if(emailEl){emailEl.href='mailto:'+f.email;emailEl.textContent=f.email;}
+      document.querySelectorAll('a.ilink[href^="mailto:"]').forEach(function(a){a.href='mailto:'+f.email;});
+    }
+    // Phone
+    if(f.phone){
+      var phoneBtn=document.getElementById('cms-phone-btn');
+      if(phoneBtn){phoneBtn.href='tel:'+f.phone.replace(/\s/g,'');phoneBtn.textContent=f.phone;}
+    }
+    // Links
+    if(f.linkedin){
+      document.querySelectorAll('a[href*="linkedin"]').forEach(function(a){a.href=f.linkedin;});
+    }
+    if(f.orcid){
+      document.querySelectorAll('a[href*="orcid"]').forEach(function(a){a.href=f.orcid;});
+    }
+    if(f.cvLink){
+      document.querySelectorAll('.cms-cv-link, a[href*="CV_LINK"]').forEach(function(a){a.href=f.cvLink;});
+      // also hero btn
+      document.querySelectorAll('a.btn-p').forEach(function(a){if(a.textContent.includes('Download'))a.href=f.cvLink;});
+    }
+    // Section HTML overrides
+    if(s.experience && s.experience.trim()){setH('cms-exp-section',s.experience);}
+    if(s.publications && s.publications.trim()){setH('cms-pub-section',s.publications);}
+    if(s.awards && s.awards.trim()){setH('cms-awards-section',s.awards);}
+    if(s.conferences && s.conferences.trim()){setH('cms-conf-section',s.conferences);}
+    if(s.visionText && s.visionText.trim()){setH('cms-vision-text',s.visionText);}
+  }catch(err){console.warn('Portfolio CMS hydration error:',err);}
+})();
+</script>
+
+<script>
+// Scroll reveal
+const revEls = document.querySelectorAll('.reveal');
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+}, {threshold:.1});
+revEls.forEach(el => ro.observe(el));
+
+// Skill bar animation
+document.querySelectorAll('.sk-fill').forEach(bar => {
+  const w = bar.style.width;
+  bar.style.width = '0%';
+  const bo = new IntersectionObserver(([e]) => {
+    if(e.isIntersecting){
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{ bar.style.width=w; }));
+      bo.unobserve(bar);
+    }
+  },{threshold:.3});
+  bo.observe(bar);
+});
+
+// Active nav highlight
+const navSecs = document.querySelectorAll('section[id]');
+const navLinks2 = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  navSecs.forEach(s=>{ if(window.scrollY>=s.offsetTop-130) cur=s.id; });
+  navLinks2.forEach(a=>{ a.style.color=''; if(a.getAttribute('href')==='#'+cur) a.style.color='var(--amber)'; });
+});
+
+// Mobile nav
+let open=false;
+function toggleNav(){
+  open=!open;
+  const nl=document.querySelector('.nav-links');
+  if(open){
+    Object.assign(nl.style,{display:'flex',flexDirection:'column',position:'absolute',
+      top:'100%',left:'0',right:'0',background:'rgba(250,248,243,.97)',
+      padding:'1.5rem 2.5rem',borderBottom:'1px solid #ddd8cc',gap:'1.2rem'});
+  } else { nl.style.cssText=''; }
+}
+</script>
+</body>
+</html>
