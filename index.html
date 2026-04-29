@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>R. Sridhar — Organic Chemist · PhD Applicant 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23040d1e'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='8' fill='none' stroke='%2300c9a7' stroke-width='1.8'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='8' fill='none' stroke='%2300c9a7' stroke-width='1.8' transform='rotate(60 32 32)'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='8' fill='none' stroke='%23e8a020' stroke-width='1.8' transform='rotate(120 32 32)'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2300c9a7'/%3E%3C/svg%3E"/>
+<meta name="description" content="R. Sridhar — Organic chemist specialising in glycochemistry, Ferrier rearrangements, and biomimetic Cu catalysis. JRF at NIT Calicut. Seeking PhD in Europe 2026."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   CRYSTALLOGRAPHIC PRECISION — DESIGN SYSTEM v4 (L99 FINAL)
+   Palette: Abyssal Navy · Bioluminescent Teal · Spectral Gold
+            Orbital Lavender · Plasma Rose
+══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:    #030c1b;
+  --bg1:   #061323;
+  --bg2:   #0b1c35;
+  --bg3:   #101f3a;
+  --card:  #0e2040;
+  --cardH: #132850;
+  --teal:  #00c9a7;
+  --tealL: #2ddfc0;
+  --tealD: #009e85;
+  --tB:    rgba(0,201,167,.28);
+  --tG:    rgba(0,201,167,.09);
+  --tG2:   rgba(0,201,167,.18);
+  --gold:  #e8a020;
+  --goldL: #f5bc48;
+  --gB:    rgba(232,160,32,.3);
+  --gG:    rgba(232,160,32,.09);
+  --lav:   #9b8fff;
+  --lavB:  rgba(155,143,255,.3);
+  --lavG:  rgba(155,143,255,.09);
+  --rose:  #ff6b8a;
+  --roseG: rgba(255,107,138,.09);
+  --roseB: rgba(255,107,138,.28);
+  --grn:   #22c55e;
+  --ink:   #cde2ff;
+  --inkS:  #6e93b8;
+  --inkF:  #334d6a;
+  --bdr:   rgba(255,255,255,.065);
+  --bdrE:  rgba(0,201,167,.22);
+  --bdrH:  rgba(0,201,167,.45);
+  --serif: 'Cormorant Garamond',Georgia,serif;
+  --sans:  'Inter',system-ui,sans-serif;
+  --mono:  'JetBrains Mono',monospace;
+  --r:10px;--rl:18px;--rxl:24px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --sh:0 4px 32px rgba(0,0,0,.5);
+  --shT:0 0 0 1px var(--tB),0 12px 40px rgba(0,201,167,.12);
+  --shG:0 0 0 1px var(--gB),0 12px 40px rgba(232,160,32,.12);
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+::selection{background:var(--tG2);color:var(--teal)}
+a{color:var(--teal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--tealL)}
+img{display:block;max-width:100%}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--tealD);border-radius:99px}
+
+/* ══════════════════════════════════════
+   PRELOADER
+══════════════════════════════════════ */
+#preloader{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+#preloader.done{opacity:0;pointer-events:none;transform:scale(1.04)}
+.pl-orb{position:relative;width:80px;height:80px}
+.pl-orb svg{width:100%;height:100%}
+.pl-orb-ring{fill:none;stroke-width:1.5;stroke-dasharray:220;stroke-dashoffset:220;
+  animation:pl-draw 1.4s var(--ease) forwards}
+@keyframes pl-draw{to{stroke-dashoffset:0}}
+.pl-text{font-family:var(--mono);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--inkF);animation:pl-fade 1.4s var(--ease) .3s forwards;opacity:0}
+@keyframes pl-fade{to{opacity:1;color:var(--teal)}}
+
+/* ══════════════════════════════════════
+   CUSTOM CURSOR
+══════════════════════════════════════ */
+#cursor{
+  position:fixed;top:0;left:0;z-index:9998;pointer-events:none;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--teal);mix-blend-mode:screen;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 10px rgba(0,201,167,.8);
+}
+#cursor-ring{
+  position:fixed;top:0;left:0;z-index:9997;pointer-events:none;
+  width:26px;height:26px;border-radius:50%;
+  border:1px solid rgba(0,201,167,.5);
+  transform:translate(-50%,-50%);
+  transition:width .18s,height .18s,opacity .18s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor{width:10px;height:10px;background:var(--gold)}
+body:has(a:hover) #cursor-ring,
+body:has(button:hover) #cursor-ring{width:38px;height:38px;border-color:var(--gold)}
+@media(hover:none){#cursor,#cursor-ring{display:none}}
+
+/* ══════════════════════════════════════
+   LAYOUT
+══════════════════════════════════════ */
+.wrap{max-width:1100px;margin:0 auto;padding:0 2.2rem}
+section{padding:6rem 0;position:relative;overflow:hidden}
+section>.wrap{position:relative;z-index:2}
+
+/* ══════════════════════════════════════
+   SCROLL PROGRESS
+══════════════════════════════════════ */
+#scroll-prog{
+  position:fixed;top:0;left:0;height:2px;z-index:998;width:0%;
+  background:linear-gradient(90deg,var(--teal),var(--lav),var(--gold));
+  box-shadow:0 0 8px rgba(0,201,167,.6);
+  transition:width .08s linear;border-radius:0 2px 2px 0;
+}
+
+/* ══════════════════════════════════════
+   NAV
+══════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 2.5rem;
+  background:rgba(3,12,27,.82);
+  backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+  border-bottom:1px solid var(--bdr);
+  transition:all .35s var(--ease);
+}
+nav.scrolled{
+  background:rgba(3,12,27,.96);
+  border-bottom-color:rgba(0,201,167,.12);
+  box-shadow:0 4px 32px rgba(0,0,0,.4);
+}
+.nav-brand{
+  font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  color:var(--ink);letter-spacing:.03em;display:flex;align-items:center;gap:.5rem
+}
+.nav-brand .nb-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--teal);
+  box-shadow:0 0 10px var(--teal);animation:hpulse 2.5s ease infinite;flex-shrink:0
+}
+.nav-brand span{color:var(--teal)}
+.nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center}
+.nav-links a{
+  font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--inkS);transition:color .2s;position:relative;padding-bottom:3px;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
+  background:var(--teal);transition:width .28s var(--ease);
+}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--teal)}
+.nav-cta{
+  font-size:.7rem!important;
+  background:var(--tG2)!important;
+  border:1px solid var(--tB)!important;
+  color:var(--teal)!important;padding:.42rem 1.15rem!important;
+  border-radius:var(--r)!important;font-weight:600!important;
+  transition:all .22s!important;
+}
+.nav-cta:hover{background:var(--teal)!important;color:var(--bg)!important;
+  box-shadow:0 0 18px rgba(0,201,167,.35)!important}
+.nav-cta::after{display:none!important}
+.ham{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  padding:5px;background:none;border:none;
+}
+.ham span{display:block;width:22px;height:1.5px;background:var(--ink);
+  border-radius:2px;transition:all .28s var(--ease)}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* Mobile nav */
+#mob-nav{
+  display:none;position:fixed;inset:0;z-index:490;
+  background:rgba(3,12,27,.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;
+  overflow-y:auto;padding:2rem 1.5rem;
+}
+#mob-nav.open{display:flex}
+#mob-nav a{
+  font-family:var(--serif);font-size:clamp(1.6rem,7vw,2.4rem);
+  color:rgba(205,226,255,.75);transition:color .2s;position:relative;
+  text-align:center;
+}
+#mob-nav a:hover,#mob-nav a:active{color:var(--teal)}
+
+/* ══════════════════════════════════════
+   SECTION LABELS
+══════════════════════════════════════ */
+.sl{
+  font-family:var(--mono);font-size:.63rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--teal);display:flex;align-items:center;gap:.7rem;margin-bottom:.6rem;
+}
+.sl::before{content:'';width:20px;height:1px;background:var(--teal);flex-shrink:0;
+  box-shadow:0 0 6px var(--teal)}
+.sh{
+  font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:.45rem;
+}
+.sh .grad{
+  background:linear-gradient(135deg,var(--teal) 0%,var(--lav) 60%,var(--teal) 100%);
+  background-size:200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:gradShift 6s linear infinite;
+}
+@keyframes gradShift{0%{background-position:0%}100%{background-position:200%}}
+@keyframes aboutRing{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.04) rotate(1.5deg)}}
+@keyframes aboutFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.sd{color:var(--inkS);font-size:.93rem;max-width:560px;margin-bottom:3rem;line-height:1.85}
+
+/* ══════════════════════════════════════
+   REVEAL ANIMATIONS
+══════════════════════════════════════ */
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease);
+  will-change:opacity,transform;
+}
+.reveal.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+.d3{transition-delay:.32s}.d4{transition-delay:.45s}.d5{transition-delay:.58s}
+.slide-l{opacity:0;transform:translateX(-32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.slide-r{opacity:0;transform:translateX(32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.slide-l.on,.slide-r.on{opacity:1;transform:none}
+.scale-in{opacity:0;transform:scale(.9);transition:opacity .7s var(--spring),transform .7s var(--spring)}
+.scale-in.on{opacity:1;transform:none}
+
+/* ══════════════════════════════════════
+   SECTION DIVIDER
+══════════════════════════════════════ */
+.sec-div{
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,var(--bdrE) 50%,transparent 100%);
+  position:relative;overflow:visible;
+}
+.sec-div::after{
+  content:'';position:absolute;top:-2px;left:50%;transform:translateX(-50%);
+  width:6px;height:6px;border-radius:50%;background:var(--teal);
+  box-shadow:0 0 12px var(--teal);
+}
+
+/* ══════════════════════════════════════
+   LATTICE BACKGROUND
+══════════════════════════════════════ */
+.lattice{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle,rgba(0,201,167,.048) 1px,transparent 1px),
+    radial-gradient(circle,rgba(0,201,167,.022) 1px,transparent 1px);
+  background-size:44px 44px,88px 88px;
+  background-position:0 0,22px 22px;
+  animation:latticeDrift 40s linear infinite;
+}
+@keyframes latticeDrift{0%{background-position:0 0,22px 22px}100%{background-position:44px 44px,66px 66px}}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+#hero{
+  min-height:100vh;display:flex;align-items:center;padding-top:5rem;
+  background:var(--bg);position:relative;overflow:hidden;
+}
+#hero-canvas{
+  position:absolute;inset:0;z-index:0;opacity:.7;
+}
+#hero::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse 50% 70% at 8% 50%,rgba(0,201,167,.055) 0%,transparent 100%),
+    radial-gradient(ellipse 40% 55% at 92% 35%,rgba(155,143,255,.06) 0%,transparent 100%),
+    radial-gradient(ellipse 30% 40% at 50% 90%,rgba(232,160,32,.04) 0%,transparent 100%);
+}
+
+.hero-inner{
+  position:relative;z-index:3;width:100%;
+  display:grid;grid-template-columns:1fr 390px;gap:3.5rem;align-items:center;
+}
+
+/* Status badge */
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.65rem;padding:.4rem 1.1rem;
+  background:rgba(0,201,167,.1);border:1px solid rgba(0,201,167,.35);
+  border-radius:100px;margin-bottom:2rem;
+  opacity:0;animation:fadeUp .9s var(--ease) .25s forwards;
+  position:relative;overflow:hidden;
+}
+.hero-badge::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(0,201,167,.12),transparent);
+  transform:translateX(-100%);animation:badgeSheen 3s ease 2s infinite;
+}
+@keyframes badgeSheen{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.h-dot{
+  width:7px;height:7px;background:var(--teal);border-radius:50%;
+  box-shadow:0 0 8px var(--teal);animation:hpulse 2.2s ease infinite;flex-shrink:0;
+}
+@keyframes hpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.9)}}
+.hero-badge span{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+
+/* Name */
+h1.hero-name{
+  font-family:var(--serif);font-size:clamp(3.2rem,8vw,6.8rem);
+  font-weight:700;color:var(--ink);line-height:.93;letter-spacing:-.03em;
+  margin-bottom:1.1rem;opacity:0;animation:fadeUp .95s var(--ease) .38s forwards;
+}
+h1.hero-name em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--teal),var(--lav));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Typed tagline */
+.hero-tag{
+  font-family:var(--serif);font-style:italic;font-size:clamp(1rem,2.1vw,1.25rem);
+  color:rgba(205,226,255,.48);margin-bottom:2.2rem;max-width:540px;line-height:1.72;
+  opacity:0;animation:fadeUp .95s var(--ease) .55s forwards;min-height:3.5rem;
+}
+#typed-cursor{
+  display:inline-block;width:2px;height:1.1em;background:var(--teal);
+  vertical-align:middle;margin-left:2px;
+  animation:blink .8s step-end infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* Chips */
+.hero-chips{
+  display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:2.8rem;
+  opacity:0;animation:fadeUp .95s var(--ease) .72s forwards;
+}
+.chip{
+  font-size:.68rem;font-weight:500;padding:.3rem .85rem;border-radius:100px;
+  border:1px solid var(--bdr);color:rgba(205,226,255,.45);
+  background:rgba(255,255,255,.04);transition:all .25s var(--ease);cursor:default;
+  position:relative;overflow:hidden;
+}
+.chip::before{content:'';position:absolute;inset:0;background:var(--tG);opacity:0;transition:opacity .25s}
+.chip:hover::before{opacity:1}
+.chip:hover{border-color:var(--tB);color:var(--teal);transform:translateY(-2px)}
+.chip.hi{border-color:var(--tB);color:var(--teal);background:var(--tG)}
+.chip.gl{border-color:var(--gB);color:var(--gold);background:var(--gG)}
+.chip.lv{border-color:var(--lavB);color:var(--lav);background:var(--lavG)}
+
+/* Buttons */
+.hero-actions{
+  display:flex;flex-wrap:wrap;gap:.9rem;
+  opacity:0;animation:fadeUp .95s var(--ease) .9s forwards;
+}
+.btn-p{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 2rem;
+  background:var(--teal);color:var(--bg);font-weight:700;font-size:.77rem;
+  letter-spacing:.09em;text-transform:uppercase;border-radius:var(--r);
+  border:1px solid var(--teal);transition:all .28s var(--ease);
+  position:relative;overflow:hidden;
+}
+.btn-p::before{
+  content:'';position:absolute;top:50%;left:50%;
+  width:0;height:0;border-radius:50%;
+  background:rgba(255,255,255,.2);transform:translate(-50%,-50%);
+  transition:width .5s,height .5s;
+}
+.btn-p:hover::before{width:200px;height:200px}
+.btn-p:hover{color:var(--bg);transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(0,201,167,.38)}
+.btn-s{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 2rem;
+  background:transparent;color:rgba(205,226,255,.7);font-weight:600;font-size:.77rem;
+  letter-spacing:.09em;text-transform:uppercase;border-radius:var(--r);
+  border:1px solid var(--bdr);transition:all .28s var(--ease);
+}
+.btn-s:hover{border-color:var(--tB);color:var(--teal);transform:translateY(-3px);
+  background:var(--tG)}
+
+/* Hero right */
+.hero-right{
+  display:flex;flex-direction:column;align-items:center;gap:2rem;
+  opacity:0;animation:fadeIn 1.3s var(--ease) 1s forwards;
+}
+
+/* ── 3-Orbital animated display ── */
+.orbital-wrap{position:relative;width:280px;height:280px}
+.orbital-svg{width:100%;height:100%;overflow:visible}
+@keyframes nucleus-pulse{
+  0%,100%{opacity:.65;transform:scale(1)}
+  50%{opacity:1;transform:scale(1.1)}
+}
+.o-nuc{animation:nucleus-pulse 3.5s ease-in-out infinite;transform-origin:120px 120px}
+.o-nuc2{animation:nucleus-pulse 3.5s ease-in-out infinite 0.6s;transform-origin:120px 120px}
+
+/* Stats 2×2 */
+.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--bdrE);border-radius:var(--r);overflow:hidden;
+  width:100%;border:1px solid var(--bdrE);
+  box-shadow:var(--shT);
+}
+.hstat{
+  padding:1.15rem 1.4rem;background:var(--card);transition:background .22s;
+  position:relative;overflow:hidden;
+}
+.hstat::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--teal),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.hstat:hover{background:var(--cardH)}
+.hstat:hover::before{opacity:1}
+.hstat-n{
+  font-family:var(--serif);font-size:2.1rem;font-weight:700;
+  color:var(--teal);line-height:1;display:block;
+}
+.hstat-n sup{font-size:1.1rem;font-family:var(--serif)}
+.hstat-l{font-family:var(--mono);font-size:.54rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--inkF);display:block;margin-top:.3rem}
+
+/* Scroll hint */
+.hero-scroll{
+  position:absolute;bottom:2.4rem;left:2.5rem;z-index:4;
+  display:flex;align-items:center;gap:.8rem;
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;
+  color:rgba(205,226,255,.18);
+  opacity:0;animation:fadeIn 1s var(--ease) 2s forwards;
+}
+.scroll-ln{width:38px;height:1px;background:rgba(0,201,167,.18);position:relative;overflow:hidden}
+.scroll-ln::after{
+  content:'';position:absolute;width:100%;height:100%;
+  background:var(--teal);animation:scrollA 2.5s ease-in-out infinite;
+}
+@keyframes scrollA{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* Chem formula floating */
+.hero-formula{
+  position:absolute;z-index:3;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;
+  color:rgba(0,201,167,.18);pointer-events:none;white-space:nowrap;
+  animation:formulaFloat 8s ease-in-out infinite;
+}
+@keyframes formulaFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+.hero-formula:nth-child(2){animation-delay:-3s;animation-duration:10s;color:rgba(232,160,32,.14)}
+.hero-formula:nth-child(3){animation-delay:-6s;animation-duration:12s;color:rgba(155,143,255,.13)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ══════════════════════════════════════
+   ABOUT
+══════════════════════════════════════ */
+#about{background:var(--bg1)}
+#about-svg-bg{position:absolute;top:0;right:-60px;width:420px;height:420px;opacity:1;pointer-events:none;z-index:0}
+
+.about-grid{display:grid;grid-template-columns:260px 1fr;gap:4rem;align-items:start}
+
+/* Photo */
+.about-photo-wrap{display:flex;flex-direction:column;gap:0}
+.about-photo{
+  width:100%;aspect-ratio:3/4;border-radius:var(--rl);background:var(--card);
+  border:1px solid var(--bdrE);display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+  box-shadow:var(--shT);transition:box-shadow .3s;
+}
+.about-photo:hover{box-shadow:0 0 0 2px var(--teal),0 16px 48px rgba(0,201,167,.18)}
+.photo-monogram{
+  width:100%;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:1.5rem;
+  background:linear-gradient(160deg,var(--card) 0%,var(--bg2) 100%);
+}
+.pm-initials{
+  font-family:var(--serif);font-size:4.5rem;font-weight:700;
+  background:linear-gradient(135deg,var(--teal),var(--lav));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;letter-spacing:-.02em;
+}
+.pm-sub{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--inkF);text-align:center;line-height:1.6}
+.photo-corner{
+  position:absolute;bottom:-5px;right:-5px;width:58px;height:58px;
+  border:1.5px solid var(--tB);border-radius:12px;background:var(--tG);
+}
+
+/* Profile links */
+.profile-links{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.2rem}
+.ilink{
+  display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;font-weight:500;
+  padding:.38rem .82rem;border:1px solid var(--bdr);border-radius:var(--r);
+  color:var(--inkS);background:var(--card);transition:all .22s var(--ease);
+}
+.ilink:hover{border-color:var(--tB);color:var(--teal);background:var(--tG);transform:translateY(-2px)}
+
+/* Bio */
+.about-body h2{
+  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;
+  color:var(--ink);margin-bottom:1rem;line-height:1.22;
+}
+.about-body h2 .teal{color:var(--teal);font-style:italic}
+.about-body p{color:var(--inkS);font-size:.93rem;line-height:1.92;margin-bottom:1rem}
+.about-body p strong{color:var(--ink);font-weight:600}
+.about-body p em{color:var(--teal);font-style:normal;font-weight:600}
+
+/* Meta grid */
+.meta-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:.65rem;
+  margin-top:1.9rem;padding-top:1.9rem;border-top:1px solid var(--bdr);
+}
+.meta-item{
+  padding:.7rem .9rem;background:var(--card);border:1px solid var(--bdr);
+  border-radius:var(--r);transition:all .22s;
+}
+.meta-item:hover{border-color:var(--tB);background:var(--cardH)}
+.meta-item .lbl{
+  font-family:var(--mono);font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--inkF);display:block;margin-bottom:.2rem;
+}
+.meta-item .val{font-size:.84rem;color:var(--inkS);font-weight:500;display:block}
+.meta-item .val.hi{color:var(--teal);font-weight:600}
+
+/* ══════════════════════════════════════
+   EXPERIENCE — TIMELINE
+══════════════════════════════════════ */
+#experience{background:var(--bg)}
+#exp-svg-bg{position:absolute;bottom:-40px;left:-60px;width:320px;height:320px;opacity:1;pointer-events:none;z-index:0}
+
+.tl{position:relative;padding-left:3.2rem}
+.tl::before{
+  content:'';position:absolute;left:9px;top:24px;bottom:24px;
+  width:1px;
+  background:linear-gradient(to bottom,var(--teal) 0%,var(--lav) 55%,var(--gold) 85%,transparent 100%);
+  box-shadow:0 0 8px rgba(0,201,167,.25);
+}
+.tl-item{position:relative;margin-bottom:2.4rem}
+.tl-item:last-child{margin-bottom:0}
+
+/* Timeline node */
+.tl-node{
+  position:absolute;left:-3.2rem;top:1.6rem;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--inkF);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .35s var(--ease);cursor:default;
+}
+.tl-node::after{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--inkF);transition:all .35s var(--ease);
+}
+.tl-item.now .tl-node{
+  border-color:var(--teal);
+  box-shadow:0 0 0 4px rgba(0,201,167,.12),0 0 18px rgba(0,201,167,.45);
+}
+.tl-item.now .tl-node::after{background:var(--teal);box-shadow:0 0 6px var(--teal)}
+.tl-item.thesis .tl-node{border-color:var(--gold);box-shadow:0 0 0 4px rgba(232,160,32,.1),0 0 14px rgba(232,160,32,.4)}
+.tl-item.thesis .tl-node::after{background:var(--gold)}
+
+/* Exp card */
+.exp-card{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:2rem;transition:all .3s var(--ease);position:relative;overflow:hidden;
+  transform:translateZ(0);
+}
+.exp-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--teal);opacity:0;transition:opacity .3s;
+}
+.exp-card::after{
+  content:'';position:absolute;top:0;right:0;left:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--tB),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.exp-card:hover{
+  border-color:var(--bdrE);
+  box-shadow:var(--shT);transform:translateX(5px);
+}
+.exp-card:hover::before,.tl-item.now .exp-card::before{opacity:1}
+.exp-card:hover::after{opacity:1}
+.tl-item.thesis .exp-card::before{background:var(--gold);opacity:1}
+.tl-item.thesis .exp-card::after{background:linear-gradient(90deg,transparent,var(--gB),transparent);opacity:1}
+
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;
+  margin-bottom:.5rem;flex-wrap:wrap}
+.exp-role{font-family:var(--serif);font-size:1.22rem;font-weight:700;color:var(--ink);line-height:1.3}
+.exp-tag{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;
+  padding:.26rem .8rem;border-radius:100px;white-space:nowrap;border:1px solid;flex-shrink:0;
+}
+.exp-tag.now{color:var(--teal);background:var(--tG);border-color:var(--tB)}
+.exp-tag.past{color:var(--gold);background:var(--gG);border-color:var(--gB)}
+.exp-where{font-size:.82rem;color:var(--teal);font-weight:600;margin-bottom:.2rem}
+.exp-guide{font-size:.78rem;color:var(--inkF);margin-bottom:1rem;font-style:italic}
+.exp-ql{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.3rem;
+}
+.exp-qt{
+  font-family:var(--serif);font-style:italic;font-size:1.02rem;
+  color:var(--inkS);margin-bottom:.9rem;line-height:1.52;
+  border-left:2px solid var(--gB);padding-left:.9rem;
+}
+.exp-body{font-size:.88rem;color:var(--inkS);line-height:1.9;margin-bottom:.9rem}
+.exp-body strong{color:var(--ink);font-weight:600}
+.outcome{
+  display:flex;align-items:flex-start;gap:.65rem;background:var(--tG);
+  border:1px solid var(--tB);border-radius:var(--r);padding:.78rem 1.05rem;
+  font-size:.82rem;color:var(--teal);margin-bottom:.9rem;line-height:1.6;
+}
+.outcome::before{content:'→';font-weight:700;flex-shrink:0;margin-top:.02rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.04em;
+  padding:.22rem .65rem;border-radius:100px;
+  background:rgba(255,255,255,.04);border:1px solid var(--bdr);color:var(--inkS);
+  transition:all .2s;
+}
+.tag:hover{border-color:var(--tB);color:var(--teal);background:var(--tG)}
+
+/* ══════════════════════════════════════
+   VISION
+══════════════════════════════════════ */
+#vision{background:var(--bg2)}
+#vision::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 95% 10%,rgba(155,143,255,.09) 0%,transparent 100%),
+    radial-gradient(ellipse 50% 60% at 5% 88%,rgba(0,201,167,.07) 0%,transparent 100%);
+}
+
+.vision-box{
+  background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.09);
+  border-radius:var(--rxl);padding:3rem;position:relative;overflow:hidden;
+}
+.vision-box::before{
+  content:'"';position:absolute;top:-60px;right:1.5rem;
+  font-family:var(--serif);font-size:22rem;
+  background:linear-gradient(180deg,rgba(0,201,167,.05),transparent);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;pointer-events:none;user-select:none;
+}
+.vision-box::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--tB) 30%,var(--lavB) 70%,transparent);
+}
+.vision-text{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(.98rem,1.8vw,1.18rem);color:rgba(205,226,255,.6);
+  line-height:2.08;margin-bottom:2.4rem;position:relative;z-index:1;
+}
+.vision-text strong{color:var(--ink);font-style:normal}
+.vision-text em{color:var(--teal);font-style:normal}
+
+.pillars{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;
+  margin-bottom:2.8rem;padding-top:2.1rem;border-top:1px solid rgba(255,255,255,.08);
+}
+.pillar{
+  padding:1.45rem;background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);border-radius:var(--r);
+  transition:all .3s var(--spring);position:relative;overflow:hidden;
+}
+.pillar::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 0%,var(--tG),transparent 70%);
+  opacity:0;transition:opacity .3s;
+}
+.pillar:hover{background:rgba(255,255,255,.06);border-color:var(--tB);transform:translateY(-5px);
+  box-shadow:var(--shT)}
+.pillar:hover::before{opacity:1}
+.pillar-ico{font-size:1.4rem;margin-bottom:.7rem}
+.pillar-t{font-size:.86rem;font-weight:600;color:var(--ink);margin-bottom:.35rem}
+.pillar-d{font-size:.76rem;color:var(--inkF);line-height:1.7}
+
+.target-sec h4{
+  font-family:var(--mono);font-size:.61rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:1.05rem;
+}
+.tgroup{display:flex;flex-direction:column;gap:.8rem}
+.tg-item{
+  padding:1.1rem 1.35rem;background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);border-radius:var(--r);
+  transition:all .28s var(--ease);position:relative;
+}
+.tg-item::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--lav);opacity:0;border-radius:1px;transition:opacity .28s;
+}
+.tg-item:hover{border-color:var(--lavB);background:var(--lavG);transform:translateX(3px)}
+.tg-item:hover::before{opacity:1}
+.tg-pi{font-size:.88rem;font-weight:600;color:var(--ink)}
+.tg-inst{font-size:.75rem;color:var(--lav);margin-top:.2rem}
+.tg-why{font-size:.77rem;color:var(--inkF);line-height:1.72;margin-top:.45rem}
+
+/* ══════════════════════════════════════
+   PUBLICATIONS
+══════════════════════════════════════ */
+#publications{background:var(--bg1)}
+#pub-svg-bg{position:absolute;right:-8px;top:0;width:80px;height:100%;opacity:1;pointer-events:none;z-index:0}
+
+.pub-card{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:1.8rem;display:grid;grid-template-columns:auto 1fr;gap:1.5rem;
+  align-items:stretch;transition:all .3s var(--ease);margin-bottom:1.3rem;
+  position:relative;overflow:hidden;
+}
+.pub-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--tB),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.pub-card:hover{border-color:var(--bdrE);box-shadow:var(--shT);transform:translateY(-2px)}
+.pub-card:hover::after{opacity:1}
+.pub-type{
+  writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--mono);
+  font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;padding:.65rem .45rem;
+  border-radius:8px;display:flex;align-items:center;justify-content:center;
+  white-space:nowrap;flex-shrink:0;align-self:stretch;
+}
+.pub-type.journal{color:var(--teal);background:var(--tG);border:1px solid var(--tB)}
+.pub-type.thesis{color:var(--gold);background:var(--gG);border:1px solid var(--gB)}
+.pub-title{font-family:var(--serif);font-size:1.08rem;font-weight:700;color:var(--ink);
+  margin-bottom:.38rem;line-height:1.4}
+.pub-authors{font-size:.79rem;color:var(--inkS);margin-bottom:.38rem}
+.pub-authors strong{color:var(--teal)}
+.pub-journal{font-size:.8rem;color:var(--inkS);font-style:italic;margin-bottom:.65rem}
+.pub-meta{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:.85rem}
+.pbadge{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;
+  padding:.18rem .65rem;border-radius:100px;border:1px solid}
+.pbadge.prep{color:var(--rose);background:var(--roseG);border-color:var(--roseB)}
+.pbadge.jrf{color:var(--teal);background:var(--tG);border-color:var(--tB)}
+.pbadge.grade{color:var(--gold);background:var(--gG);border-color:var(--gB)}
+.pub-bullets{margin-top:.4rem;list-style:none}
+.pub-bullets li{font-size:.83rem;color:var(--inkS);margin-bottom:.45rem;
+  padding-left:1.1rem;position:relative;line-height:1.72}
+.pub-bullets li::before{
+  content:'';position:absolute;left:0;top:.6rem;width:5px;height:1px;
+  background:var(--teal);box-shadow:0 0 4px var(--teal);
+}
+.pub-bullets li strong{color:var(--ink);font-weight:600}
+
+/* ══════════════════════════════════════
+   SKILLS — CIRCULAR RING GAUGES
+══════════════════════════════════════ */
+#skills{background:var(--bg)}
+#skills-svg-bg{position:absolute;top:-20px;right:-50px;width:280px;height:280px;opacity:1;pointer-events:none;z-index:0}
+
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.sg{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:1.75rem;transition:all .3s var(--ease);position:relative;overflow:hidden;
+}
+.sg::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 100% 0%,var(--tG),transparent 60%);
+  opacity:0;transition:opacity .3s;
+}
+.sg:hover{border-color:var(--bdrE);box-shadow:var(--shT)}
+.sg:hover::before{opacity:1}
+.sg-head{
+  font-family:var(--mono);font-size:.61rem;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:1.4rem;display:flex;align-items:center;gap:.5rem;
+  position:relative;z-index:1;
+}
+.sk-rows{display:flex;flex-direction:column;gap:1rem;position:relative;z-index:1}
+.sk-row{display:flex;align-items:center;gap:1rem}
+.sk-ring-wrap{flex-shrink:0;width:40px;height:40px;position:relative}
+.sk-ring{width:40px;height:40px;display:block;transform:rotate(-90deg)}
+.sk-ring .sk-track{fill:none;stroke:rgba(255,255,255,.07);stroke-width:3.2}
+.sk-ring .sk-fill{fill:none;stroke-width:3.2;stroke-linecap:round;
+  stroke-dasharray:0 100;transition:stroke-dasharray 1.4s cubic-bezier(.22,1,.36,1)}
+.sk-fill.tc{stroke:var(--teal);filter:drop-shadow(0 0 3px rgba(0,201,167,.5))}
+.sk-fill.gc{stroke:var(--gold);filter:drop-shadow(0 0 3px rgba(232,160,32,.5))}
+.sk-fill.lc{stroke:var(--lav);filter:drop-shadow(0 0 3px rgba(155,143,255,.5))}
+.sk-info{flex:1}
+.sk-name{font-size:.84rem;color:var(--ink);font-weight:500;line-height:1.3}
+.sk-lv{font-family:var(--mono);font-size:.58rem;color:var(--inkF);margin-top:.1rem}
+.skill-tags{
+  display:flex;flex-wrap:wrap;gap:.42rem;margin-top:1.3rem;
+  padding-top:1.3rem;border-top:1px solid var(--bdr);position:relative;z-index:1;
+}
+.stag{font-size:.7rem;padding:.26rem .68rem;border-radius:100px;
+  background:rgba(255,255,255,.04);border:1px solid var(--bdr);color:var(--inkS);
+  transition:all .2s;
+}
+.stag:hover{border-color:var(--tB);color:var(--teal)}
+
+/* ══════════════════════════════════════
+   AWARDS
+══════════════════════════════════════ */
+#awards{background:var(--bg1)}
+.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.aw-card{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:1.55rem;display:flex;gap:1.1rem;align-items:flex-start;
+  transition:all .3s var(--ease);position:relative;overflow:hidden;
+}
+.aw-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gB),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.aw-card:hover{border-color:var(--bdrE);box-shadow:var(--shG);transform:translateY(-3px)}
+.aw-card:hover::before{opacity:1}
+.aw-ico{font-size:1.6rem;flex-shrink:0;margin-top:.05rem;filter:drop-shadow(0 0 8px rgba(232,160,32,.3))}
+.aw-title{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:.28rem;line-height:1.35}
+.aw-body{font-size:.79rem;color:var(--inkS);line-height:1.7}
+.aw-year{font-family:var(--mono);font-size:.58rem;color:var(--gold);letter-spacing:.08em;margin-top:.45rem}
+
+/* ══════════════════════════════════════
+   CONFERENCES
+══════════════════════════════════════ */
+#conferences{background:var(--bg)}
+.conf-list{display:flex;flex-direction:column;gap:.82rem}
+.conf-item{
+  display:grid;grid-template-columns:88px 1fr auto;gap:1.3rem;
+  align-items:center;padding:1.1rem 1.5rem;background:var(--card);
+  border:1px solid var(--bdr);border-radius:var(--r);transition:all .28s var(--ease);
+  position:relative;overflow:hidden;
+}
+.conf-item::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:0;
+  background:var(--teal);transition:width .3s var(--ease);
+}
+.conf-item:hover{border-color:var(--bdrE);transform:translateX(4px)}
+.conf-item:hover::before{width:2px}
+.conf-year{font-family:var(--mono);font-size:.72rem;font-weight:500;
+  color:var(--teal);letter-spacing:.06em}
+.conf-name{font-size:.88rem;font-weight:600;color:var(--ink);line-height:1.35;margin-bottom:.22rem}
+.conf-role{font-size:.78rem;color:var(--inkS);line-height:1.55}
+.conf-loc{font-family:var(--mono);font-size:.62rem;color:var(--inkF);white-space:nowrap}
+
+/* ══════════════════════════════════════
+   COURSES
+══════════════════════════════════════ */
+#courses{background:var(--bg1)}
+/* NMR spectrum decoration */
+.nmr-bar{position:absolute;bottom:0;left:0;right:0;height:80px;
+  pointer-events:none;z-index:0;overflow:hidden;opacity:.6}
+
+.courses-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.cg{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:1.6rem;transition:all .28s var(--ease);
+}
+.cg:hover{border-color:var(--bdrE);box-shadow:var(--shT)}
+.cg-inst{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.22rem}
+.cg-type{font-family:var(--mono);font-size:.59rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:1.1rem}
+.cg-row{display:flex;justify-content:space-between;align-items:center;
+  padding:.52rem 0;border-bottom:1px solid var(--bdr);gap:.5rem}
+.cg-row:last-child{border-bottom:none}
+.cg-row .cn{font-size:.82rem;color:var(--inkS);flex:1}
+.cg-row .cy{font-family:var(--mono);font-size:.62rem;color:var(--inkF);white-space:nowrap}
+
+/* ══════════════════════════════════════
+   LEADERSHIP
+══════════════════════════════════════ */
+#leadership{background:var(--bg)}
+.ls-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ls-card{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:1.5rem;transition:all .3s var(--spring);position:relative;overflow:hidden;
+}
+.ls-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--teal),var(--lav));
+  opacity:0;transition:opacity .3s;
+}
+.ls-card:hover{border-color:var(--bdrE);box-shadow:var(--shT);transform:translateY(-4px)}
+.ls-card:hover::after{opacity:1}
+.ls-ico{font-size:1.65rem;margin-bottom:.7rem;
+  filter:drop-shadow(0 0 8px rgba(0,201,167,.3))}
+.ls-title{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:.35rem}
+.ls-body{font-size:.79rem;color:var(--inkS);line-height:1.7}
+.ls-tag{font-family:var(--mono);font-size:.59rem;color:var(--gold);margin-top:.55rem}
+
+/* ══════════════════════════════════════
+   REFERENCES
+══════════════════════════════════════ */
+#references{background:var(--bg1)}
+.ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ref-card{
+  background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);
+  padding:1.6rem;transition:all .28s var(--ease);
+}
+.ref-card:hover{border-color:var(--bdrE);box-shadow:var(--shT);transform:translateY(-3px)}
+.ref-av{
+  width:54px;height:54px;border-radius:50%;
+  background:linear-gradient(135deg,var(--tG2),var(--lavG));
+  border:2px solid var(--tB);margin-bottom:.95rem;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--teal);
+  box-shadow:0 0 16px rgba(0,201,167,.2);
+}
+.ref-name{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.ref-pos{font-size:.78rem;color:var(--teal);margin-bottom:.22rem;line-height:1.4}
+.ref-inst{font-size:.76rem;color:var(--inkS);margin-bottom:.85rem;line-height:1.6}
+.ref-email{font-family:var(--mono);font-size:.65rem;color:var(--inkF);word-break:break-all;
+  transition:color .2s}
+.ref-email:hover{color:var(--teal)}
+
+/* ══════════════════════════════════════
+   CONTACT
+══════════════════════════════════════ */
+#contact{background:var(--bg2);position:relative}
+#contact::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 55% 60% at 50% 50%,rgba(0,201,167,.07) 0%,transparent 100%);
+}
+
+.contact-inner{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:2}
+
+.avail-badge{
+  display:inline-flex;align-items:center;gap:.65rem;
+  padding:.44rem 1.2rem;background:var(--tG);border:1px solid var(--tB);
+  border-radius:100px;margin-bottom:2.2rem;
+  box-shadow:0 0 24px rgba(0,201,167,.15);
+}
+.avail-badge .h-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;
+  box-shadow:0 0 8px var(--teal);animation:hpulse 2s ease infinite;flex-shrink:0}
+.avail-badge span{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--teal)}
+
+.contact-h{
+  font-family:var(--serif);font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:1.1rem;
+}
+.contact-h em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--teal),var(--lav));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.contact-sub{color:var(--inkS);font-size:.93rem;line-height:1.85;max-width:580px;margin:0 auto 2.2rem}
+.contact-email-link{
+  display:inline-block;font-family:var(--serif);
+  font-size:clamp(1.3rem,3.5vw,2.2rem);font-weight:700;color:var(--ink);
+  margin-bottom:2.8rem;transition:all .28s var(--ease);word-break:break-all;
+  position:relative;
+}
+.contact-email-link::after{
+  content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;
+  background:linear-gradient(90deg,var(--teal),var(--lav));transition:width .3s;
+}
+.contact-email-link:hover{color:var(--teal)}
+.contact-email-link:hover::after{width:100%}
+.contact-btns{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;
+  background:transparent;border:1px solid var(--bdr);border-radius:var(--r);
+  color:var(--inkS);font-size:.78rem;font-weight:500;transition:all .22s var(--ease);
+}
+.btn-ghost:hover{border-color:var(--tB);color:var(--teal);background:var(--tG);transform:translateY(-2px)}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer{
+  background:var(--bg);border-top:1px solid var(--bdr);
+  padding:2.6rem 2rem;text-align:center;position:relative;overflow:hidden;
+}
+.footer-eq{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--inkF);
+  margin-bottom:.7rem;line-height:1.9;
+}
+.footer-eq .hl{color:var(--teal);text-shadow:0 0 8px rgba(0,201,167,.35)}
+.footer-eq .hl2{color:var(--gold);text-shadow:0 0 8px rgba(232,160,32,.3)}
+.footer-copy{font-size:.74rem;color:var(--inkF)}
+.footer-copy a{color:var(--inkS);transition:color .2s}
+.footer-copy a:hover{color:var(--teal)}
+/* NMR spectrum footer decoration */
+.footer-nmr{position:absolute;bottom:0;left:0;right:0;height:40px;
+  pointer-events:none;opacity:.35}
+
+/* ══════════════════════════════════════
+   SECTION DIVIDER GLOW LINE
+══════════════════════════════════════ */
+.sec-div{height:1px;
+  background:linear-gradient(90deg,transparent 0%,var(--bdrE) 50%,transparent 100%);
+  position:relative;overflow:visible}
+.sec-div::after{content:'';position:absolute;top:-2.5px;left:50%;transform:translateX(-50%);
+  width:5px;height:5px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — TABLET (≤ 900px)
+══════════════════════════════════════ */
+@media(max-width:900px){
+  /* Hero — stack right below left */
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-right{
+    display:flex;flex-direction:column;align-items:center;gap:1.6rem;
+    width:100%;max-width:480px;margin:0 auto;
+    opacity:1;animation:none;
+  }
+  .orbital-wrap{width:200px;height:200px}
+  .hero-stats{width:100%;max-width:400px}
+
+  /* About */
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .about-photo-wrap{display:flex;flex-direction:row;align-items:flex-start;gap:1.4rem;flex-wrap:wrap}
+  .about-photo{width:180px;flex-shrink:0}
+  .profile-links{flex-direction:row;flex-wrap:wrap}
+
+  /* Sections */
+  .meta-grid{grid-template-columns:1fr 1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .awards-grid{grid-template-columns:1fr 1fr}
+  .ls-grid{grid-template-columns:1fr 1fr}
+  .ref-grid{grid-template-columns:1fr 1fr}
+  .courses-grid{grid-template-columns:1fr 1fr}
+  .conf-item{grid-template-columns:80px 1fr;gap:1rem}.conf-loc{display:none}
+
+  /* Vision box */
+  .vision-box{padding:2rem}
+  .tgroup{gap:.65rem}
+
+  /* Pub cards */
+  .pub-card{grid-template-columns:1fr;gap:.8rem}
+  .pub-type{writing-mode:horizontal-tb;transform:none;padding:.35rem .8rem;
+    border-radius:99px;align-self:flex-start;width:auto}
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — MOBILE (≤ 640px)
+══════════════════════════════════════ */
+@media(max-width:640px){
+  /* Nav */
+  nav{padding:.8rem 1.2rem}
+  .nav-links{display:none}
+  .ham{display:flex}
+
+  /* Layout */
+  .wrap{padding:0 1rem}
+  section{padding:3.5rem 0}
+
+  /* Hero */
+  .hero-inner{gap:2rem}
+  h1.hero-name{font-size:clamp(2.6rem,12vw,3.8rem);line-height:.95}
+  .hero-tag{font-size:.92rem;min-height:2.8rem}
+  .hero-badge{margin-bottom:1.4rem}
+  .hero-chips{gap:.38rem}
+  .chip{font-size:.66rem;padding:.28rem .72rem}
+  .hero-actions{flex-direction:column;gap:.7rem}
+  .btn-p,.btn-s{width:100%;justify-content:center;padding:.78rem 1.4rem}
+  .hero-right{max-width:100%}
+  .orbital-wrap{width:160px;height:160px}
+  .hero-stats{grid-template-columns:1fr 1fr;max-width:100%}
+  .hstat-n{font-size:1.6rem}
+  .hstat-l{font-size:.5rem}
+  .hero-scroll{display:none}
+  /* Floating formulas hidden on small screens */
+  .hero-formula{display:none}
+
+  /* About */
+  .about-grid{gap:1.5rem}
+  .about-photo-wrap{flex-direction:column;align-items:center;text-align:center}
+  .about-photo{width:160px;max-width:160px}
+  .profile-links{justify-content:center}
+  .about-body h2{font-size:1.55rem}
+  .meta-grid{grid-template-columns:1fr}
+
+  /* Timeline */
+  .tl{padding-left:1.8rem}
+  .tl::before{left:7px}
+  .tl-node{left:-1.8rem;width:16px;height:16px}
+  .tl-node::after{width:6px;height:6px}
+  .exp-card{padding:1.35rem}
+  .exp-head{flex-direction:column;gap:.5rem;align-items:flex-start}
+  .exp-role{font-size:1rem}
+  .exp-qt{font-size:.9rem}
+  .exp-body{font-size:.84rem}
+  .outcome{font-size:.8rem}
+
+  /* Vision */
+  .vision-box{padding:1.4rem}
+  .vision-box::before{font-size:10rem;top:-20px}
+  .vision-text{font-size:.9rem;line-height:1.9}
+  .pillars{grid-template-columns:1fr;gap:.8rem}
+  .pillar{padding:1.1rem}
+  .tg-item{padding:.9rem 1rem}
+  .tg-pi{font-size:.84rem}
+  .tg-why{font-size:.74rem}
+
+  /* Publications */
+  .pub-card{padding:1.3rem;gap:.7rem}
+  .pub-title{font-size:.95rem}
+  .pub-bullets li{font-size:.8rem}
+
+  /* Skills */
+  .skills-grid{grid-template-columns:1fr}
+  .sg{padding:1.3rem}
+  .sk-rows{gap:.75rem}
+
+  /* Awards */
+  .awards-grid{grid-template-columns:1fr}
+  .aw-card{padding:1.2rem}
+
+  /* Conferences */
+  .conf-item{grid-template-columns:60px 1fr;padding:.85rem 1rem}
+  .conf-name{font-size:.82rem}
+  .conf-role{font-size:.74rem}
+
+  /* Courses */
+  .courses-grid{grid-template-columns:1fr}
+
+  /* Leadership */
+  .ls-grid{grid-template-columns:1fr}
+
+  /* References */
+  .ref-grid{grid-template-columns:1fr}
+  .ref-card{padding:1.2rem}
+
+  /* Contact */
+  .contact-h{font-size:clamp(1.6rem,8vw,2.4rem)}
+  .contact-email-link{font-size:clamp(1rem,5vw,1.5rem)}
+  .contact-btns{flex-direction:column;align-items:stretch}
+  .btn-ghost,.btn-p{width:100%;justify-content:center}
+
+  /* Section backgrounds — reduce opacity for performance */
+  #about-svg-bg,#exp-svg-bg,#pub-svg-bg,#skills-svg-bg{opacity:.6}
+  .lattice{animation:none}
+
+  /* Footer */
+  .footer-eq{font-size:.64rem;letter-spacing:.1em}
+  .footer-copy{font-size:.7rem}
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — SMALL PHONE (≤ 390px)
+══════════════════════════════════════ */
+@media(max-width:390px){
+  .wrap{padding:0 .85rem}
+  h1.hero-name{font-size:2.5rem}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-badge span{font-size:.56rem;letter-spacing:.1em}
+  .exp-card{padding:1.1rem}
+  .vision-box{padding:1.1rem}
+  .contact-email-link{font-size:.95rem}
+}
+</style>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pl-orb">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50" cy="50" rx="42" ry="16" stroke="#00c9a7" stroke-width="1.5" class="pl-orb-ring" style="animation-delay:0s"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" stroke="#9b8fff" stroke-width="1.5" class="pl-orb-ring" style="animation-delay:.2s;transform-origin:50px 50px;transform:rotate(60deg)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" stroke="#e8a020" stroke-width="1.5" class="pl-orb-ring" style="animation-delay:.4s;transform-origin:50px 50px;transform:rotate(120deg)"/>
+      <circle cx="50" cy="50" r="5" fill="#00c9a7" opacity=".9">
+        <animate attributeName="opacity" values="1;.3;1" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+  </div>
+  <div class="pl-text">Initialising Portfolio</div>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-prog"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">
+    <div class="nb-dot"></div>
+    R.&thinsp;<span>Sridhar</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Research</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="ham" id="ham-btn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mob-nav">
+  <a href="#about" class="mob-link">About</a>
+  <a href="#experience" class="mob-link">Research</a>
+  <a href="#vision" class="mob-link">Vision</a>
+  <a href="#publications" class="mob-link">Publications</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#awards" class="mob-link">Awards</a>
+  <a href="#conferences" class="mob-link">Conferences</a>
+  <a href="#leadership" class="mob-link">Leadership</a>
+  <a href="#references" class="mob-link">References</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Floating chemistry formulas -->
+  <div class="hero-formula" style="top:18%;left:6%;font-size:.7rem">D-Glucal → D-Rhamnal</div>
+  <div class="hero-formula" style="top:72%;left:12%;font-size:.58rem">Cu·L + O₂ → [Cu-OOH]</div>
+  <div class="hero-formula" style="top:30%;right:5%;font-size:.62rem;right:8%">BF₃·OEt₂ cat.</div>
+
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="h-dot"></div>
+          <span id="cms-status-text">JRF · NIT Calicut · Feb 2026 — Present</span>
+        </div>
+
+        <h1 class="hero-name">R.&nbsp;<em>Sridhar</em></h1>
+
+        <p id="cms-hero-tagline" class="hero-tag">
+          <span id="typed-text"></span><span id="typed-cursor"></span>
+        </p>
+
+        <div class="hero-chips">
+          <span class="chip hi">⬡ Glycochemistry</span>
+          <span class="chip hi">⬡ Ferrier Rearrangements</span>
+          <span class="chip hi">⬡ LPMO Biomimetic Catalysis</span>
+          <span class="chip">Green Catalytic Strategies</span>
+          <span class="chip">Drug Design Intermediates</span>
+          <span class="chip gl">GATE 2025 · CSIR-NET 2025</span>
+          <span class="chip lv">🇪🇺 Seeking PhD · Europe 2026</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="YOUR_CV_LINK.pdf" target="_blank" class="btn-p cms-cv-link" id="cms-cv-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV
+          </a>
+          <a href="#contact" class="btn-s">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
+          <a href="#vision" class="btn-s">Research Vision ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- 3-Orbital SVG -->
+        <div class="orbital-wrap">
+          <svg class="orbital-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="glow"><feGaussianBlur stdDeviation="2.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="nglow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="gglow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <!-- Outer halos -->
+            <circle cx="120" cy="120" r="115" stroke="rgba(0,201,167,.04)" stroke-width="1"/>
+            <circle cx="120" cy="120" r="95" stroke="rgba(155,143,255,.04)" stroke-width="1"/>
+            <!-- Ring 1 teal -->
+            <ellipse cx="120" cy="120" rx="98" ry="34" stroke="rgba(0,201,167,.3)" stroke-width="1.5" fill="none"/>
+            <!-- Ring 2 lavender -->
+            <ellipse cx="120" cy="120" rx="98" ry="34" stroke="rgba(155,143,255,.26)" stroke-width="1.5" fill="none" transform="rotate(60 120 120)"/>
+            <!-- Ring 3 gold -->
+            <ellipse cx="120" cy="120" rx="98" ry="34" stroke="rgba(232,160,32,.24)" stroke-width="1.5" fill="none" transform="rotate(120 120 120)"/>
+            <!-- Nucleus glow -->
+            <circle cx="120" cy="120" r="18" fill="rgba(0,201,167,.1)" stroke="rgba(0,201,167,.5)" stroke-width="1.5" filter="url(#nglow)" class="o-nuc"/>
+            <circle cx="120" cy="120" r="9" fill="rgba(0,201,167,.6)" class="o-nuc2"/>
+            <circle cx="120" cy="120" r="4.5" fill="#00c9a7"/>
+            <!-- Electron ring 1 -->
+            <circle r="6" fill="#00c9a7" filter="url(#glow)">
+              <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#ring1"/></animateMotion>
+            </circle>
+            <!-- Electron ring 2 -->
+            <circle r="5.5" fill="#9b8fff" filter="url(#glow)">
+              <animateMotion dur="10s" repeatCount="indefinite" begin=".6s"><mpath href="#ring2"/></animateMotion>
+            </circle>
+            <!-- Electron ring 3 -->
+            <circle r="5" fill="#e8a020" filter="url(#gglow)">
+              <animateMotion dur="8.5s" repeatCount="indefinite" begin="1.3s"><mpath href="#ring3"/></animateMotion>
+            </circle>
+            <!-- Hidden motion paths -->
+            <ellipse id="ring1" cx="120" cy="120" rx="98" ry="34" visibility="hidden"/>
+            <ellipse id="ring2" cx="120" cy="120" rx="98" ry="34" transform="rotate(60 120 120)" visibility="hidden"/>
+            <ellipse id="ring3" cx="120" cy="120" rx="98" ry="34" transform="rotate(120 120 120)" visibility="hidden"/>
+          </svg>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="hstat">
+            <span class="hstat-n" id="cms-stat-cgpa"><span class="count" data-target="8.75" data-dec="2">0</span></span>
+            <span class="hstat-l">M.Sc. CGPA / 10</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n" id="cms-stat-rank">3<sup>rd</sup></span>
+            <span class="hstat-l">University Rank</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n" id="cms-stat-yield">&gt;95%</span>
+            <span class="hstat-l">Ferrier Yield</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n" id="cms-stat-papers"><span class="count" data-target="25" data-dec="0">0</span>+</span>
+            <span class="hstat-l">Papers Analysed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-ln"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="lattice"></div>
+  <!-- Benzene + pyranose ring BG -->
+  <svg id="about-svg-bg" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g style="transform-origin:150px 130px;animation:aboutRing 9s ease-in-out infinite">
+      <polygon points="150,40 218,78 218,154 150,192 82,154 82,78" stroke="#00c9a7" stroke-width="1.5" fill="none" opacity=".14"/>
+      <circle cx="150" cy="116" r="42" stroke="#00c9a7" stroke-width="1" stroke-dasharray="7 5" fill="none" opacity=".1"/>
+      <circle cx="150" cy="40" r="5" fill="#00c9a7" opacity=".18"/>
+      <circle cx="218" cy="78" r="5" fill="#00c9a7" opacity=".18"/>
+      <circle cx="218" cy="154" r="5" fill="#00c9a7" opacity=".18"/>
+      <circle cx="150" cy="192" r="5" fill="#00c9a7" opacity=".18"/>
+      <circle cx="82" cy="154" r="5" fill="#00c9a7" opacity=".18"/>
+      <circle cx="82" cy="78" r="5" fill="#00c9a7" opacity=".18"/>
+      <line x1="150" y1="46" x2="210" y2="82" stroke="#00c9a7" stroke-width="3" opacity=".09"/>
+      <line x1="210" y1="82" x2="210" y2="148" stroke="#00c9a7" stroke-width="3" opacity=".09"/>
+      <line x1="150" y1="186" x2="90" y2="150" stroke="#00c9a7" stroke-width="3" opacity=".09"/>
+    </g>
+    <g style="transform-origin:85px 265px;animation:aboutFloat 6s ease-in-out infinite .8s" opacity=".14">
+      <polygon points="85,235 125,218 155,238 145,272 105,288 75,268" stroke="#9b8fff" stroke-width="1.4" fill="none"/>
+      <line x1="85" y1="235" x2="67" y2="222" stroke="#9b8fff" stroke-width="1.2"/><circle cx="63" cy="219" r="3.5" fill="#9b8fff"/>
+      <line x1="125" y1="218" x2="125" y2="202" stroke="#9b8fff" stroke-width="1.2"/><circle cx="125" cy="198" r="3.5" fill="#9b8fff"/>
+      <line x1="155" y1="238" x2="172" y2="229" stroke="#9b8fff" stroke-width="1.2"/><circle cx="176" cy="226" r="3.5" fill="#9b8fff"/>
+      <circle cx="75" cy="268" r="4" fill="#9b8fff" opacity=".7"/>
+    </g>
+    <path d="M110 215 Q120 228 130 215" stroke="rgba(155,143,255,.2)" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+    <!-- Bond connecting -->
+    <line x1="118" y1="235" x2="128" y2="245" stroke="#00c9a7" stroke-width="1" opacity=".15" stroke-dasharray="4 3"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="slide-l">
+        <div class="about-photo">
+          <div class="photo-monogram">
+            <div class="pm-initials">RS</div>
+            <div class="pm-sub">Replace with your<br/>professional photo</div>
+          </div>
+          <div class="photo-corner"></div>
+        </div>
+        <div class="profile-links">
+          <a href="mailto:your-email@example.com" class="ilink" id="cms-about-email">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
+          </a>
+          <a href="https://www.linkedin.com/in/sridhar-r-chem/" target="_blank" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://orcid.org/0009-0001-3602-6240" target="_blank" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>ORCID
+          </a>
+          <a href="https://sridhar20ch.github.io/Portfolio/" target="_blank" class="ilink">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="slide-r about-body">
+        <div class="sl">About Me</div>
+        <h2><span id="cms-about-h1">Organic Chemist Eager to Explore</span><br/><span class="teal" id="cms-about-h2">Multidisciplinary Research</span></h2>
+        <p id="cms-about-p1">I am an organic chemist eager to explore multidisciplinary research for impactful outcomes, with a deep specialisation in <strong>carbohydrate chemistry and biomimetic catalysis</strong>. My research sits at a compelling intersection — using the structural complexity of glycals and their rearrangements to access <em>pharmacologically relevant scaffolds</em>, while simultaneously designing metal-ligand systems that replicate the enzymatic elegance of nature.</p>
+        <p id="cms-about-p2">At <strong>Pondicherry University</strong> under Prof. J. Kandasamy, I developed an efficient synthetic route to <strong>D-Rhamnal from D-Glucal</strong> and exploited it to synthesise novel <strong>C-2 aryl glycosides via Pd-catalysed arylation</strong> — work now being prepared for peer-reviewed publication. My Ferrier-I rearrangement studies produced 2,3-unsaturated glycosides in <em>yields exceeding 95%</em>, establishing robust methodology across four glycal precursors.</p>
+        <p id="cms-about-p3">I am currently a <strong>Junior Research Fellow (JRF) at NIT Calicut</strong> under Dr. M. Sankaralingam, exploring biomimetic analogues of Lytic Polysaccharide Monooxygenases (LPMOs) — copper-dependent enzymes central to sustainable biomass valorisation. I seek a <em>European PhD position</em> at the frontier of synthetic methodology, green catalysis, and chemical biology.</p>
+        <div class="meta-grid">
+          <div class="meta-item reveal"><span class="lbl">Current Position</span><span class="val hi" id="cms-meta-position">JRF — NIT Calicut</span></div>
+          <div class="meta-item reveal d1"><span class="lbl">M.Sc. CGPA</span><span class="val hi" id="cms-meta-cgpa">8.75 / 10 — 3rd University Rank</span></div>
+          <div class="meta-item reveal d2"><span class="lbl">Qualifications</span><span class="val hi" id="cms-meta-quals">GATE 2025 (CY) · CSIR-NET 2025</span></div>
+          <div class="meta-item reveal d3"><span class="lbl">Languages</span><span class="val" id="cms-meta-langs">English (C1) · Tamil · Telugu</span></div>
+          <div class="meta-item reveal d4"><span class="lbl">Target Region</span><span class="val hi" id="cms-meta-region">Europe</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     RESEARCH EXPERIENCE
+════════════════════════════════════════ -->
+<section id="experience">
+  <!-- Orbital BG -->
+  <svg id="exp-svg-bg" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="140" cy="140" r="10" fill="#00c9a7" opacity=".18"/>
+    <circle cx="140" cy="140" r="18" stroke="#00c9a7" stroke-width="1" fill="none" opacity=".12"/>
+    <ellipse cx="140" cy="140" rx="100" ry="32" stroke="#00c9a7" stroke-width="1.6" fill="none" opacity=".15"/>
+    <ellipse cx="140" cy="140" rx="100" ry="32" stroke="#9b8fff" stroke-width="1.4" fill="none" opacity=".12" transform="rotate(60 140 140)"/>
+    <ellipse cx="140" cy="140" rx="100" ry="32" stroke="#e8a020" stroke-width="1.4" fill="none" opacity=".1" transform="rotate(120 140 140)"/>
+    <circle cx="240" cy="140" r="5" fill="#00c9a7" opacity=".25"/>
+    <circle cx="40"  cy="140" r="5" fill="#00c9a7" opacity=".25"/>
+    <circle cx="190" cy="58"  r="5" fill="#9b8fff" opacity=".22"/>
+    <circle cx="90"  cy="222" r="5" fill="#9b8fff" opacity=".22"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="sl reveal">Research Experience</div>
+    <h2 class="sh reveal d1">The Work, <span class="grad">in Detail</span></h2>
+    <p class="sd reveal d2">Each project described as a scientific narrative — the question, my specific contribution, and what emerged.</p>
+
+    <div id="cms-exp-section" class="tl">
+      <!-- EXP 1 — CURRENT JRF -->
+      <div class="tl-item now">
+        <div class="tl-node"></div>
+        <div class="exp-card reveal">
+          <div class="exp-head">
+            <div class="exp-role">Nature-inspired Conversion of Biomass to Biofuel: The LPMO Paradigm</div>
+            <span class="exp-tag now">Feb 2026 — Present</span>
+          </div>
+          <div class="exp-where">🏛 National Institute of Technology Calicut, India</div>
+          <div class="exp-guide">Project Associate (JRF) · Guide: Dr. M. Sankaralingam, Associate Professor</div>
+          <div class="exp-ql">Scientific Question</div>
+          <div class="exp-qt">"Can we design synthetic molecular systems and functional nanomaterials that replicate the oxidative C–H activation achieved by copper-dependent LPMOs in nature?"</div>
+          <div class="exp-body">Lytic Polysaccharide Monooxygenases (LPMOs) are copper metalloenzymes that perform the remarkable feat of oxidatively cleaving recalcitrant crystalline cellulose — a bond inert to most conventional reagents. <strong>My role is twofold:</strong> (1) design and synthesise biomimetic ligand scaffolds that support Cu-coordination environments analogous to the LPMO active site; and (2) tune surface chemistry of nanomaterials and MOFs to replicate LPMO reactivity in heterogeneous systems.</div>
+          <div class="outcome">Currently synthesising first-generation ligand candidates and characterising Cu complexes by UV-Vis, EPR, and cyclic voltammetry to probe redox behaviour.</div>
+          <div class="tags">
+            <span class="tag">Ligand Design</span><span class="tag">Cu Coordination Chemistry</span><span class="tag">Cyclic Voltammetry</span><span class="tag">Nanomaterial Functionalisation</span><span class="tag">MOF Chemistry</span><span class="tag">Biomass Valorisation</span><span class="tag">Biomimetic Catalysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXP 2 — PONDICHERRY UNIVERSITY (CONSOLIDATED) -->
+      <div class="tl-item thesis">
+        <div class="tl-node"></div>
+        <div class="exp-card reveal">
+          <div class="exp-head">
+            <div class="exp-role">Glycochemistry Research Programme — Ferrier Rearrangements, D-Rhamnal Synthesis &amp; C-2 Aryl Glycoside Development</div>
+            <span class="exp-tag past">July 2024 – May 2025</span>
+          </div>
+          <div class="exp-where">🏛 Pondicherry University, India</div>
+          <div class="exp-guide">Internship → M.Sc. Thesis (10 months, continuous) · Guide: Prof. Dr. J. Kandasamy, Associate Professor, Dept. of Chemistry</div>
+
+          <div class="exp-ql">Central Scientific Question</div>
+          <div class="exp-qt">"Can a systematic Ferrier-I methodology across structurally diverse glycals be leveraged as the entry point for an efficient D-Rhamnal synthesis — and can that rhamnal be further functionalised via Pd-catalysed C-2 arylation to access novel, pharmaceutically relevant C-aryl glycosides?"</div>
+
+          <div class="exp-body">
+            The entire programme was driven by a single connected logic: build a robust glycal methodology first, then exploit it to access chemically significant targets. In the <strong>first phase (internship, July–Dec 2024)</strong>, I systematically benchmarked the Ferrier Type-I rearrangement across four glycal precursors — D-glucal, D-galactal, D-rhamnal, and L-rhamnal — optimising conditions for each substrate and establishing a reproducible, high-yielding protocol. <strong>Yields exceeded 95%</strong> across all substrates, and this methodological groundwork directly set the stage for what followed. Alongside the experimental work, I conducted a <strong>comprehensive critical literature review (25+ publications)</strong> analysing the evolution of the Ferrier reaction from classical BF₃·OEt₂-mediated conditions through modern green alternatives — ionic liquids, Amberlyst, zeolites, and photocatalytic systems — evaluating each against atom economy, E-factor, selectivity, and scalability. This critical reading was not peripheral; it was what identified the methodological gap that the thesis stage was designed to address.
+            <br/><br/>
+            In the <strong>second phase (thesis, Jan–May 2025)</strong>, building directly on this foundation, I developed an efficient synthetic route to <strong>D-Rhamnal from D-Glucal</strong> through selective C-6 hydroxyl modification and C-5 configuration control — a precursor route significantly shorter than existing literature methods. With D-Rhamnal in hand, I deployed it as a pseudoglycal substrate in a <strong>palladium-catalysed C-2 arylation protocol under ambient conditions</strong>, contributing to the synthesis of a range of structurally diverse C-2 arylated substrates across different pyranose frameworks. The work systematically explored aryl coupling partners, solvent conditions, and catalyst loading to map the scope of the transformation. However, the protocol revealed genuine challenges: <strong>substrate stereochemistry proved to be a significant limiting factor</strong>, with anomeric selectivity varying substantially across different glycal precursors and aryl groups, making predictable stereocontrol difficult to achieve consistently. Additionally, <strong>protecting group effects exerted a pronounced influence</strong> on the reaction outcome — certain protecting group combinations on the glycal hydroxyl positions either suppressed reactivity entirely or led to undesired elimination and migration side products. These drawbacks, honestly encountered and carefully documented, clarified the boundaries of this Pd-arylation protocol and directly define the questions I intend to pursue at the PhD level — particularly the design of catalytic systems and substrate architectures that can overcome these stereochemical and electronic limitations.
+          </div>
+
+          <div class="outcome">D-Rhamnal synthesised via an efficient novel route; diverse C-2 arylated substrates accessed under ambient conditions — stereochemical limitations and protecting group sensitivity identified, documented, and set as open questions for future PhD-level investigation.</div>
+
+          <!-- REACTION TYPES -->
+          <div style="margin-bottom:.9rem">
+            <div class="exp-ql" style="margin-bottom:.55rem">Key Reaction Types</div>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+              <span style="font-size:.76rem;padding:.28rem .75rem;border-radius:6px;background:rgba(0,201,167,.08);border:1px solid rgba(0,201,167,.2);color:var(--teal);font-family:var(--mono);letter-spacing:.03em">Ferrier Type-I Rearrangement</span>
+              <span style="font-size:.76rem;padding:.28rem .75rem;border-radius:6px;background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.2);color:var(--gold);font-family:var(--mono);letter-spacing:.03em">Pd(0)-Catalysed C–C Coupling</span>
+              <span style="font-size:.76rem;padding:.28rem .75rem;border-radius:6px;background:rgba(155,143,255,.08);border:1px solid rgba(155,143,255,.2);color:var(--lav);font-family:var(--mono);letter-spacing:.03em">Selective C-6 Deoxygenation</span>
+              <span style="font-size:.76rem;padding:.28rem .75rem;border-radius:6px;background:rgba(0,201,167,.08);border:1px solid rgba(0,201,167,.2);color:var(--teal);font-family:var(--mono);letter-spacing:.03em">Protecting Group Manipulation</span>
+              <span style="font-size:.76rem;padding:.28rem .75rem;border-radius:6px;background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.2);color:var(--gold);font-family:var(--mono);letter-spacing:.03em">Anomeric Selectivity Control</span>
+              <span style="font-size:.76rem;padding:.28rem .75rem;border-radius:6px;background:rgba(155,143,255,.08);border:1px solid rgba(155,143,255,.2);color:var(--lav);font-family:var(--mono);letter-spacing:.03em">C-Glycosidic Bond Formation</span>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Carbohydrate Chemistry</span><span class="tag">Glycal Chemistry</span><span class="tag">Pd-Catalysis</span><span class="tag">C-Glycoside Synthesis</span><span class="tag">Monosaccharide Transformations</span><span class="tag">Yield Optimisation</span><span class="tag">TLC Monitoring</span><span class="tag">¹H/¹³C NMR</span><span class="tag">DEPT · COSY</span><span class="tag">ESI-HRMS</span><span class="tag">Column Chromatography</span><span class="tag">SciFinder</span><span class="tag">Green Chemistry Metrics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     VISION
+════════════════════════════════════════ -->
+<section id="vision">
+  <div class="wrap">
+    <div class="sl reveal">Research Vision</div>
+    <h2 class="sh reveal d1">The Problems I Want to <span class="grad">Solve</span></h2>
+    <p class="sd reveal d2">My PhD goal — in the words a professor needs to hear in the first 60 seconds.</p>
+
+    <div class="vision-box reveal">
+      <p id="cms-vision-text" class="vision-text">
+        "Two of the most pressing challenges in modern synthetic chemistry converge precisely at the boundary of my expertise. First: <strong>the carbohydrate chemical space — arguably the most structurally complex and biologically essential class of natural products — remains extraordinarily difficult to access synthetically.</strong> Despite a century of glycochemistry, the selective construction of C-glycosidic bonds, particularly with control over anomeric configuration and C-2 functionality, continues to require lengthy routes incompatible with rapid analogue synthesis in drug discovery. My Ferrier-arylation work has given me a direct window into this problem, and I believe <em>new C–H and C–M activation strategies applied to glycal platforms</em> offer genuinely unexplored solutions.
+        <br/><br/>
+        Second: <strong>the enzyme family of LPMOs has revealed that nature solves the problem of activating inert C–H bonds in polysaccharides using elegant copper coordination chemistry</strong> — a feat synthetic chemists have only begun to replicate. My JRF work at NIT Calicut positions me at this exact frontier. My PhD ambition is to <em>design the next generation of biomimetic Cu catalysts</em> that bridge the mechanistic precision of the LPMO active site with the synthetic accessibility demanded by scalable biomass valorisation."
+      </p>
+
+      <div class="pillars">
+        <div class="pillar reveal">
+          <div class="pillar-ico">⬡</div>
+          <div class="pillar-t">Glycochemistry &amp; C-Glycosides</div>
+          <div class="pillar-d">New stereoselective routes to C-aryl glycosides via Pd/Ni-catalysed C–H and C–M functionalization of glycal platforms</div>
+        </div>
+        <div class="pillar reveal d1">
+          <div class="pillar-ico">⚗</div>
+          <div class="pillar-t">Biomimetic LPMO Catalysis</div>
+          <div class="pillar-d">Rational design of Cu-ligand systems that replicate LPMO's oxidative C–H cleavage — toward sustainable cellulose conversion</div>
+        </div>
+        <div class="pillar reveal d2">
+          <div class="pillar-ico">🔬</div>
+          <div class="pillar-t">Drug-Relevant Intermediates</div>
+          <div class="pillar-d">Applying glycochemistry methodology to access scaffolds relevant to glycosidase inhibitors, antibiotics, and anticancer glycoconjugates</div>
+        </div>
+      </div>
+
+      <div class="target-sec">
+        <h4>European Research Groups I Admire — and Precisely Why</h4>
+        <div class="tgroup">
+          <div class="tg-item reveal">
+            <div class="tg-pi">Prof. Peter H. Seeberger — Max Planck Institute of Colloids and Interfaces, Germany</div>
+            <div class="tg-inst">Automated glycan assembly · vaccine development · continuous-flow carbohydrate synthesis</div>
+            <div class="tg-why">Prof. Seeberger's automated glycan assembly platform directly addresses the accessibility problem I encountered in my own glycal chemistry. His group's combinatorial glycoside synthesis and use of glycan arrays in drug discovery represents exactly the translational bridge I want to build — taking my Ferrier methodology toward high-throughput application.</div>
+          </div>
+          <div class="tg-item reveal d1">
+            <div class="tg-pi">Prof. Jeroen D. C. Codée — Leiden University, Netherlands</div>
+            <div class="tg-inst">Glycan synthesis · conformational analysis · stereoselective glycosylation</div>
+            <div class="tg-why">The Codée group's mechanistic rigour in understanding anomeric selectivity, neighbouring-group participation, and the conformational dynamics of glycosyl donors closely mirrors the stereochemical questions I encountered in my C-2 arylation work. Their computational/experimental approach to glycosylation mechanism is something I want to contribute to and learn from.</div>
+          </div>
+          <div class="tg-item reveal d2">
+            <div class="tg-pi">Prof. Bert Sels — KU Leuven, Belgium</div>
+            <div class="tg-inst">Sustainable catalysis · biomass valorisation · heterogeneous catalysis for lignocellulosic conversion</div>
+            <div class="tg-why">Prof. Sels's group works precisely at the interface of catalysis and biomass conversion that defines my JRF project — their integration of material science, mechanistic chemistry, and sustainability metrics is a model I aspire to follow. A PhD here would allow me to extend my LPMO-mimicry work into real heterogeneous systems with direct bio-refinery impact.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     PUBLICATIONS
+════════════════════════════════════════ -->
+<section id="publications">
+  <div class="lattice"></div>
+  <!-- DNA double helix BG -->
+  <svg id="pub-svg-bg" viewBox="0 0 80 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M15 0 C55 30 55 70 15 100 C55 130 55 170 15 200 C55 230 55 270 15 300 C55 330 55 370 15 400 C55 430 55 470 15 500 C55 530 55 570 15 600" stroke="#00c9a7" stroke-width="1.8" fill="none" opacity=".22"/>
+    <path d="M65 0 C25 30 25 70 65 100 C25 130 25 170 65 200 C25 230 25 270 65 300 C25 330 25 370 65 400 C25 430 25 470 65 500 C25 530 25 570 65 600" stroke="#9b8fff" stroke-width="1.8" fill="none" opacity=".18"/>
+    <line x1="15" y1="50" x2="65" y2="50" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="100" x2="65" y2="100" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="150" x2="65" y2="150" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="200" x2="65" y2="200" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="250" x2="65" y2="250" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="300" x2="65" y2="300" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="350" x2="65" y2="350" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <line x1="15" y1="400" x2="65" y2="400" stroke="#e8a020" stroke-width="1.2" opacity=".25"/>
+    <circle cx="15" cy="100" r="4" fill="#00c9a7" opacity=".3"/>
+    <circle cx="15" cy="200" r="4" fill="#00c9a7" opacity=".3"/>
+    <circle cx="15" cy="300" r="4" fill="#00c9a7" opacity=".3"/>
+    <circle cx="65" cy="150" r="4" fill="#9b8fff" opacity=".28"/>
+    <circle cx="65" cy="250" r="4" fill="#9b8fff" opacity=".28"/>
+    <circle cx="65" cy="350" r="4" fill="#9b8fff" opacity=".28"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="sl reveal">Publications &amp; Thesis</div>
+    <h2 class="sh reveal d1">Scientific <span class="grad">Output</span></h2>
+    <p class="sd reveal d2">Peer-reviewed manuscripts in preparation, and dissertation work advancing glycochemistry.</p>
+
+    <div id="cms-pub-section">
+      <div class="pub-card reveal">
+        <div class="pub-type thesis">Thesis</div>
+        <div>
+          <div class="pub-title">Strategic Synthesis of D-Rhamnal from D-Glucal and Its Application in Novel C-2 Aryl Glycoside Synthesis</div>
+          <div class="pub-authors"><strong>R. Sridhar</strong> · Supervised by Prof. Dr. J. Kandasamy</div>
+          <div class="pub-journal">M.Sc. Dissertation · Department of Chemistry · Pondicherry University · 2025</div>
+          <div class="pub-meta">
+            <span class="pbadge grade">M.Sc. Thesis · CGPA 8.75 / 10</span>
+            <span class="pbadge jrf">3rd University Rank</span>
+          </div>
+          <ul class="pub-bullets">
+            <li>Developed an efficient synthetic route to <strong>D-Rhamnal from D-Glucal</strong>; confirmed by NMR (¹H, ¹³C, DEPT, COSY) and ESI-HRMS.</li>
+            <li>Ferrier-I rearrangement study across four glycal precursors with <strong>yields exceeding 95%</strong> under optimised conditions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════ -->
+<section id="skills">
+  <!-- Molecular graph BG -->
+  <svg id="skills-svg-bg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="120" y1="28" x2="178" y2="68" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <line x1="120" y1="28" x2="62"  y2="68" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <line x1="178" y1="68" x2="200" y2="138" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <line x1="62"  y1="68" x2="40"  y2="138" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <line x1="200" y1="138" x2="162" y2="200" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <line x1="40"  y1="138" x2="78"  y2="200" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <line x1="162" y1="200" x2="78"  y2="200" stroke="#00c9a7" stroke-width="1.6" opacity=".16"/>
+    <polygon points="120,68 160,90 160,134 120,156 80,134 80,90" stroke="#9b8fff" stroke-width="1.3" fill="rgba(155,143,255,.035)" opacity=".65"/>
+    <circle cx="120" cy="112" r="14" stroke="#9b8fff" stroke-width="1.5" fill="rgba(155,143,255,.06)" opacity=".65"/>
+    <circle cx="120" cy="112" r="5" fill="#9b8fff" opacity=".28"/>
+    <circle cx="120" cy="28" r="8" fill="#00c9a7" opacity=".22"/>
+    <circle cx="178" cy="68" r="7" fill="#00c9a7" opacity=".2"/>
+    <circle cx="62"  cy="68" r="7" fill="#00c9a7" opacity=".2"/>
+    <circle cx="200" cy="138" r="7" fill="#e8a020" opacity=".2"/>
+    <circle cx="40"  cy="138" r="7" fill="#e8a020" opacity=".2"/>
+    <circle cx="162" cy="200" r="8" fill="#e8a020" opacity=".22"/>
+    <circle cx="78"  cy="200" r="8" fill="#e8a020" opacity=".22"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="sl reveal">Technical Skills</div>
+    <h2 class="sh reveal d1">What I Can <span class="grad">Actually Do</span></h2>
+    <p class="sd reveal d2">Context-rich proficiency — not a keyword list. Each skill reflects real hands-on laboratory use in active research.</p>
+
+    <div id="skills-groups-cms" class="skills-grid">
+
+      <div class="sg reveal">
+        <div class="sg-head">⚗ Synthetic Techniques</div>
+        <div class="sk-rows">
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="92"/></svg></div><div class="sk-info"><div class="sk-name">Multi-step Organic Synthesis</div><div class="sk-lv">Expert — 92%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="95"/></svg></div><div class="sk-info"><div class="sk-name">Column Chromatography</div><div class="sk-lv">Expert — 95%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="95"/></svg></div><div class="sk-info"><div class="sk-name">Ferrier Rearrangements</div><div class="sk-lv">Expert — 95%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="90"/></svg></div><div class="sk-info"><div class="sk-name">Pd/Cu-Catalysed Reactions</div><div class="sk-lv">Advanced — 90%</div></div></div>
+        </div>
+        <div class="skill-tags"><span class="stag">Glycal Chemistry</span><span class="stag">Protecting Groups</span><span class="stag">Recrystallisation</span><span class="stag">Inert Atmosphere</span><span class="stag">Scale-Up</span></div>
+      </div>
+
+      <div class="sg reveal d1">
+        <div class="sg-head">📡 Spectroscopy &amp; Characterisation</div>
+        <div class="sk-rows">
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill gc" cx="18" cy="18" r="15.9" data-p="90"/></svg></div><div class="sk-info"><div class="sk-name">¹H / ¹³C NMR Spectroscopy</div><div class="sk-lv">Advanced — 90%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill gc" cx="18" cy="18" r="15.9" data-p="80"/></svg></div><div class="sk-info"><div class="sk-name">ESI-HRMS</div><div class="sk-lv">Proficient — 80%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill gc" cx="18" cy="18" r="15.9" data-p="72"/></svg></div><div class="sk-info"><div class="sk-name">PXRD Analysis</div><div class="sk-lv">Proficient — 72%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill gc" cx="18" cy="18" r="15.9" data-p="70"/></svg></div><div class="sk-info"><div class="sk-name">SEM / Morphology Analysis</div><div class="sk-lv">Proficient — 70%</div></div></div>
+        </div>
+        <div class="skill-tags"><span class="stag">TLC</span><span class="stag">UV-Vis</span><span class="stag">EPR (learning)</span><span class="stag">Cyclic Voltammetry</span><span class="stag">IR Spectroscopy</span></div>
+      </div>
+
+      <div class="sg reveal d2">
+        <div class="sg-head">💻 Computational &amp; Informatics</div>
+        <div class="sk-rows">
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill lc" cx="18" cy="18" r="15.9" data-p="88"/></svg></div><div class="sk-info"><div class="sk-name">ChemDraw / SciFinder</div><div class="sk-lv">Advanced — 88%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill lc" cx="18" cy="18" r="15.9" data-p="68"/></svg></div><div class="sk-info"><div class="sk-name">DFT Studies</div><div class="sk-lv">Developing — 68%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill lc" cx="18" cy="18" r="15.9" data-p="65"/></svg></div><div class="sk-info"><div class="sk-name">Molecular Modelling</div><div class="sk-lv">Developing — 65%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill lc" cx="18" cy="18" r="15.9" data-p="72"/></svg></div><div class="sk-info"><div class="sk-name">Molecular Docking</div><div class="sk-lv">Developing — 72%</div></div></div>
+        </div>
+        <div class="skill-tags"><span class="stag">Homology Modelling</span><span class="stag">ADMET Analysis</span><span class="stag">Green Chemistry</span><span class="stag">Data Analysis</span></div>
+      </div>
+
+      <div class="sg reveal d3">
+        <div class="sg-head">📝 Research &amp; Communication</div>
+        <div class="sk-rows">
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="88"/></svg></div><div class="sk-info"><div class="sk-name">Critical Literature Review</div><div class="sk-lv">Advanced — 88%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="82"/></svg></div><div class="sk-info"><div class="sk-name">Scientific Writing</div><div class="sk-lv">Proficient — 82%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="80"/></svg></div><div class="sk-info"><div class="sk-name">Research Design</div><div class="sk-lv">Proficient — 80%</div></div></div>
+          <div class="sk-row"><div class="sk-ring-wrap"><svg class="sk-ring" viewBox="0 0 36 36"><circle class="sk-track" cx="18" cy="18" r="15.9"/><circle class="sk-fill tc" cx="18" cy="18" r="15.9" data-p="78"/></svg></div><div class="sk-info"><div class="sk-name">Conference Presentation</div><div class="sk-lv">Proficient — 78%</div></div></div>
+        </div>
+        <div class="skill-tags"><span class="stag">English (C1)</span><span class="stag">Tamil</span><span class="stag">Telugu</span><span class="stag">Cross-discipline</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     AWARDS
+════════════════════════════════════════ -->
+<section id="awards">
+  <div class="lattice"></div>
+  <!-- Awards BG: Rising star burst / crystal lattice radiating from center-right -->
+  <svg style="position:absolute;top:50%;right:-40px;transform:translateY(-50%);width:340px;height:340px;pointer-events:none;z-index:0;opacity:1" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer diffraction ring -->
+    <circle cx="150" cy="150" r="130" stroke="#e8a020" stroke-width=".8" stroke-dasharray="6 5" opacity=".1"/>
+    <circle cx="150" cy="150" r="100" stroke="#e8a020" stroke-width=".8" stroke-dasharray="4 4" opacity=".12"/>
+    <circle cx="150" cy="150" r="68"  stroke="#e8a020" stroke-width=".9" fill="none" opacity=".14"/>
+    <!-- 8-pointed star rays -->
+    <line x1="150" y1="20"  x2="150" y2="50"  stroke="#e8a020" stroke-width="1.2" opacity=".28"/>
+    <line x1="150" y1="250" x2="150" y2="280" stroke="#e8a020" stroke-width="1.2" opacity=".28"/>
+    <line x1="20"  y1="150" x2="50"  y2="150" stroke="#e8a020" stroke-width="1.2" opacity=".28"/>
+    <line x1="250" y1="150" x2="280" y2="150" stroke="#e8a020" stroke-width="1.2" opacity=".28"/>
+    <line x1="49"  y1="49"  x2="70"  y2="70"  stroke="#e8a020" stroke-width="1.2" opacity=".22"/>
+    <line x1="230" y1="49"  x2="209" y2="70"  stroke="#e8a020" stroke-width="1.2" opacity=".22"/>
+    <line x1="49"  y1="251" x2="70"  y2="230" stroke="#e8a020" stroke-width="1.2" opacity=".22"/>
+    <line x1="230" y1="251" x2="209" y2="230" stroke="#e8a020" stroke-width="1.2" opacity=".22"/>
+    <!-- Central medallion -->
+    <polygon points="150,110 160,140 192,140 167,158 176,190 150,172 124,190 133,158 108,140 140,140" fill="rgba(232,160,32,.07)" stroke="#e8a020" stroke-width="1.2" opacity=".3"/>
+    <circle cx="150" cy="150" r="12" fill="rgba(232,160,32,.15)" stroke="#e8a020" stroke-width="1.2" opacity=".4"/>
+    <circle cx="150" cy="150" r="5"  fill="#e8a020" opacity=".35"/>
+    <!-- Small orbiting dots -->
+    <circle cx="150" cy="50"  r="3.5" fill="#e8a020" opacity=".3"/>
+    <circle cx="150" cy="250" r="3.5" fill="#e8a020" opacity=".3"/>
+    <circle cx="50"  cy="150" r="3.5" fill="#e8a020" opacity=".3"/>
+    <circle cx="250" cy="150" r="3.5" fill="#e8a020" opacity=".3"/>
+    <circle cx="69"  cy="69"  r="3"   fill="#9b8fff" opacity=".25"/>
+    <circle cx="231" cy="69"  r="3"   fill="#9b8fff" opacity=".25"/>
+    <circle cx="69"  cy="231" r="3"   fill="#9b8fff" opacity=".25"/>
+    <circle cx="231" cy="231" r="3"   fill="#9b8fff" opacity=".25"/>
+  </svg>
+  <div class="wrap">
+    <div class="sl reveal">Honours &amp; Awards</div>
+    <h2 class="sh reveal d1"><span class="grad">Recognition</span></h2>
+    <p class="sd reveal d2">Academic distinctions and competitive qualifications that contextualise research standing in the Indian and global scientific community.</p>
+    <div id="cms-awards-section" class="awards-grid">
+      <div class="aw-card reveal"><div class="aw-ico">🏆</div><div><div class="aw-title">GATE 2025 — Qualified (Chemistry, CY)</div><div class="aw-body">Graduate Aptitude Test in Engineering — India's most competitive national exam for postgraduate science students. Required for all funded JRF &amp; PhD positions at IITs, NITs, and IISERs.</div><div class="aw-year">2025</div></div></div>
+      <div class="aw-card reveal d1"><div class="aw-ico">🏅</div><div><div class="aw-title">CSIR-NET June 2025 — Qualified (PhD Only)</div><div class="aw-body">Council of Scientific &amp; Industrial Research — National Eligibility Test. One of India's most rigorous research aptitude tests — qualification demonstrates strong theoretical mastery across all branches of chemistry.</div><div class="aw-year">2025</div></div></div>
+      <div class="aw-card reveal d2"><div class="aw-ico">🥉</div><div><div class="aw-title">Merit Cum Means Scholarship — 3rd University Rank</div><div class="aw-body">Awarded by Pondicherry University for outstanding M.Sc. Chemistry performance. Ranked 3rd out of all M.Sc. Chemistry students — recognising sustained academic excellence across all four semesters (CGPA 8.75/10).</div><div class="aw-year">2023–2025 · Pondicherry University</div></div></div>
+      <div class="aw-card reveal d3"><div class="aw-ico">🎖️</div><div><div class="aw-title">Prof. A.C. Joseph Medal — 178th College Day</div><div class="aw-body">Prestigious medal awarded at the annual College Day of St. Joseph's College, Tiruchirappalli — recognising outstanding academic and extracurricular contribution.</div><div class="aw-year">2022 · St. Joseph's College</div></div></div>
+      <div class="aw-card reveal d4"><div class="aw-ico">🏸</div><div><div class="aw-title">Consecutive Inter-Collegiate Ball Badminton Champion</div><div class="aw-body">Led the college Ball Badminton team to back-to-back championship victories at Bharathidasan University tournaments. Team Captain responsible for strategy and training coordination.</div><div class="aw-year">2022 &amp; 2023 · Bharathidasan University</div></div></div>
+      <div class="aw-card reveal d5"><div class="aw-ico">⭐</div><div><div class="aw-title">Special Award — Sports &amp; Games, Achievers Day</div><div class="aw-body">Recognised on Achievers Day at St. Joseph's College for exceptional contribution to inter-collegiate sports — demonstrating leadership and the discipline required both on the field and in the laboratory.</div><div class="aw-year">2023 · St. Joseph's College</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     CONFERENCES
+════════════════════════════════════════ -->
+<section id="conferences">
+  <!-- Conferences BG: global network / molecular connectivity -->
+  <svg style="position:absolute;top:50%;left:-30px;transform:translateY(-50%);width:300px;height:300px;pointer-events:none;z-index:0;opacity:1" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Globe latitude lines -->
+    <circle cx="130" cy="130" r="110" stroke="#00c9a7" stroke-width="1" stroke-dasharray="5 4" opacity=".1"/>
+    <ellipse cx="130" cy="130" rx="110" ry="45" stroke="#00c9a7" stroke-width=".8" stroke-dasharray="4 4" opacity=".1"/>
+    <ellipse cx="130" cy="130" rx="85"  ry="35" stroke="#00c9a7" stroke-width=".8" stroke-dasharray="4 4" opacity=".09"/>
+    <ellipse cx="130" cy="130" rx="110" ry="80" stroke="#00c9a7" stroke-width=".8" stroke-dasharray="5 4" opacity=".09"/>
+    <!-- Longitude lines -->
+    <line x1="130" y1="20"  x2="130" y2="240" stroke="#00c9a7" stroke-width=".8" opacity=".1"/>
+    <line x1="50"  y1="50"  x2="210" y2="210" stroke="#00c9a7" stroke-width=".8" opacity=".09" stroke-dasharray="4 4"/>
+    <line x1="210" y1="50"  x2="50"  y2="210" stroke="#00c9a7" stroke-width=".8" opacity=".09" stroke-dasharray="4 4"/>
+    <!-- Network nodes (conference locations) -->
+    <circle cx="130" cy="55"  r="6" fill="#00c9a7" opacity=".3" stroke="#00c9a7" stroke-width="1"/>
+    <circle cx="50"  cy="100" r="5" fill="#9b8fff" opacity=".28"/>
+    <circle cx="200" cy="90"  r="5" fill="#9b8fff" opacity=".28"/>
+    <circle cx="170" cy="175" r="5" fill="#e8a020" opacity=".28"/>
+    <circle cx="75"  cy="185" r="5" fill="#e8a020" opacity=".28"/>
+    <circle cx="130" cy="200" r="5" fill="#00c9a7" opacity=".25"/>
+    <!-- Connection edges (conference network) -->
+    <line x1="130" y1="55"  x2="50"  y2="100" stroke="#00c9a7" stroke-width="1" opacity=".18"/>
+    <line x1="130" y1="55"  x2="200" y2="90"  stroke="#9b8fff" stroke-width="1" opacity=".16"/>
+    <line x1="50"  y1="100" x2="75"  y2="185" stroke="#9b8fff" stroke-width="1" opacity=".14"/>
+    <line x1="200" y1="90"  x2="170" y2="175" stroke="#e8a020" stroke-width="1" opacity=".16"/>
+    <line x1="75"  y1="185" x2="130" y2="200" stroke="#e8a020" stroke-width="1" opacity=".16"/>
+    <line x1="170" y1="175" x2="130" y2="200" stroke="#00c9a7" stroke-width="1" opacity=".14"/>
+    <line x1="50"  y1="100" x2="200" y2="90"  stroke="#00c9a7" stroke-width=".8" opacity=".1" stroke-dasharray="3 3"/>
+    <line x1="75"  y1="185" x2="170" y2="175" stroke="#9b8fff" stroke-width=".8" opacity=".1" stroke-dasharray="3 3"/>
+  </svg>
+  <div class="wrap">
+    <div class="sl reveal">Conferences &amp; Workshops</div>
+    <h2 class="sh reveal d1">Scientific Community <span class="grad">Engagement</span></h2>
+    <p class="sd reveal d2">Events attended, scientific networks built, and exposure to cutting-edge research directions.</p>
+    <div id="cms-conf-section" class="conf-list">
+      <div class="conf-item reveal"><div class="conf-year">2025</div><div><div class="conf-name">ICFCS 2025 — International Conference on Frontiers in Chemical Sciences</div><div class="conf-role">Participant &amp; Student Volunteer — engaged with international researchers across organic, inorganic, and materials chemistry</div></div><div class="conf-loc">India</div></div>
+      <div class="conf-item reveal d1"><div class="conf-year">Nov 2024</div><div><div class="conf-name">Indo-ASEAN Symposium on Organic Synthesis and Medicinal Chemistry</div><div class="conf-role">Participant — exposure to organic synthesis and drug discovery from Indian and ASEAN institutions</div></div><div class="conf-loc">India</div></div>
+      <div class="conf-item reveal d2"><div class="conf-year">Dec 2024</div><div><div class="conf-name">National Workshop on Green Hydrogen: Technology to Application</div><div class="conf-role">Participant — aligned with interest in sustainable catalysis and energy-relevant chemistry</div></div><div class="conf-loc">India</div></div>
+      <div class="conf-item reveal d3"><div class="conf-year">2024</div><div><div class="conf-name">RACES 2024 — National Conference on Recent Advancements in Chemistry &amp; Environmental Sciences</div><div class="conf-role">Participant — exposure to environmental and analytical chemistry frontiers</div></div><div class="conf-loc">India</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     COURSES
+════════════════════════════════════════ -->
+<section id="courses">
+  <!-- NMR spectrum decoration -->
+  <div class="nmr-bar">
+    <svg viewBox="0 0 1100 80" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+      <line x1="0" y1="65" x2="1100" y2="65" stroke="#00c9a7" stroke-width=".8" opacity=".15"/>
+      <path d="M80 65 Q82 65 86 65 Q90 30 92 8 Q94 30 98 65 Q102 65 106 65" stroke="#00c9a7" stroke-width="1.5" fill="rgba(0,201,167,.04)" opacity=".55"/>
+      <path d="M200 65 Q203 65 206 52 Q208 30 210 20 Q212 32 214 52 Q216 65 220 65" stroke="#00c9a7" stroke-width="1.5" fill="rgba(0,201,167,.04)" opacity=".5"/>
+      <path d="M235 65 Q238 65 241 52 Q243 32 245 22 Q247 34 249 52 Q251 65 255 65" stroke="#00c9a7" stroke-width="1.5" fill="rgba(0,201,167,.04)" opacity=".5"/>
+      <path d="M380 65 Q383 55 386 38 Q389 18 392 6 Q395 18 398 38 Q401 55 404 65" stroke="#9b8fff" stroke-width="1.6" fill="rgba(155,143,255,.05)" opacity=".55"/>
+      <path d="M560 65 Q562 56 565 44 Q567 30 569 20 Q571 30 573 44 Q575 56 578 65" stroke="#e8a020" stroke-width="1.5" fill="rgba(232,160,32,.04)" opacity=".48"/>
+      <path d="M583 65 Q585 56 588 44 Q590 30 592 20 Q594 30 596 44 Q598 56 600 65" stroke="#e8a020" stroke-width="1.5" fill="rgba(232,160,32,.04)" opacity=".48"/>
+      <path d="M760 65 Q763 55 768 28 Q774 6 780 0 Q786 6 792 28 Q797 55 800 65" stroke="#9b8fff" stroke-width="1.7" fill="rgba(155,143,255,.06)" opacity=".5"/>
+      <path d="M1000 65 Q1003 60 1006 50 Q1010 35 1014 22 Q1018 35 1022 50 Q1025 60 1028 65" stroke="#00c9a7" stroke-width="1.4" fill="rgba(0,201,167,.04)" opacity=".45"/>
+      <text x="92" y="79" font-size="7" fill="#00c9a7" opacity=".3" text-anchor="middle" font-family="monospace">9.2</text>
+      <text x="222" y="79" font-size="7" fill="#00c9a7" opacity=".3" text-anchor="middle" font-family="monospace">7.8</text>
+      <text x="392" y="79" font-size="7" fill="#9b8fff" opacity=".3" text-anchor="middle" font-family="monospace">5.5</text>
+      <text x="580" y="79" font-size="7" fill="#e8a020" opacity=".3" text-anchor="middle" font-family="monospace">4.1</text>
+      <text x="780" y="79" font-size="7" fill="#9b8fff" opacity=".3" text-anchor="middle" font-family="monospace">3.2</text>
+      <text x="1014" y="79" font-size="7" fill="#00c9a7" opacity=".28" text-anchor="middle" font-family="monospace">TMS</text>
+    </svg>
+  </div>
+
+  <div class="lattice"></div>
+  <div class="wrap">
+    <div class="sl reveal">Courses &amp; Training</div>
+    <h2 class="sh reveal d1">Continuous <span class="grad">Learning</span></h2>
+    <p class="sd reveal d2">Formal training beyond degree coursework — demonstrating initiative and broadening technical range.</p>
+    <div id="cms-courses-section" class="courses-grid">
+      <div class="cg reveal"><div class="cg-inst">Discovery Boulevard</div><div class="cg-type">Online · Computational Drug Discovery · 2025</div><div class="cg-row"><span class="cn">Molecular Docking &amp; Multi-Ligand Screening</span><span class="cy">2025</span></div><div class="cg-row"><span class="cn">Homology Modelling</span><span class="cy">2025</span></div><div class="cg-row"><span class="cn">Drug-Likeness Filtering &amp; ADMET Analysis</span><span class="cy">2025</span></div></div>
+      <div class="cg reveal d1"><div class="cg-inst">St. Joseph's College</div><div class="cg-type">B.Sc. Elective Coursework · Tiruchirappalli</div><div class="cg-row"><span class="cn">Pharmaceutical Chemistry</span><span class="cy">2021</span></div><div class="cg-row"><span class="cn">Separation &amp; Instrumental Techniques</span><span class="cy">2022</span></div><div class="cg-row"><span class="cn">Food Standards &amp; Quality Control</span><span class="cy">2023</span></div></div>
+      <div class="cg reveal d2"><div class="cg-inst">CIPET–IPT Kochi</div><div class="cg-type">Online · 2025</div><div class="cg-row"><span class="cn">Polymers in Electronics</span><span class="cy">2025</span></div></div>
+      <div class="cg reveal d3"><div class="cg-inst">Bharathidasan University</div><div class="cg-type">Diploma · Computing Sciences</div><div class="cg-row"><span class="cn">Office Automation</span><span class="cy">2016</span></div><div class="cg-row"><span class="cn">Programming Techniques</span><span class="cy">2017</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     LEADERSHIP
+════════════════════════════════════════ -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="sl reveal">Leadership &amp; Service</div>
+    <h2 class="sh reveal d1">Beyond the <span class="grad">Laboratory</span></h2>
+    <p class="sd reveal d2">Scientific research demands collaboration, resilience, and the ability to lead — skills built equally at the bench and in the field.</p>
+    <div class="ls-grid">
+      <div class="ls-card reveal"><div class="ls-ico">🏸</div><div class="ls-title">Ball Badminton Team Captain</div><div class="ls-body">Led college team to consecutive inter-collegiate championship victories at Bharathidasan University. Responsible for strategy, training schedule, and team motivation across state-level competition.</div><div class="ls-tag">2022 &amp; 2023 · Bharathidasan University</div></div>
+      <div class="ls-card reveal d1"><div class="ls-ico">🔬</div><div class="ls-title">14th Chemistry Research Drive (CRD-2025) — RJSF</div><div class="ls-body">Participated in the Chemistry Research Drive organised by the Ramanujan Junior Science Forum — a competitive, research-focused engagement platform for emerging chemists. Demonstrates commitment to the Indian chemistry research community and early career professional development.</div><div class="ls-tag">2025 · Ramanujan Junior Science Forum</div></div>
+      <div class="ls-card reveal d2"><div class="ls-ico">🌍</div><div class="ls-title">Languages &amp; Communication</div><div class="ls-body"><strong style="color:var(--ink)">English</strong> — C1 level (academic and scientific communication). <strong style="color:var(--ink)">Tamil</strong> — Native. <strong style="color:var(--ink)">Telugu</strong> — Native. Comfortable writing and presenting in English; reviewed literature, written thesis, and presented posters in English throughout M.Sc. studies.</div><div class="ls-tag">English C1 · Tamil · Telugu</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     REFERENCES
+════════════════════════════════════════ -->
+<section id="references">
+  <div class="lattice"></div>
+  <div class="wrap">
+    <div class="sl reveal">References</div>
+    <h2 class="sh reveal d1">Who Can Speak to My <span class="grad">Work</span></h2>
+    <p class="sd reveal d2">Supervisors who have directly observed and evaluated my research — available to correspond with prospective PhD supervisors upon request.</p>
+    <div class="ref-grid">
+      <div class="ref-card reveal"><div class="ref-av">MS</div><div class="ref-name">Dr. Muniyandi Sankaralingam</div><div class="ref-pos">Associate Professor &amp; Current Research Advisor</div><div class="ref-inst">Department of Chemistry<br/>NIT Calicut, India</div><a href="mailto:sankaralingam@nitc.ac.in" class="ref-email">sankaralingam@nitc.ac.in</a></div>
+      <div class="ref-card reveal d1"><div class="ref-av">JK</div><div class="ref-name">Prof. Dr. Jeyakumar Kandasamy</div><div class="ref-pos">Associate Professor &amp; M.Sc. Thesis Advisor</div><div class="ref-inst">Department of Chemistry<br/>Pondicherry University, India</div><a href="mailto:jkchempu@gmail.com" class="ref-email">jkchempu@gmail.com</a></div>
+      <div class="ref-card reveal d2"><div class="ref-av">SS</div><div class="ref-name">Prof. Dr. S. Sabiah</div><div class="ref-pos">Professor, Department of Chemistry</div><div class="ref-inst">Pondicherry University, India</div><a href="mailto:sabiah.s@pondiuni.edu.in" class="ref-email">sabiah.s@pondiuni.edu.in</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<!-- ════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="avail-badge reveal">
+        <div class="h-dot"></div>
+        <span id="cms-avail-text">Actively seeking PhD positions — Europe 2025/26</span>
+      </div>
+      <h2 class="contact-h reveal d1">Let's Discuss<br/><em>Science Together</em></h2>
+      <p id="cms-contact-sub" class="contact-sub reveal d2">I welcome emails from professors whose research connects to glycochemistry, biomimetic catalysis, or synthetic methodology — even before a formal position is advertised. The best collaborations start with a conversation about ideas, not a vacancy notice.</p>
+      <a id="cms-contact-email" href="mailto:your-email@example.com" class="contact-email-link reveal d3">your-email@example.com</a>
+      <div class="contact-btns reveal d4">
+        <a id="cms-linkedin-btn" href="https://www.linkedin.com/in/sridhar-r-chem/" target="_blank" class="btn-ghost">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+        </a>
+        <a id="cms-orcid-btn" href="https://orcid.org/0009-0001-3602-6240" target="_blank" class="btn-ghost">ORCID: 0009-0001-3602-6240</a>
+        <a id="cms-phone-btn" href="tel:+919486941040" class="btn-ghost">+91 94869 41040</a>
+        <a href="YOUR_CV_LINK.pdf" target="_blank" class="btn-p cms-cv-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <!-- Reaction arrow decoration -->
+  <svg class="footer-nmr" viewBox="0 0 1100 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="32" x2="1100" y2="32" stroke="#00c9a7" stroke-width=".6" opacity=".12"/>
+    <path d="M50 32 Q52 32 55 32 Q58 16 61 4 Q64 16 67 32 Q70 32 73 32" stroke="#00c9a7" stroke-width="1.2" fill="rgba(0,201,167,.04)" opacity=".5"/>
+    <path d="M180 32 Q183 24 186 14 Q189 6 192 0 Q195 6 198 14 Q201 24 204 32" stroke="#9b8fff" stroke-width="1.2" fill="rgba(155,143,255,.04)" opacity=".45"/>
+    <path d="M350 32 Q353 22 357 12 Q360 4 363 32" stroke="#e8a020" stroke-width="1" opacity=".4"/>
+    <path d="M900 32 Q903 22 906 12 Q909 4 912 0 Q915 4 918 12 Q921 22 924 32" stroke="#00c9a7" stroke-width="1.1" opacity=".42"/>
+  </svg>
+
+  <div class="footer-eq">
+    <span class="hl">Glycal</span> + [Pd⁰] + ArX &nbsp;⟶&nbsp; <span class="hl2">C-2 Aryl Glycoside</span>
+    <br/>
+    <span class="hl">Cu·L</span> + O₂ + e⁻ &nbsp;⟶&nbsp; <span class="hl2">[Cu-OOH]&nbsp;(LPMO Mimic)</span>
+  </div>
+  <div class="footer-copy">
+    "Selectivity is nature's signature; catalysis is our attempt to imitate it" &nbsp;·&nbsp;
+    <a href="https://sridhar20ch.github.io/Portfolio/" target="_blank">R. Sridhar</a> · 2026
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+/* ── CMS HYDRATION ───────────────────────────────────── */
+(function(){
+  try{
+    var raw=localStorage.getItem('sridhar_cms_v2');if(!raw)return;
+    var d=JSON.parse(raw),f=d.fields||{};
+    var setT=function(id,v){if(!v)return;var e=document.getElementById(id);if(e)e.textContent=v};
+    var setH=function(id,v){if(!v)return;var e=document.getElementById(id);if(e)e.innerHTML=v};
+    setT('cms-status-text',f.statusText);setH('cms-hero-tagline',f.heroTagline);
+    setT('cms-stat-cgpa',f.cgpa);setT('cms-stat-rank',f.rank);
+    setT('cms-stat-yield',f.yieldStat);setT('cms-stat-papers',f.papersStat);
+    if(f.aboutH1)setT('cms-about-h1',f.aboutH1);if(f.aboutH2)setT('cms-about-h2',f.aboutH2);
+    setH('cms-about-p1',f.aboutP1);setH('cms-about-p2',f.aboutP2);setH('cms-about-p3',f.aboutP3);
+    setT('cms-meta-position',f.metaPosition);setT('cms-meta-cgpa',f.metaCgpa);
+    setT('cms-meta-quals',f.metaQuals);setT('cms-meta-langs',f.metaLangs);setT('cms-meta-region',f.targetRegion);
+    setT('cms-avail-text',f.availMsg);setH('cms-contact-sub',f.contactSub);
+    if(f.email){var em=document.getElementById('cms-contact-email');if(em){em.href='mailto:'+f.email;em.textContent=f.email;}document.getElementById('cms-about-email').href='mailto:'+f.email;}
+    if(f.phone){var pb=document.getElementById('cms-phone-btn');if(pb){pb.href='tel:'+f.phone.replace(/\s/g,'');pb.textContent=f.phone;}}
+    if(f.linkedin)document.querySelectorAll('a[href*="linkedin"]').forEach(function(a){a.href=f.linkedin});
+    if(f.orcid)document.querySelectorAll('a[href*="orcid"]').forEach(function(a){a.href=f.orcid});
+    if(f.cvLink)document.querySelectorAll('.cms-cv-link,#cms-cv-btn').forEach(function(a){a.href=f.cvLink});
+    if(d._html){var h=d._html;
+      if(h.experience)setH('cms-exp-section',h.experience);
+      if(h.publications)setH('cms-pub-section',h.publications);
+      if(h.awards)setH('cms-awards-section',h.awards);
+      if(h.conferences)setH('cms-conf-section',h.conferences);
+      if(h.visionText)setH('cms-vision-text',h.visionText);
+      if(h.skillsGroups)setH('skills-groups-cms',h.skillsGroups);
+      if(h.courses)setH('cms-courses-section',h.courses);
+    }
+  }catch(e){console.warn('CMS:',e)}
+})();
+
+/* ── PRELOADER ───────────────────────────────────────── */
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    document.getElementById('preloader').classList.add('done');
+    document.body.style.overflow='';
+  },1600);
+});
+document.body.style.overflow='hidden';
+
+/* ── CUSTOM CURSOR ───────────────────────────────────── */
+var cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+var mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX;my=e.clientY;
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+});
+(function animRing(){
+  rx+=(mx-rx)*.3;ry+=(my-ry)*.3;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+})();
+
+/* ── TYPED TEXT ──────────────────────────────────────── */
+(function(){
+  var phrases=[
+    'Organic chemist eager to explore multidisciplinary research for impactful outcomes.',
+    'Specialising in glycochemistry, Ferrier rearrangements & biomimetic Cu catalysis.',
+    'JRF at NIT Calicut · Seeking PhD in Europe 2026.'
+  ];
+  var el=document.getElementById('typed-text'),idx=0,ci=0,del=false,wait=0;
+  function tick(){
+    if(wait>0){wait--;setTimeout(tick,60);return;}
+    var cur=phrases[idx];
+    if(!del){
+      el.textContent=cur.slice(0,++ci);
+      if(ci===cur.length){del=true;wait=55;}
+    }else{
+      el.textContent=cur.slice(0,--ci);
+      if(ci===0){del=false;idx=(idx+1)%phrases.length;wait=12;}
+    }
+    setTimeout(tick,del?32:52);
+  }
+  setTimeout(tick,1800);
+})();
+
+/* ── COUNTER ANIMATION ───────────────────────────────── */
+function animateCounters(){
+  document.querySelectorAll('.count').forEach(function(el){
+    var target=parseFloat(el.dataset.target),dec=parseInt(el.dataset.dec)||0;
+    var start=0,dur=1600,step=dur/60;
+    var t=0;
+    var id=setInterval(function(){
+      t+=step;var p=Math.min(t/dur,1);
+      var ease=1-Math.pow(1-p,3);
+      el.textContent=(start+ease*(target-start)).toFixed(dec);
+      if(p>=1){el.textContent=target.toFixed(dec);clearInterval(id);}
+    },16);
+  });
+}
+
+/* ── HERO CANVAS — MOLECULAR NETWORK ────────────────── */
+(function(){
+  var canvas=document.getElementById('hero-canvas');
+  var ctx=canvas.getContext('2d');
+  var nodes=[],W,H,countersRun=false;
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  resize();window.addEventListener('resize',resize);
+  for(var i=0;i<62;i++){
+    nodes.push({
+      x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,
+      r:Math.random()*2.5+1,
+      c:Math.random()<.55?'#00c9a7':Math.random()<.5?'#9b8fff':'#e8a020',
+    });
+  }
+  var mouse={x:-999,y:-999};
+  document.addEventListener('mousemove',function(e){mouse.x=e.clientX;mouse.y=e.clientY;});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    // connections
+    for(var i=0;i<nodes.length;i++){
+      for(var j=i+1;j<nodes.length;j++){
+        var dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y;
+        var dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<155){
+          ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);
+          ctx.strokeStyle='rgba(0,201,167,'+(0.12*(1-dist/155))+')';
+          ctx.lineWidth=.6;ctx.stroke();
+        }
+      }
+    }
+    // nodes
+    nodes.forEach(function(n){
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+      ctx.fillStyle=n.c;ctx.globalAlpha=.55;ctx.fill();ctx.globalAlpha=1;
+    });
+    // update
+    nodes.forEach(function(n){
+      n.x+=n.vx;n.y+=n.vy;
+      if(n.x<0||n.x>W) n.vx*=-1;
+      if(n.y<0||n.y>H) n.vy*=-1;
+      // gentle mouse repulsion
+      var dx=n.x-mouse.x,dy=n.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){n.vx+=dx/d*.04;n.vy+=dy/d*.04;}
+      n.vx=Math.max(-.55,Math.min(.55,n.vx));n.vy=Math.max(-.55,Math.min(.55,n.vy));
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── MOBILE NAV ──────────────────────────────────────── */
+var hamBtn=document.getElementById('ham-btn'),mobNav=document.getElementById('mob-nav');
+function openMob(){hamBtn.classList.add('open');mobNav.classList.add('open');document.body.style.overflow='hidden';}
+function closeMob(){hamBtn.classList.remove('open');mobNav.classList.remove('open');document.body.style.overflow='';}
+hamBtn.addEventListener('click',function(){mobNav.classList.contains('open')?closeMob():openMob();});
+document.querySelectorAll('.mob-link').forEach(function(a){a.addEventListener('click',closeMob);});
+
+/* ── SCROLL PROGRESS + ACTIVE NAV + SCROLLED NAV ─────── */
+var prog=document.getElementById('scroll-prog');
+var navLinks=document.querySelectorAll('.nav-links a:not(.nav-cta)');
+var sections=document.querySelectorAll('section[id]');
+var navEl=document.getElementById('nav');
+var countersTriggered=false;
+window.addEventListener('scroll',function(){
+  var docH=document.documentElement.scrollHeight-window.innerHeight;
+  if(prog) prog.style.width=(docH>0?window.scrollY/docH*100:0)+'%';
+  navEl.classList.toggle('scrolled',window.scrollY>60);
+  var cur='';
+  sections.forEach(function(s){if(window.scrollY>=s.offsetTop-170)cur=s.id;});
+  navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
+  if(!countersTriggered&&window.scrollY>200){countersTriggered=true;animateCounters();}
+},{passive:true});
+
+/* ── REVEAL OBSERVER ─────────────────────────────────── */
+var ro=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting)e.target.classList.add('on');
+    else e.target.classList.remove('on');
+  });
+},{threshold:.07,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.reveal,.slide-l,.slide-r,.scale-in').forEach(function(el){ro.observe(el);});
+
+/* ── SKILL RING ANIMATION ────────────────────────────── */
+document.querySelectorAll('.sk-ring .sk-fill').forEach(function(c){
+  var p=parseInt(c.getAttribute('data-p')||0);
+  var circ=2*Math.PI*15.9;
+  c.style.strokeDasharray='0 100';
+  var obs=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting){
+      requestAnimationFrame(function(){requestAnimationFrame(function(){c.style.strokeDasharray=p+' 100';});});
+    }else{c.style.strokeDasharray='0 100';}
+  },{threshold:.35});
+  obs.observe(c.closest('.sk-ring-wrap'));
+});
+
+/* ── CARD TILT EFFECT ────────────────────────────────── */
+document.querySelectorAll('.exp-card,.pub-card,.aw-card,.ls-card,.ref-card,.pillar').forEach(function(card){
+  card.addEventListener('mousemove',function(e){
+    var r=card.getBoundingClientRect();
+    var x=(e.clientX-r.left)/r.width-.5;
+    var y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform='perspective(800px) rotateX('+(y*-6)+'deg) rotateY('+(x*6)+'deg) translateZ(4px)';
+  });
+  card.addEventListener('mouseleave',function(){
+    card.style.transform='';
+    card.style.transition='transform .45s var(--ease)';
+  });
+  card.addEventListener('mouseenter',function(){card.style.transition='transform .08s linear';});
+});
+
+/* ── VISITOR TRACKING ────────────────────────────────── */
+(function(){
+  try{
+    var KEY='portfolio_visits';
+    var v=JSON.parse(localStorage.getItem(KEY)||'[]');
+    var now=new Date(),ua=navigator.userAgent;
+    v.push({
+      ts:now.getTime(),
+      date:now.toISOString().slice(0,10),
+      hour:now.getHours(),
+      device:/Mobile|Android|iPhone/i.test(ua)?'mobile':/iPad|Tablet/i.test(ua)?'tablet':'desktop',
+      ref:document.referrer||'direct',
+      sid:sessionStorage.getItem('sid')||(function(){
+        var s=Math.random().toString(36).slice(2);
+        sessionStorage.setItem('sid',s);return s;
+      })()
+    });
+    if(v.length>1000)v=v.slice(-1000);
+    localStorage.setItem(KEY,JSON.stringify(v));
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
