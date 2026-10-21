@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>R. Sridhar — Organic Chemist · PhD Applicant 2026</title>
+<meta name="description" content="R. Sridhar — organic chemist working on glycochemistry, Ferrier rearrangements and biomimetic Cu catalysis. JRF at NIT Calicut, seeking a PhD in Europe in 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23060e1c'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='8' fill='none' stroke='%232dd4bf' stroke-width='2'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='8' fill='none' stroke='%23e8a838' stroke-width='2' transform='rotate(60 32 32)'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%232dd4bf'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#060e1c;--bg2:#0a1628;--card:rgba(255,255,255,.035);--cardH:rgba(255,255,255,.065);--line:rgba(255,255,255,.09);--ink:#e4edf7;--mute:#8ea3bb;--teal:#2dd4bf;--gold:#e8a838;--lav:#a99bff;--serif:'Newsreader',Georgia,serif;--sans:'Public Sans',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--teal);text-decoration:none}a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--teal),var(--lav),var(--gold));z-index:30}
+.top{position:fixed;top:0;left:0;right:0;z-index:20;transition:.3s}
+.top.s{background:rgba(6,14,28,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1.5rem;height:60px}
+.brand{font:600 1.15rem var(--serif);color:var(--ink);display:flex;align-items:center;gap:.55rem;white-space:nowrap}
+.brand i{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,.18)}
+.top nav{display:flex;gap:1.2rem;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.top nav a{color:var(--mute);font-size:.82rem;white-space:nowrap;position:relative;padding:.3rem 0}
+.top nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--teal);transition:.25s}
+.top nav a:hover,.top nav a.on{color:var(--ink)}.top nav a:hover::after,.top nav a.on::after{width:100%}
+.cta{background:var(--teal);color:var(--bg)!important;font-weight:600;font-size:.82rem;padding:.4rem 1rem;border-radius:99px;white-space:nowrap}
+.cta:hover{background:var(--gold)}
+/* hero */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:6.5rem 0 3rem;overflow:hidden;background:radial-gradient(ellipse 60% 50% at 80% 35%,rgba(45,212,191,.09),transparent 70%),radial-gradient(ellipse 50% 50% at 10% 90%,rgba(169,155,255,.07),transparent 70%)}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:3rem;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:.6rem;font:500 .76rem var(--mono);color:var(--teal);border:1px solid rgba(45,212,191,.3);background:rgba(45,212,191,.07);padding:.35rem .9rem;border-radius:99px}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1{font:500 clamp(3rem,7vw,5.2rem)/1 var(--serif);letter-spacing:-.03em;margin:1.4rem 0 1rem}
+h1 em{font-style:italic;background:linear-gradient(100deg,var(--teal),var(--lav));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font:400 1.2rem/1.5 var(--serif);color:var(--mute);min-height:3.6em;max-width:30em}
+#tc{display:inline-block;width:2px;height:1.1em;background:var(--teal);margin-left:3px;vertical-align:-.15em;animation:pulse 1s infinite}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 2rem}
+.chip{font-size:.78rem;border:1px solid var(--line);background:var(--card);padding:.25rem .8rem;border-radius:99px;color:var(--mute);transition:.2s}
+.chip:hover{border-color:var(--teal);color:var(--ink)}.chip.hi{color:var(--teal);border-color:rgba(45,212,191,.3)}.chip.gl{color:var(--gold);border-color:rgba(232,168,56,.3)}
+.acts{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.9rem;padding:.7rem 1.4rem;border-radius:99px;transition:.25s}
+.btn.p{background:var(--teal);color:var(--bg)}.btn.p:hover{background:var(--gold);color:var(--bg);transform:translateY(-2px)}
+.btn.s{border:1px solid var(--line);color:var(--ink)}.btn.s:hover{border-color:var(--teal);color:var(--teal)}
+.viewer{position:relative;border:1px solid var(--line);border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));box-shadow:0 30px 80px rgba(0,0,0,.45);padding:.6rem;backdrop-filter:blur(8px)}
+#mol{width:100%;height:400px;display:block;cursor:grab;touch-action:none}#mol:active{cursor:grabbing}
+.vt{display:flex;gap:.4rem;flex-wrap:wrap;padding:.4rem .6rem}
+.vt button{font:500 .78rem var(--sans);border:1px solid var(--line);background:transparent;color:var(--mute);padding:.35rem .9rem;border-radius:99px;cursor:pointer;transition:.2s}
+.vt button:hover{color:var(--ink);border-color:var(--teal)}.vt button.on{background:var(--teal);border-color:var(--teal);color:var(--bg)}
+.vc{font-size:.82rem;color:var(--mute);padding:.2rem .8rem .7rem;min-height:3.8em}
+.hint{position:absolute;top:1rem;left:1.2rem;font:400 .7rem var(--mono);color:var(--mute)}
+.leg{position:absolute;top:1rem;right:1.2rem;display:flex;gap:.8rem;font:400 .7rem var(--mono);color:var(--mute)}
+.leg i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.3rem}
+.fm{position:absolute;font:400 .72rem var(--mono);color:rgba(142,163,187,.55);animation:fl 9s ease-in-out infinite;pointer-events:none}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.hstats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3.5rem}
+.st{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.4rem;transition:.25s}
+.st:hover{background:var(--cardH);border-color:rgba(45,212,191,.4);transform:translateY(-3px)}
+.st b{display:block;font:500 2.2rem/1.1 var(--serif);color:var(--ink)}.st span{font-size:.8rem;color:var(--mute)}
+/* sections */
+section.s{padding:5.5rem 0;border-top:1px solid var(--line)}
+.sh{margin-bottom:3rem;max-width:42rem}
+.sh h2{font:500 clamp(2rem,4vw,2.9rem)/1.1 var(--serif);letter-spacing:-.02em}
+.sh h2::after{content:"";display:block;width:3rem;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--teal),var(--gold));margin-top:1rem}
+.sh p{color:var(--mute);margin-top:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;transition:.25s;position:relative}
+.card:hover{background:var(--cardH);border-color:rgba(45,212,191,.35);transform:translateY(-3px)}
+.g2,.g3{display:grid;gap:1.25rem}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+h3{font:500 1.35rem/1.3 var(--serif);margin-bottom:.3rem}h4{font:600 .95rem var(--sans);margin-bottom:.35rem}
+.m{font:400 .78rem/1.5 var(--mono);color:var(--teal);margin-bottom:.8rem}
+.card p{color:var(--mute);font-size:.94rem}.card p+p{margin-top:.8rem}.card p b{color:var(--ink);font-weight:600}
+.tags{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.2rem}
+.tags li{font-size:.75rem;color:var(--mute);border:1px solid var(--line);padding:.15rem .7rem;border-radius:99px;transition:.2s}
+.tags li:hover{color:var(--teal);border-color:var(--teal)}
+.q{font:italic 400 1.1rem/1.55 var(--serif);color:var(--ink);border-left:3px solid var(--gold);padding:.2rem 0 .2rem 1.1rem;margin:1.2rem 0}
+/* about */
+.ab{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:3rem;align-items:start}
+.ab p{color:var(--mute)}.ab p+p{margin-top:1.1rem}.ab p b{color:var(--ink);font-weight:500}
+.facts{display:grid;gap:.8rem}.facts .card{padding:1rem 1.3rem}
+.facts small{display:block;font:400 .7rem var(--mono);color:var(--teal)}.facts span{font-size:.92rem}
+/* timeline */
+.tl{position:relative;display:grid;gap:1.75rem;padding-left:2.4rem}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--teal),var(--lav),transparent)}
+.tl>div{position:relative}.tl>div::before{content:"";position:absolute;left:-2.4rem;top:1.9rem;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--teal)}
+.tl>div.now::before{background:var(--teal);box-shadow:0 0 0 5px rgba(45,212,191,.2)}
+.tl .card{padding:2rem}
+/* vision */
+.vb{background:linear-gradient(135deg,rgba(45,212,191,.08),rgba(169,155,255,.06));border:1px solid rgba(45,212,191,.25);border-radius:22px;padding:2.5rem;margin-bottom:1.5rem}
+.vb p{font:400 1.2rem/1.65 var(--serif);max-width:60ch}.vb p+p{margin-top:1rem;color:var(--mute)}
+.pn{font:500 .75rem var(--mono);color:var(--gold);display:block;margin-bottom:.6rem}
+.sub{font:500 1.5rem var(--serif);margin:3rem 0 1.25rem}
+/* skills etc */
+.card ul.l{list-style:none;color:var(--mute);font-size:.92rem}.card ul.l li{padding:.4rem 0;border-bottom:1px solid var(--line)}.card ul.l li:last-child{border:0}
+.yr{font:500 .78rem var(--mono);color:var(--gold);margin-bottom:.6rem;display:block}
+.cl{display:grid;gap:.9rem}.cl .card{display:grid;grid-template-columns:7rem 1fr;gap:1.2rem;padding:1.2rem 1.6rem}.cl .card:hover{transform:translateX(4px)}
+.av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:600 .95rem var(--serif);background:linear-gradient(135deg,var(--teal),var(--lav));color:var(--bg);margin-bottom:1rem}
+.ct{text-align:center;padding:3rem 2rem;background:linear-gradient(135deg,rgba(45,212,191,.09),rgba(232,168,56,.06));border:1px solid rgba(45,212,191,.28);border-radius:24px}
+.ct p{color:var(--mute);max-width:46ch;margin:1rem auto 1.6rem}.ct .acts{justify-content:center}
+.eq{font:400 .82rem/1.9 var(--mono);color:var(--mute);text-align:center;margin-top:3.5rem}.eq b{color:var(--teal);font-weight:400}.eq u{color:var(--gold);text-decoration:none}
+footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;color:var(--mute);font-size:.82rem}
+.ga{margin:1.8rem 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in}.ga[hidden]{display:none}
+.ga img{display:block;width:100%;height:auto}.ga figcaption{background:var(--bg2);color:var(--mute);font-size:.78rem;padding:.6rem 1rem;border-top:1px solid var(--line)}
+#lb{position:fixed;inset:0;background:rgba(3,8,16,.92);display:none;place-items:center;z-index:50;padding:2rem;cursor:zoom-out}#lb.on{display:grid}#lb img{max-width:100%;max-height:100%;background:#fff;border-radius:8px}
+.cx{display:grid;gap:1.25rem}.cx.cards{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.cx.text{max-width:72ch}.cx.figure{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}.cx.list .card:hover{transform:translateX(4px)}
+.cimg{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);margin-bottom:1rem;background:#fff}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero-grid,.ab{grid-template-columns:1fr}.g3{grid-template-columns:1fr 1fr}.hstats{grid-template-columns:1fr 1fr}.brand span{display:none}#mol{height:340px}.fm{display:none}}
+@media(max-width:620px){.g2,.g3{grid-template-columns:1fr}.cl .card{grid-template-columns:1fr;gap:.3rem}section.s{padding:4rem 0}.top .cta{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style></head><body>
+<div id="bar"></div>
+<header class="top" id="top"><div class="wrap"><a class="brand" href="#hero"><i></i><span>R. Sridhar</span></a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#experience">Research</a><a href="#vision">Vision</a><a href="#dissertation">Dissertation</a><a href="#skills">Skills</a><a href="#awards">Honours</a><a href="#conferences">Conferences</a><a href="#courses">Training</a><a href="#leadership">Leadership</a><a href="#references">References</a><a href="#contact">Contact</a></nav>
+<a class="cta cms-cv-link" href="CV.pdf" target="_blank" rel="noopener">Download CV</a></div></header>
+
+<section id="hero"><canvas id="net" aria-hidden="true"></canvas>
+<span class="fm" style="top:17%;left:4%">D-Glucal → D-Rhamnal</span><span class="fm" style="top:78%;left:8%;animation-delay:-3s">Cu·L + O₂ → [Cu–OOH]</span><span class="fm" style="top:12%;right:5%;animation-delay:-6s">BF₃·OEt₂ cat.</span>
+<div class="wrap"><div class="hero-grid">
+<div><span class="badge" id="cms-status-text">JRF · NIT Calicut · Feb 2026 – present</span>
+<h1>R. <em>Sridhar</em></h1>
+<p class="tag" id="cms-hero-tagline"><span id="tt">Organic chemist exploring multidisciplinary research for impactful outcomes.</span><span id="tc"></span></p>
+<div class="chips"><span class="chip hi">Glycochemistry</span><span class="chip hi">Ferrier rearrangements</span><span class="chip hi">LPMO biomimetic catalysis</span><span class="chip">Green catalysis</span><span class="chip">Drug-design intermediates</span><span class="chip gl">GATE 2025 · CSIR-NET 2025</span><span class="chip gl">PhD in Europe, 2026</span></div>
+<div class="acts"><a class="btn p cms-cv-link" id="cms-cv-btn" href="CV.pdf" target="_blank" rel="noopener">Download CV</a><a class="btn s" href="#contact">Get in touch</a><a class="btn s" href="#vision">Research vision</a></div></div>
+<div class="viewer"><span class="hint">Drag to rotate</span><div class="leg"><span><i style="background:#9fb0c2"></i>C</span><span><i style="background:#ef5a4e"></i>O</span><span><i style="background:#5b8cff"></i>N</span><span><i style="background:#e8a838"></i>Cu</span></div>
+<canvas id="mol" aria-label="Interactive 3D molecular model. Drag to rotate."></canvas>
+<div class="vt"><button class="on" data-m="0">D-Glucal</button><button data-m="1">Ferrier product</button><button data-m="2">Cu–O₂ LPMO model</button></div><p class="vc" id="vc"></p></div></div>
+<div class="hstats"><div class="st"><b id="cms-stat-cgpa">8.75</b><span>M.Sc. grade, out of 10</span></div><div class="st"><b id="cms-stat-rank">3rd</b><span>University rank</span></div><div class="st"><b id="cms-stat-yield">&gt;95%</b><span>Ferrier-I yield</span></div><div class="st"><b id="cms-stat-papers">25+</b><span>Papers reviewed</span></div></div></div></section>
+
+<section class="s" id="about"><div class="wrap"><div class="sh"><h2>About</h2></div><div class="ab">
+<div><p id="cms-about-p1">My work sits between carbohydrate chemistry and biomimetic catalysis. I use glycals and their rearrangements to reach pharmacologically relevant scaffolds, and I design copper–ligand systems that imitate the way enzymes activate inert bonds.</p>
+<p id="cms-about-p2">At Pondicherry University, under Prof. J. Kandasamy, I developed a synthetic route from D-glucal to D-rhamnal and contributed experimentally to Pd-catalysed C-2 arylation of 2,3-pseudoglycals, synthesising and characterising 15+ pyranoside derivatives. My Ferrier Type-I studies gave 2,3-unsaturated glycosides in yields above 95% across four glycal precursors.</p>
+<p id="cms-about-p3">I am now a Junior Research Fellow at NIT Calicut under Dr. M. Sankaralingam, developing copper-based functional models of lytic polysaccharide monooxygenases (LPMOs) for biomass valorisation. I am seeking a European PhD in synthetic methodology, green catalysis and chemical biology.</p></div>
+<div class="facts"><div class="card"><small>Position</small><span id="cms-meta-position">JRF, NIT Calicut</span></div><div class="card"><small>Qualifications</small><span id="cms-meta-quals">GATE 2025 (CY) · CSIR-NET June 2025 (PhD only)</span></div><div class="card"><small>Languages</small><span id="cms-meta-langs">English (C1) · Tamil · Telugu</span></div><div class="card"><small>Target</small><span id="cms-meta-region">PhD, Europe</span></div></div></div></div></section>
+
+<section class="s" id="experience"><div class="wrap"><div class="sh"><h2>Research experience</h2><p>Each project as a scientific narrative: the question, my contribution, and what emerged.</p></div><div class="tl" id="cms-exp-section">
+<div class="now"><div class="card"><h3>Nature-inspired Conversion of Biomass to Biofuel: The LPMO Paradigm</h3>
+<p class="m">Project Associate (JRF) · NIT Calicut, India · Feb 2026 – present · Advisor: Dr. M. Sankaralingam</p>
+<p class="q">Can synthetic molecular systems and functional nanomaterials replicate the oxidative C–H activation that copper-dependent LPMOs achieve in nature?</p>
+<p>I designed and characterised tetradentate Cu complexes with systematically varied ligand environments as functional models of LPMOs for polysaccharide oxidation, and studied how ligand denticity, sterics and electronics affect catalyst behaviour.</p>
+<p>To test the role of supports, I synthesised MIL-100 MOFs and ferrites. Molecular catalysts are compared on p-nitrophenyl glycoside model substrates by UV–Vis spectroscopy, which guides later work with natural polysaccharides. Mechanistic studies by DFT and analytical methods are in progress.</p>
+<ul class="tags"><li>Ligand design</li><li>Cu coordination chemistry</li><li>Cyclic voltammetry</li><li>MOFs and ferrites</li><li>Biomass valorisation</li><li>DFT</li></ul>
+<figure class="ga" data-ga="jrf"><img src="images/graphical-abstract-jrf.png" alt="Graphical abstract of the JRF project" onerror="this.closest('figure').hidden=true"><figcaption>Graphical abstract · JRF project</figcaption></figure></div></div>
+<div><div class="card"><h3>Ferrier Rearrangements, D-Rhamnal Synthesis and C-2 Aryl Glycosides</h3>
+<p class="m">Graduate Researcher (M.Sc. thesis and internship) · Pondicherry University, India · July 2024 – May 2025 · Advisor: Prof. Dr. J. Kandasamy</p>
+<p class="q">Can a systematic Ferrier-I methodology serve as the entry to an efficient D-rhamnal synthesis, and can that rhamnal be functionalised by Pd-catalysed C-2 arylation?</p>
+<p><b>Internship, July–Dec 2024.</b> I optimised the Ferrier Type-I rearrangement across four glycal precursors (D-glucal, D-galactal, D-rhamnal, L-rhamnal) and evaluated catalytic approaches, with yields above 95%. A critical review of 25+ publications compared classical BF₃·OEt₂ conditions with ionic liquids, Amberlyst, zeolites and photocatalytic systems on atom economy, E-factor, selectivity and scalability.</p>
+<p><b>Thesis, Jan–May 2025.</b> I developed a route from D-glucal to D-rhamnal through selective C-6 modification and C-5 configuration control, shorter than existing literature methods. As part of this training I contributed experimentally to the work underlying the methodology reported in <i>J. Org. Chem.</i> 2026, 91, 9028–9044 (Pd-catalysed C-2 arylation of 2,3-pseudoglycals), synthesising and characterising 15+ pyranoside derivatives and interpreting their spectra.</p>
+<p>The scope study showed two limits: anomeric selectivity varies with the glycal and aryl partner, and some protecting-group combinations suppress reactivity or cause elimination and migration. These define the questions I want to pursue in a PhD.</p>
+<ul class="tags"><li>Ferrier Type-I rearrangement</li><li>Pd-catalysed C–C coupling</li><li>Selective C-6 deoxygenation</li><li>Protecting-group strategy</li><li>Anomeric selectivity</li><li>C-glycosides</li><li>NMR, ESI-HRMS</li></ul>
+<figure class="ga" data-ga="msc"><img src="images/graphical-abstract-msc.png" alt="Graphical abstract of the M.Sc. dissertation" onerror="this.closest('figure').hidden=true"><figcaption>Graphical abstract · M.Sc. dissertation</figcaption></figure></div></div></div></div></section>
+
+<section class="s" id="vision"><div class="wrap"><div class="sh"><h2>Research vision</h2><p>The problems I want to solve in a PhD.</p></div><div id="cms-vision-text">
+<div class="vb"><p>Carbohydrates remain hard to access synthetically: selective C-glycosidic bond formation, with control of anomeric configuration and C-2 functionality, still needs long routes that do not suit analogue synthesis in drug discovery. I believe C–H and C–M activation strategies on glycal platforms offer unexplored solutions.</p><p>LPMOs show that nature activates inert C–H bonds in polysaccharides with copper coordination chemistry. My ambition is to design biomimetic Cu catalysts that combine the precision of the LPMO active site with the accessibility needed for scalable biomass valorisation.</p></div>
+<div class="g3"><div class="card"><span class="pn">Pillar I</span><h4>Glycochemistry and C-glycosides</h4><p>Stereoselective routes to C-aryl glycosides via Pd/Ni-catalysed C–H and C–M functionalisation of glycals.</p></div><div class="card"><span class="pn">Pillar II</span><h4>Biomimetic LPMO catalysis</h4><p>Cu–ligand systems that replicate oxidative C–H cleavage, toward sustainable cellulose conversion.</p></div><div class="card"><span class="pn">Pillar III</span><h4>Drug-relevant intermediates</h4><p>Scaffolds relevant to glycosidase inhibitors, antibiotics and anticancer glycoconjugates.</p></div></div>
+<h3 class="sub">European groups I admire</h3>
+<div class="g3"><div class="card"><h4>Prof. Peter H. Seeberger</h4><p class="m">Max Planck Institute of Colloids and Interfaces, Germany</p><p>Automated glycan assembly addresses the accessibility problem I met in glycal chemistry, and is a route to high-throughput use of my Ferrier methodology.</p></div><div class="card"><h4>Prof. Jeroen D. C. Codée</h4><p class="m">Leiden University, Netherlands</p><p>Mechanistic work on anomeric selectivity and glycosyl donor conformation mirrors the stereochemical questions from my C-2 arylation work.</p></div><div class="card"><h4>Prof. Bert Sels</h4><p class="m">KU Leuven, Belgium</p><p>Catalysis and biomass conversion are the interface of my JRF project; a PhD here would extend LPMO mimicry into heterogeneous systems.</p></div></div></div></div></section>
+
+<section class="s" id="dissertation"><div class="wrap"><div class="sh"><h2>M.Sc. dissertation</h2></div><div id="cms-pub-section">
+<div class="card"><span class="yr">Pondicherry University · 2025</span><h3>Strategic Synthesis of D-Rhamnal from D-Glucal and Its Application in Novel C-2 Aryl Glycoside Synthesis</h3><p class="m">Supervisor: Prof. Dr. J. Kandasamy · Grade 8.75/10</p><p>An efficient D-rhamnal route confirmed by ¹H, ¹³C, DEPT and COSY NMR and ESI-HRMS, with a Ferrier-I study across four glycal precursors at yields above 95%.</p></div></div></div></section>
+
+<section class="s" id="skills"><div class="wrap"><div class="sh"><h2>Skills</h2><p>Hands-on laboratory and computational methods from active research.</p></div><div class="g3" id="skills-groups-cms">
+<div class="card"><h4>Molecular and coordination chemistry</h4><p>Carbohydrate synthesis, synthetic route development, reaction optimisation, Cu complex synthesis, ligand-environment tuning, separation and purification, protecting groups, inert-atmosphere work.</p></div>
+<div class="card"><h4>Materials synthesis</h4><p>Sol-gel and microwave-assisted solvothermal synthesis of ferrites and MOFs; thermal treatment and processing of supported materials.</p></div>
+<div class="card"><h4>Characterisation</h4><p>NMR (¹H, ¹³C, DEPT, COSY), ESI-HRMS, FT-IR (ATR), UV–Vis, cyclic voltammetry, PXRD, SEM, TLC monitoring.</p></div>
+<div class="card"><h4>Computational methods</h4><p>Molecular modelling, DFT, molecular docking, homology modelling, ADMET analysis, spectral interpretation.</p></div>
+<div class="card"><h4>Software</h4><p>ChemDraw 22, SciFinder, Spartan 14, GaussView 06, Gaussian 16, Discovery Studio, VESTA, PyRx, AutoDock Tools, MestReNova 12, Origin 2024, SigmaPlot 14.</p></div>
+<div class="card"><h4>Research and communication</h4><p>Critical literature review, scientific writing, research design, conference presentation; English (C1), Tamil, Telugu.</p></div></div></div></section>
+
+<section class="s" id="awards"><div class="wrap"><div class="sh"><h2>Honours and awards</h2></div><div class="g3" id="cms-awards-section">
+<div class="card"><span class="yr">2025</span><h4>GATE 2025, Chemistry (CY)</h4><p>Qualified.</p></div>
+<div class="card"><span class="yr">2025</span><h4>CSIR-NET June 2025</h4><p>Qualified (PhD only).</p></div>
+<div class="card"><span class="yr">2023–25</span><h4>Merit Cum Means Scholarship, 3rd University Rank</h4><p>Pondicherry University, for outstanding performance in M.Sc. Chemistry (8.75/10).</p></div>
+<div class="card"><span class="yr">2023</span><h4>Special Award for Sports and Games</h4><p>Achievers Day, St. Joseph’s College.</p></div>
+<div class="card"><span class="yr">2022, 2023</span><h4>Inter-Collegiate Ball Badminton Champion</h4><p>Bharathidasan University.</p></div>
+<div class="card"><span class="yr">2022</span><h4>Prof. A. C. Joseph Medal for merit</h4><p>178th College Day, St. Joseph’s College.</p></div></div></div></section>
+
+<section class="s" id="conferences"><div class="wrap"><div class="sh"><h2>Conferences and workshops</h2></div><div class="cl" id="cms-conf-section">
+<div class="card"><span class="yr">2025</span><div><h4>ICFCS 2025: International Conference on Frontiers in Chemical Sciences</h4><p>Participant and student volunteer.</p></div></div>
+<div class="card"><span class="yr">Nov 2024</span><div><h4>Indo-ASEAN Symposium on Organic Synthesis and Medicinal Chemistry</h4><p>Participant.</p></div></div>
+<div class="card"><span class="yr">Dec 2024</span><div><h4>National Workshop on Green Hydrogen: Technology to Application</h4><p>Participant.</p></div></div>
+<div class="card"><span class="yr">2024</span><div><h4>RACES 2024: National Conference on Recent Advancements in Chemistry and Environmental Sciences</h4><p>Participant and student volunteer.</p></div></div></div></div></section>
+
+<section class="s" id="courses"><div class="wrap"><div class="sh"><h2>Courses and training</h2></div><div class="g2" id="cms-courses-section">
+<div class="card"><span class="yr">Online · 2025–26</span><h3>Discovery Boulevard</h3><p>Molecular docking and multi-ligand screening, homology modelling, drug-likeness filtering, ADMET analysis and DFT studies.</p></div>
+<div class="card"><span class="yr">B.Sc. electives</span><h3>St. Joseph’s College</h3><p>Pharmaceutical Chemistry (2021); Separation and Instrumental Techniques (2022); Food Standards and Quality Control (2023).</p></div>
+<div class="card"><span class="yr">Online · 2025</span><h3>CIPET–IPT Kochi</h3><p>Polymers in Electronics.</p></div>
+<div class="card"><span class="yr">Diploma</span><h3>Bharathidasan University</h3><p>Computing Sciences: Office Automation (2016); Programming Techniques (2017).</p></div></div></div></section>
+
+<section class="s" id="leadership"><div class="wrap"><div class="sh"><h2>Leadership and service</h2></div><div class="g3">
+<div class="card"><h4>Captain, College Ball Badminton Team</h4><p>Led the team to multiple state-level and inter-collegiate championships (2022, 2023), and the school and college teams to titles in senior year.</p></div>
+<div class="card"><h4>Project responsibilities, JRF</h4><p>Managed project financial activities, compiled annual fund-utilisation reports, and organised project documents for future reference.</p></div>
+<div class="card"><h4>Organising committee</h4><p>ICFCS 2025 and the Indo-ASEAN Symposium.</p></div>
+<div class="card"><h4>14th Chemistry Research Drive (CRD-2025)</h4><p>Ramanujan Junior Science Forum, 2025.</p></div>
+<div class="card"><h4>Academic enrichment</h4><p>Inspire Internship Programme (2018); State-Level Common Aptitude Test (2017).</p></div>
+<div class="card"><h4>Languages</h4><p>English (C1); Tamil and Telugu (native).</p></div></div></div></section>
+
+<section class="s" id="references"><div class="wrap"><div class="sh"><h2>References</h2><p>Supervisors who have evaluated my research, available on request.</p></div><div class="g3">
+<div class="card"><div class="av">MS</div><h4>Dr. Muniyandi Sankaralingam</h4><p class="m">Associate Professor and research advisor</p><p>Department of Chemistry, NIT Calicut, India</p><p><a href="https://nitc.ac.in/department/chemistry/faculty-and-staff/faculty/60c32cb2-367d-4519-8bcb-0b763120cfc8" target="_blank" rel="noopener">Faculty profile</a></p></div>
+<div class="card"><div class="av">JK</div><h4>Prof. Dr. Jeyakumar Kandasamy</h4><p class="m">Associate Professor and research advisor</p><p>Department of Chemistry, Pondicherry University, India</p><p><a href="https://www.pondiuni.edu.in/faculy_profiles/dr-jeyakumar-kandasamy/" target="_blank" rel="noopener">Faculty profile</a></p></div>
+<div class="card"><div class="av">SS</div><h4>Prof. Dr. S. Sabiah</h4><p class="m">Professor</p><p>Department of Chemistry, Pondicherry University, India</p><p><a href="https://www.pondiuni.edu.in/faculy_profiles/dr-s-sabiah/" target="_blank" rel="noopener">Faculty profile</a></p></div></div></div></section>
+
+<section class="s" id="contact"><div class="wrap"><div class="ct"><h2 style="font:500 clamp(2rem,4vw,2.9rem)/1.1 var(--serif)" id="cms-avail-text">Actively seeking PhD positions in Europe, 2026</h2>
+<p id="cms-contact-sub">I welcome emails from professors whose work connects to glycochemistry, biomimetic catalysis or synthetic methodology, even before a position is advertised.</p>
+<div class="acts"><a class="btn p" id="cms-contact-email" href="mailto:Sridhar20ch@gmail.com">Sridhar20ch@gmail.com</a><a class="btn s" id="cms-phone-btn" href="tel:+919486941040">+91 94869 41040</a><a class="btn s" id="cms-linkedin-btn" href="https://www.linkedin.com/in/sridhar-r-chem/" target="_blank" rel="noopener">LinkedIn</a><a class="btn s" id="cms-orcid-btn" href="https://orcid.org/0009-0001-3602-6240" target="_blank" rel="noopener">ORCID</a><a class="btn s cms-cv-link" href="CV.pdf" target="_blank" rel="noopener">Download CV</a></div></div>
+<p class="eq"><b>Glycal</b> + [Pd⁰] + ArX ⟶ <u>C-2 aryl glycoside</u><br><b>Cu·L</b> + O₂ + e⁻ ⟶ <u>[Cu–OOH] (LPMO mimic)</u></p></div></section>
+<div id="lb" role="dialog" aria-label="Enlarged figure"><img alt=""></div>
+<footer>© 2026 R. Sridhar · Tamil Nadu, India</footer>
+
+<script>
+(function(){try{var raw=localStorage.getItem('sridhar_cms_v2');if(!raw)return;var d=JSON.parse(raw),f=Object.assign({},d.fields,d);
+var $=function(i){return document.getElementById(i)},T=function(i,v){var e=$(i);if(v&&e)e.textContent=v},H=function(i,v){var e=$(i);if(v&&e)e.innerHTML=v};
+T('cms-status-text',f.statusText);T('cms-stat-cgpa',f.cgpa);T('cms-stat-rank',f.rank);T('cms-stat-yield',f.yieldStat);T('cms-stat-papers',f.papersStat);
+H('cms-about-p1',f.aboutP1);H('cms-about-p2',f.aboutP2);H('cms-about-p3',f.aboutP3);T('cms-meta-position',f.metaPosition);T('cms-meta-quals',f.metaQuals);T('cms-meta-langs',f.metaLangs);T('cms-meta-region',f.targetRegion);T('cms-avail-text',f.availMsg);H('cms-contact-sub',f.contactSub);
+if(f.typedPhrases&&f.typedPhrases.length)window._ph=f.typedPhrases;
+if(f.email){var m=$('cms-contact-email');m.href='mailto:'+f.email;m.textContent=f.email}
+if(f.phone){var p=$('cms-phone-btn');p.href='tel:'+f.phone.replace(/\s/g,'');p.textContent=f.phone}
+if(f.linkedin)$('cms-linkedin-btn').href=f.linkedin;if(f.orcid)$('cms-orcid-btn').href=f.orcid;
+if(f.cvLink)document.querySelectorAll('.cms-cv-link').forEach(function(a){a.href=f.cvLink});
+[['jrf','gaJrf'],['msc','gaMsc']].forEach(function(p){var g=d[p[1]],fg=document.querySelector('[data-ga="'+p[0]+'"]');if(!g||!fg)return;if(g.img){fg.hidden=false;fg.querySelector('img').src=g.img}if(g.cap)fg.querySelector('figcaption').textContent=g.cap});
+var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})},P=function(t){return E(t).split(/\n{2,}/).filter(Boolean).map(function(x){return'<p>'+x.replace(/\n/g,'<br>')+'</p>'}).join('')};
+var last={},nav=document.querySelector('.top nav');
+(d.customSections||[]).forEach(function(s){if(!s||s.visible===false)return;var id='custom-'+s.id,sec=document.createElement('section');sec.className='s';sec.id=id;
+ var bl=(s.blocks||[]).map(function(b){return'<div class="card">'+(b.img?'<img class="cimg" src="'+E(b.img)+'" alt="'+E(b.h)+'" loading="lazy">':'')+(b.h?'<h3>'+E(b.h)+'</h3>':'')+P(b.body)+(b.link?'<p><a href="'+E(b.link)+'" target="_blank" rel="noopener">'+E(b.label||'Learn more')+' →</a></p>':'')+'</div>'}).join('');
+ sec.innerHTML='<div class="wrap"><div class="sh"><h2>'+E(s.title)+'</h2>'+(s.sub?'<p>'+E(s.sub)+'</p>':'')+'</div><div class="cx '+E(s.layout||'cards')+'">'+bl+'</div></div>';
+ var tg=s.after&&s.after!=='end'?$(s.after):null,ref=last[s.after]||tg;if(ref)ref.parentNode.insertBefore(sec,ref.nextSibling);else document.body.insertBefore(sec,document.querySelector('footer'));last[s.after]=sec;
+ if(s.nav!==false){var a=document.createElement('a');a.href='#'+id;a.textContent=s.title;var ta=last['n'+s.after]||nav.querySelector('a[href="#'+s.after+'"]');if(ta)ta.parentNode.insertBefore(a,ta.nextSibling);else nav.appendChild(a);last['n'+s.after]=a}})
+}catch(e){console.warn('CMS',e)}})();
+var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* nav, progress, reveal */
+var top_=document.getElementById('top'),bar=document.getElementById('bar'),links=[].slice.call(document.querySelectorAll('.top nav a'));
+addEventListener('scroll',function(){top_.classList.toggle('s',scrollY>20);bar.style.width=scrollY/(document.body.scrollHeight-innerHeight)*100+'%'},{passive:true});
+document.querySelectorAll('section.s').forEach(function(s){s.querySelectorAll('.sh,.card,.vb,.ct,.tl>div').forEach(function(e){e.classList.add('rv')});
+ new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+s.id)})})},{rootMargin:'-40% 0px -55% 0px'}).observe(s)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(e,i){e.style.transitionDelay=(i%3)*80+'ms';io.observe(e)});
+/* typed tagline */
+(function(){var ph=window._ph||[window._tag||'Organic chemist exploring multidisciplinary research for impactful outcomes.','Specialising in glycochemistry, Ferrier rearrangements and biomimetic Cu catalysis.','JRF at NIT Calicut, seeking a PhD in Europe in 2026.'],el=document.getElementById('tt');if(still)return;
+var i=0,c=0,d=false,w=0;(function t(){if(w>0){w--;return setTimeout(t,50)}var s=ph[i];if(!d){el.textContent=s.slice(0,++c);if(c==s.length){d=true;w=60}}else{el.textContent=s.slice(0,--c);if(c==0){d=false;i=(i+1)%ph.length;w=8}}setTimeout(t,d?22:42)})()})();
+/* hero network */
+(function(){var c=document.getElementById('net'),x=c.getContext('2d'),N=[],W,H,m={x:-999,y:-999},dpr=devicePixelRatio||1;
+function rs(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);N=[];var n=Math.round(W*H/16000);for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,k:i%7?0:1})}
+rs();addEventListener('resize',rs);c.parentNode.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+(function f(){x.clearRect(0,0,W,H);N.forEach(function(a,i){if(!still){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;var dx=a.x-m.x,dy=a.y-m.y,d=Math.hypot(dx,dy);if(d<120){a.x+=dx/d*.8;a.y+=dy/d*.8}}
+ for(var j=i+1;j<N.length;j++){var b=N[j],l=Math.hypot(a.x-b.x,a.y-b.y);if(l<130){x.strokeStyle='rgba(45,212,191,'+(.16*(1-l/130))+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+ x.fillStyle=a.k?'rgba(232,168,56,.7)':'rgba(45,212,191,.5)';x.beginPath();x.arc(a.x,a.y,a.k?3:2,0,7);x.fill()});requestAnimationFrame(f)})()})();
+/* 3D molecular viewer */
+(function(){
+var M=[],cv=document.getElementById('mol'),cx=cv.getContext('2d'),dpr=devicePixelRatio||1;
+function ring(dbl,sub){var A=[],B=[],t=['O','C','C','C','C','C'],R=1.45;
+ for(var i=0;i<6;i++){var a=i*Math.PI/3;A.push([t[i],R*Math.cos(a),R*Math.sin(a),i%2?.3:-.3])}
+ for(i=0;i<6;i++)B.push([i,(i+1)%6,dbl===i?2:1]);
+ sub.forEach(function(s){var i=s[0],a=i*Math.PI/3,k=A.length,z=(i%2?1:-1)*.75;
+  A.push([s[1],(R+1.3)*Math.cos(a),(R+1.3)*Math.sin(a),A[i][3]+z]);B.push([i,k,1]);
+  if(s[2]){var k2=A.length;A.push([s[2],(R+2.4)*Math.cos(a)-.4*Math.sin(a),(R+2.4)*Math.sin(a)+.4*Math.cos(a),A[k][3]+.4]);B.push([k,k2,1])}});
+ return{a:A,b:B}}
+M[0]=ring(1,[[3,'O'],[4,'O'],[5,'C','O']]);M[1]=ring(2,[[1,'O','C'],[4,'O'],[5,'C','O']]);
+(function(){var A=[['Cu',0,0,0],['N',0,-1.15,0]],B=[[0,1,1]];
+ for(var i=0;i<3;i++){var t=i*2*Math.PI/3+.5,c=Math.cos(t),s=Math.sin(t),k=A.length;
+  A.push(['C',.8*c,-1.55,.8*s],['C',1.65*c,-.7,1.65*s],['N',1.3*c,.35,1.3*s]);B.push([1,k,1],[k,k+1,1],[k+1,k+2,1],[k+2,0,1])}
+ var o=A.length;A.push(['O',0,1.05,0],['O',.55,1.95,.3]);B.push([0,o,1],[o,o+1,2]);M[2]={a:A,b:B}})();
+var info=['D-Glucal: the entry point of the Ferrier-I study and the starting material for the D-rhamnal route (C-6 modification, C-5 control).','Ferrier product: a 2,3-unsaturated glycoside, the outcome of the Ferrier Type-I rearrangement, obtained in over 95% yield on four glycals.','Cu–O₂ model: a schematic tetradentate N4 Cu complex with bound dioxygen, the active-site motif behind the LPMO biomimetic work at NIT Calicut.'];
+var col={C:'#9fb0c2',O:'#ef5a4e',N:'#5b8cff',Cu:'#e8a838'},rad={C:.34,O:.38,N:.37,Cu:.55},cur=0,rx=-.5,ry=.6,drag=false,px=0,py=0,mouse=null,W,H,fade=1;
+function size(){var r=cv.getBoundingClientRect();if(!r.width||!r.height)return;W=r.width;H=r.height;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);cx.setTransform(dpr,0,0,dpr,0,0)}
+function proj(a){var x=a[1],y=a[2],z=a[3],c=Math.cos(ry),s=Math.sin(ry),x1=x*c+z*s,z1=-x*s+z*c;c=Math.cos(rx);s=Math.sin(rx);var y1=y*c-z1*s,z2=y*s+z1*c,sc=Math.min(W,H)/(cur==2?6.4:8.8),p=1/(1-z2*.06);return{x:W/2+x1*sc*p,y:H/2+14+y1*sc*p,z:z2,r:rad[a[0]]*sc*p,t:a[0]}}
+function draw(){if(!W||!H)return;var m=M[cur],P=m.a.map(proj);cx.clearRect(0,0,W,H);cx.globalAlpha=fade;var it=[];
+ m.b.forEach(function(b){var p=P[b[0]],q=P[b[1]];it.push({z:(p.z+q.z)/2-.01,b:b,p:p,q:q})});P.forEach(function(p){it.push({z:p.z,p:p})});it.sort(function(u,v){return u.z-v.z});
+ it.forEach(function(e){var p=e.p;if(e.b){var q=e.q,dx=q.x-p.x,dy=q.y-p.y,l=Math.hypot(dx,dy)||1,nx=-dy/l*3.2,ny=dx/l*3.2;cx.strokeStyle='rgba(200,215,232,.75)';cx.lineWidth=2.6;cx.lineCap='round';(e.b[2]==2?[-1,1]:[0]).forEach(function(o){cx.beginPath();cx.moveTo(p.x+nx*o,p.y+ny*o);cx.lineTo(q.x+nx*o,q.y+ny*o);cx.stroke()})}
+ else{var g=cx.createRadialGradient(p.x-p.r*.35,p.y-p.r*.35,p.r*.1,p.x,p.y,p.r);g.addColorStop(0,'#fff');g.addColorStop(.3,col[p.t]);g.addColorStop(1,'#000a');cx.fillStyle=g;cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill();
+  if(mouse&&Math.hypot(mouse.x-p.x,mouse.y-p.y)<p.r+4){cx.strokeStyle='#2dd4bf';cx.lineWidth=2;cx.stroke();cx.fillStyle='#e4edf7';cx.font='600 13px Public Sans';cx.fillText(p.t,p.x+p.r+6,p.y-p.r)}}});cx.globalAlpha=1}
+size();(function loop(){if(!drag&&!still){rx+=.003;ry+=.006}if(fade<1)fade=Math.min(1,fade+.06);try{draw()}catch(e){}requestAnimationFrame(loop)})();
+cv.addEventListener('pointerdown',function(e){drag=true;px=e.clientX;py=e.clientY;cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();mouse={x:e.clientX-r.left,y:e.clientY-r.top};if(drag){ry+=(e.clientX-px)*.012;rx+=(e.clientY-py)*.012;px=e.clientX;py=e.clientY}});
+cv.addEventListener('pointerup',function(){drag=false});cv.addEventListener('pointerleave',function(){mouse=null});
+var bs=document.querySelectorAll('.vt button'),vc=document.getElementById('vc');
+bs.forEach(function(b){b.onclick=function(){bs.forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur=+b.dataset.m;fade=0;vc.textContent=info[cur]}});
+vc.textContent=info[0];addEventListener('resize',size);if(window.ResizeObserver)new ResizeObserver(size).observe(cv)})();
+document.querySelectorAll('.ga img').forEach(function(i){i.onclick=function(){var l=document.getElementById('lb');l.querySelector('img').src=i.src;l.classList.add('on')}});document.getElementById('lb').onclick=function(){this.classList.remove('on')};addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb').classList.remove('on')});
+</script></body></html>
